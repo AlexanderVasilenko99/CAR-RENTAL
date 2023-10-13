@@ -1,0 +1,28 @@
+.HelpPage {
+    padding: 0px;
+}
+
+.HelpPage h1 {
+    text-align: center;
+}
+
+.HelpPage .grig-container {
+    padding: 0px 175px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+
+    gap: 20px;
+}
+
+.grig-container>* {
+    text-align: center;
+    grid-column: span 2;
+}
+
+.grig-container a:nth-last-of-type(1) {
+    grid-column-end: -3;
+}
+.banner{
+    width: 100vw;
+}

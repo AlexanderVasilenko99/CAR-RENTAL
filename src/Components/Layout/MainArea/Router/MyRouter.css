@@ -1,0 +1,8 @@
+.MyRouter{
+    height: auto;
+    /* padding: 0px 175px; */
+    background-color: #FAF6E9 ;
+}
+.MyRouter > *{
+    /* padding: 0px 175px; */
+}

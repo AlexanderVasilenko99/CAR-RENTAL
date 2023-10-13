@@ -1,0 +1,23 @@
+.SingleLinkFamily {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.SingleLinkFamily h3{
+    margin: 10px 0px;
+    color: #952323;
+}
+.SingleLinkFamily a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #952323;
+    padding: 1px 0px;
+}
+.SingleLinkFamily div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}

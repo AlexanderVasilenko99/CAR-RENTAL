@@ -1,0 +1,100 @@
+.FleetPage {
+    padding: 0px 175px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.FleetPage > a {
+    opacity: 0;
+}
+
+/* .FleetPage a:nth-of-type(8) {
+    opacity: 1;
+    margin: auto;
+} */
+
+.FleetPage>a:nth-of-type(1) {
+    animation: slideIn 500ms linear forwards;
+}
+
+.FleetPage>a:nth-of-type(2) {
+    animation: slideIn 500ms 100ms linear forwards;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.FleetPage>a:nth-of-type(3) {
+    animation: slideIn 500ms 200ms linear forwards;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.FleetPage>a:nth-of-type(4) {
+    animation: slideIn 500ms 300ms linear forwards;
+}
+
+.FleetPage>a:nth-of-type(5) {
+    animation: slideIn 500ms 400ms linear forwards;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.FleetPage>a:nth-of-type(6) {
+    animation: slideIn 500ms 500ms linear forwards;
+    margin-left: auto;
+}
+
+.FleetPage>a:nth-of-type(7) {
+    animation: slideIn 500ms 600ms linear forwards;
+    margin-left: auto;
+}
+
+
+.FleetPage h1 a{
+    color: #952323;
+    text-decoration: none;
+}
+.FleetPage h1 a:hover{
+    color: #A73121;
+}
+
+.FleetPage > a:nth-last-of-type(1) {
+    grid-column: span 3;
+    opacity: 1;
+    margin: auto;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    
+    height: auto;
+    width: auto;
+    color: black;
+}
+.FleetPage > a:nth-last-of-type(1):hover {
+    color: #952323;
+}
+
+.FleetPage>h1 {
+    margin: 35px 0px;
+}
+/* 
+.fleetPage h3 {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+} */
+
+@keyframes slideIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}

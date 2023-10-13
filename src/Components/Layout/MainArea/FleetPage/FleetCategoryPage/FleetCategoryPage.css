@@ -1,0 +1,20 @@
+.FleetCategoryPage {
+	padding: 0px 175px;
+}
+.FleetCategoryPageGridContainer{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 60px;
+}
+.FleetCategoryPageGridContainer > *{
+    grid-column : span 2;
+}
+.FleetCategoryPage  h1{
+    margin-bottom: 0;
+}
+.FleetCategoryPage h3{
+    margin-top: 10px;  
+}
+.FleetCategoryPage h3 a{
+    color: black;  
+}

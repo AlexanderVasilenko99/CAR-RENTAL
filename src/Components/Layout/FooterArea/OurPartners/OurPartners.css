@@ -1,0 +1,19 @@
+.OurPartners {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    background-color: #A73121;
+    padding: 0px 175px;
+}
+
+.OurPartners p {
+    color: #FAF6E9;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+.OurPartners .grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}

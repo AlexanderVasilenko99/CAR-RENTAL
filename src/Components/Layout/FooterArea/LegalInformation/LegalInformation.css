@@ -1,0 +1,22 @@
+.LegalInformation {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #952323;
+    text-align: center;
+    color: #FAF6E9;
+}
+
+.LegalInformation>p {
+    padding: 0;
+    margin: 0;
+}
+
+.LegalInformation>p:nth-of-type(1) {
+    font-weight: 600;
+}
+.LegalInformation>p:nth-of-type(2) {
+    font-size: 14px;
+}

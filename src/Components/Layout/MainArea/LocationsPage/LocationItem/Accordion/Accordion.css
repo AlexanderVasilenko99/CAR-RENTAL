@@ -1,0 +1,62 @@
+.Accordion {
+    --color: #A73121;
+    --hover-b: #FAF6E9;
+}
+
+.Accordion .LocationParameter {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+
+}
+
+.Accordion .svgAndHeading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 700;
+}
+
+.Accordion .svgAndHeading svg {
+    padding-right: 5px;
+}
+
+.Accordion .locationText {
+    padding-left: 30px;
+}
+
+.Accordion .workingHours {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+}
+
+.Accordion button {
+    /* width: 85%;
+    height: 40px;
+    margin: auto;
+    margin-top: 12px;
+    font-size: 16px; */
+
+    background: none;
+    border: 2px solid var(--color);
+    padding: 0.8em 1em;
+    margin: 1em;
+    margin-top: 1.6em;
+    user-select: none;
+    text-transform: uppercase;
+    color: var(--color);
+    letter-spacing: 2.2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transform: translateY(0);
+    transition: all 0.3s linear;
+}
+
+
+
+.btn:hover {
+    box-shadow: inset 15rem 0 0 0 var(--color), inset -15rem 0 0 0 var(--color);
+    color: var(--hover-b);
+    transform: translateY(-0.2rem);
+
+}

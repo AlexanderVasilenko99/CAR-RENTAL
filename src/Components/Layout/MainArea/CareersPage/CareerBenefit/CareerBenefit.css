@@ -1,0 +1,23 @@
+.CareerBenefit {}
+
+.CareerBenefit>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.CareerBenefit > div > *{
+    margin: auto;
+    text-align: center;
+}
+.career-benefit-header{
+    width: 300px;
+    margin: 10px;
+}
+.career-benefit-text{
+    padding: 10px 15%;
+}
+.CareerBenefit img {
+    width: 100px;
+}

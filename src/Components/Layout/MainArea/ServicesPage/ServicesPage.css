@@ -1,0 +1,13 @@
+.ServicesPage {}
+
+.ServicesPage .image-container {
+	position: relative;
+}
+.ServicesPage .image-container img {
+	width: 100%;
+	opacity: .85;
+}
+.ServicesPage .image-container-content {
+	position: absolute;
+	/* top: 100px; */
+}

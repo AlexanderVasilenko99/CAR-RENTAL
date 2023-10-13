@@ -1,0 +1,137 @@
+.LocationItem,
+.LocationItemActive {
+    color: #A73121;
+    text-decoration: none;
+}
+
+.LocationItem div[class="row"],
+.LocationItemActive div[class="row"] {
+    box-sizing: border-box;
+    height: 135px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+
+    border: 1px solid #A73121;
+    border-radius: 5px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.LocationItem div[class="row"]:hover,
+.LocationItemActive div[class="row"] {
+    scale: 1.06;
+    transition: 350ms;
+    background-color: #A73121;
+    color: white;
+    border: 1px solid white;
+}
+
+.LocationItem div[class="row"]:hover h2,
+.LocationItemActive div[class="row"] h2 {
+    text-decoration: underline;
+    text-decoration-color: (white);
+}
+
+.LocationItem div[class="row"]:hover svg,
+.LocationItem div[class="row"]:hover h3,
+.LocationItemActive div[class="row"] svg,
+.LocationItemActive div[class="row"] h3 {
+    transition: 350ms;
+    color: white;
+}
+
+.LocationItem div:hover>img,
+.LocationItemActive div>img {
+    border: 1px solid white;
+}
+
+.LocationItem div[class="row-text"],
+.LocationItemActive div[class="row-text"] {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+
+.LocationItem div[class="row-text"] h2,
+.LocationItem div[class="row-text"] h3,
+.LocationItemActive div[class="row-text"] h2,
+.LocationItemActive div[class="row-text"] h3 {
+    margin: 0;
+    display: flex;
+}
+
+.LocationItem div[class="row-text"] h2,
+.LocationItemActive div[class="row-text"] h2 {
+    text-decoration: underline;
+    text-decoration-color: (#A73121);
+}
+
+.LocationItem div[class="row-text"] h3,
+.LocationItemActive div[class="row-text"] h3 {
+    font-weight: 300;
+}
+
+.LocationItem img,
+.LocationItemActive img {
+    width: 100px;
+    margin: 0px 5px;
+    border: 1px solid #A73121;
+    border-radius: 5px;
+}
+
+
+
+
+
+.LocationItem>div[class=""],
+.LocationItemActive>div[class=""] {
+    animation: accordion-close 100ms linear forwards;
+    overflow: hidden;
+    border: 1px solid #952323;
+    border-radius: 5px;
+    /* display: none; */
+}
+
+.LocationItem .accordion-div,
+.LocationItemActive .accordion-div {
+    animation: accordion-open 150ms linear forwards;
+    overflow: hidden;
+    grid-column: span 3;
+    border: 1px solid #952323;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+
+@keyframes accordion-open {
+    from {
+        height: 0px;
+        display: none;
+    }
+
+    to {
+        height: 330px;
+    }
+}
+
+@keyframes accordion-close {
+    from {
+        height: 330px;
+    }
+
+    to {
+        height: 0px;
+        display: none;
+    }
+}

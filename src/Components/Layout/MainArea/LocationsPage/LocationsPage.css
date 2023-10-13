@@ -1,0 +1,36 @@
+.LocationsPage {
+    padding: 0px 175px;
+    height: fit-content;
+}
+
+.LocationsPage>div[class="locations-container"] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    row-gap: 30px;
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+.LocationsPage svg {
+    color: #952323;
+    /* A73121 */
+}
+
+.LocationsPage .row {
+    opacity: 0;
+    animation: appear 400ms linear forwards;
+}
+
+@keyframes appear {
+    from {
+        scale: 0;
+        opacity: 0;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}

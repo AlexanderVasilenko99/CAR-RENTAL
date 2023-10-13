@@ -1,0 +1,10 @@
+.HomePage {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.navbar-placeholder {
+    height: 70px;
+    background-color: #952323;
+}
