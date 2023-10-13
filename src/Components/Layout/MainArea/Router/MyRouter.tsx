@@ -19,6 +19,7 @@ function Router(): JSX.Element {
             <Routes>
                 {/* Default Route */}
                 <Route path="/" element={<Navigate to={"/home"} />}></Route>
+                <Route path="/car-rental/" element={<Navigate to={"/home"} />}></Route>
 
                 <Route path={appConfig.homePagePath} element={<HomePage />} />
                 <Route path={appConfig.fleetPagePath} element={< FleetPage />} />
