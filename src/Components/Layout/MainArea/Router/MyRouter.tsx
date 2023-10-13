@@ -9,7 +9,7 @@ import HelpPage from "../HelpPage/HelpPage";
 import SignInPage from "../SignInPage/SignInPage";
 import LocationsPage from "../LocationsPage/LocationsPage";
 import ServicesPage from "../ServicesPage/ServicesPage";
-import FleetCategoryPage from "../FleetPage/FleetCategoryPage/FleetCategoryPage";
+import FleetCategoryPage from "../FleetPage/FleetCategoryPage/CategoryPage";
 
 
 

@@ -1,5 +1,5 @@
 import { NavLink, useParams } from "react-router-dom";
-import "./FleetCategoryPage.css";
+import "./CategoryPage.css";
 import { useEffect, useState } from "react";
 import FleetCategoryItem from "./Item/Item";
 import appConfig from "../../../../../Utils/AppConfig";
@@ -16,10 +16,10 @@ function FleetCategoryPage(): JSX.Element {
     }, [params]);
 
     return (
-        <div className="FleetCategoryPage">
+        <div className="CategoryPage">
             <h1>Browse {category}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
-            <div className="FleetCategoryPageGridContainer">
+            <div className="CategoryPageGridContainer">
 
                 <FleetCategoryItem vehicleName="Nissan Sentra SR 1.6" imageName="sentra.png" airConditioning doors={4} fuel="Unleaded"
                     luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
