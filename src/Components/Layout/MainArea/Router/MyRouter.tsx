@@ -23,13 +23,13 @@ function Router(): JSX.Element {
 
                 <Route path={appConfig.homePagePath} element={<HomePage />} />
                 <Route path={appConfig.fleetPagePath} element={< FleetPage />} />
-                <Route path={appConfig.fleetPagePath+":vehicleCategory"} element={< FleetCategoryPage />} />
+                <Route path={appConfig.fleetPagePath + ":vehicleCategory"} element={< FleetCategoryPage />} />
 
                 <Route path={appConfig.locationsPagePath} element={< LocationsPage />} />
                 <Route path={appConfig.careersPagePath} element={< CareersPage />} />
-                <Route path={appConfig.helpPagePath} element={<  HelpPage/>} />
-                <Route path={appConfig.signInPagePath} element={<  SignInPage/>} />
-                <Route path={appConfig.servicesPagePath} element={<  ServicesPage/>} />
+                <Route path={appConfig.helpPagePath} element={<  HelpPage />} />
+                <Route path={appConfig.signInPagePath} element={<  SignInPage />} />
+                <Route path={appConfig.servicesPagePath} element={<  ServicesPage />} />
 
 
                 <Route path="/*" element={<PageNotFound />}></Route>
