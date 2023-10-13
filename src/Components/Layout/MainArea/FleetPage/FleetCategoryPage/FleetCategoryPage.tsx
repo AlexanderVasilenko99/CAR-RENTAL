@@ -1,7 +1,7 @@
 import { NavLink, useParams } from "react-router-dom";
 import "./FleetCategoryPage.css";
 import { useEffect, useState } from "react";
-import FleetCategoryItem from "./FleetCategoryItem/FleetCategoryItem";
+import FleetCategoryItem from "./Item/Item";
 import appConfig from "../../../../../Utils/AppConfig";
 import FleetCategoryItemModel, { TransmissionTypes } from "../../../../../Models/FleetCategoryItemModel";
 

@@ -1,4 +1,4 @@
-.FleetCategoryItem {
+.Item {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -12,14 +12,14 @@
 
 }
 
-.FleetCategoryItem h1 {
+.Item h1 {
     margin: 0;
     background-color: #FAF6E9;
     text-align: center;
     font-size: 26px;
 }
 
-.FleetCategoryItem .imgHolder {
+.Item .imgHolder {
     background-color: #911F27;
     /* #F8F0E5; */
     display: flex;
@@ -28,24 +28,24 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.FleetCategoryItem .imgHolder img {
+.Item .imgHolder img {
     width: 60%;
 }
 
-.FleetCategoryItem .stats {
+.Item .stats {
     height: 100%;
     background-color: #911F27;
     font-size: 16px;
     border-radius: 0px 0px 10px 10px;
 }
 
-.FleetCategoryItem .initialStats {
+.Item .initialStats {
     display: flex;
     justify-content: space-evenly;
     font-weight: 500;
 }
 
-.FleetCategoryItem .initialStats>* {
+.Item .initialStats>* {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,11 +53,11 @@
     padding: 15px 0px;
 }
 
-.FleetCategoryItem .initialStats img {
+.Item .initialStats img {
     width: 40px;
 }
 
-.FleetCategoryItem .moreStats {
+.Item .moreStats {
     background-color: #FAF6E9;
     padding: 10px;
     margin: 10px 10px 0px 10px;
@@ -68,24 +68,24 @@
     border-radius: 10px;
 }
 
-.FleetCategoryItem .moreStats>* {
+.Item .moreStats>* {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.FleetCategoryItem .moreStats img {
+.Item .moreStats img {
     width: 25px;
     padding-right: 5px;
 }
 
-.FleetCategoryItem .btnHolder {
+.Item .btnHolder {
     display: flex;
     justify-content: center;
     padding: 15px 0px;
 }
 
-.FleetCategoryItem .btnHolder a {
+.Item .btnHolder a {
     padding: 9px 7px;
     margin: 12px;
     font-size: 18px;
@@ -97,6 +97,6 @@
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.FleetCategoryItem .btnHolder a:hover {
+.Item .btnHolder a:hover {
     background-color: #952323;
 }

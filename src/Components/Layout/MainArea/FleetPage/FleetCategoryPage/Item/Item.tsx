@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import FleetCategoryItemModel from "../../../../../../Models/FleetCategoryItemModel";
-import "./FleetCategoryItem.css";
+import "./Item.css";
 import appConfig from "../../../../../../Utils/AppConfig";
 
 function FleetCategoryItem(props: FleetCategoryItemModel): JSX.Element {
     return (
-        <div className="FleetCategoryItem">
+        <div className="Item">
             <div className="imgHolder">
                 <img src={require(`../../../../../../Assets/Images/${props.imageName}`)} />
             </div>
