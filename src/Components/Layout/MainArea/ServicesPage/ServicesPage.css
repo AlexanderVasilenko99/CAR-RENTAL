@@ -2,12 +2,30 @@
 
 .ServicesPage .image-container {
 	position: relative;
+	height: fit-content;
+	background-image: url("../../../../Assets/Images/road2.png");
+	opacity: .85;
+	height: 950px;
+	background-size: cover;
+	background-position: center;
+
+	display: grid;
+	
+	/* grid-template-columns: repeat(3, 1fr); */
+	grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+	grid-gap: 30px;	
+	padding: 30px;
+	grid-template-rows: repeat(2, 1fr);
+	height: fit-content;
+}
+
+.ServicesPage .image-container >*{ 
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .ServicesPage .image-container img {
 	width: 100%;
 	opacity: .85;
-}
-.ServicesPage .image-container-content {
-	position: absolute;
-	/* top: 100px; */
+	/* position: absolute; */
 }
