@@ -92,10 +92,11 @@
 
 .LocationItem>div[class=""],
 .LocationItemActive>div[class=""] {
-    animation: accordion-close 100ms linear forwards;
+    animation: accordion-close 150ms linear forwards;
     overflow: hidden;
     border: 1px solid #952323;
     border-radius: 5px;
+    padding: 10px;
     /* display: none; */
 }
 
