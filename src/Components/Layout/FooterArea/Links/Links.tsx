@@ -41,18 +41,18 @@ function Links(): JSX.Element {
                 <div className="family-container">
                     <SingleLinkFamily header="Services"
                         firstLinkHeader="Vehicle Rental"
-                        // secondLinkHeader="Chauffeur Services"
-                        thirdLinkHeader="Business Rental"
-                        fourthLinkHeader="Monthly Rental"
-                        fifthLinkHeader="Special Needs"
-                        sixthLinkHeader="Chauffeur Services"
+                        secondLinkHeader="Business Rental"
+                        thirdLinkHeader="Monthly Rental"
+                        fourthLinkHeader="Group Car Rental"
+                        fifthLinkHeader="One Day Car Rental"
+                        sixthLinkHeader="One Way Car Rental"
                     />
                 </div>
             </div>
             <div>
                 <div className="family-container">
                     <SingleLinkFamily header="Information"
-                        firstLinkHeader="Who Are We"
+                        firstLinkHeader="Who We Are"
                         secondLinkHeader="Useful information"
                         thirdLinkHeader="Help Page"
                         fourthLinkHeader="Loyalty Program"
