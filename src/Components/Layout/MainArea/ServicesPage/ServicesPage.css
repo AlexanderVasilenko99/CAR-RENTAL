@@ -10,22 +10,38 @@
 	background-position: center;
 
 	display: grid;
-	
+
 	/* grid-template-columns: repeat(3, 1fr); */
 	grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-	grid-gap: 30px;	
+	grid-gap: 30px;
 	padding: 30px;
 	grid-template-rows: repeat(2, 1fr);
 	height: fit-content;
+
 }
 
-.ServicesPage .image-container >*{ 
+.ServicesPage .image-container>* {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/* animation: fade-in-down 2s ease infinite; */
+	animation: fade-in-down 1s 1 ease;
 }
+
 .ServicesPage .image-container img {
 	width: 100%;
 	opacity: .85;
 	/* position: absolute; */
+}
+
+@keyframes fade-in-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		/* opacity: 1; */
+		transform: translateY(0);
+	}
 }
