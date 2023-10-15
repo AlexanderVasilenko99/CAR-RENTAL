@@ -57,7 +57,7 @@
 
 .SingleService .content a {
     width: 125px;
-    height: 80px;
+    height: 45px;
     border: 1px solid gray;
     border-radius: 10px;
     margin-left: 20px;
@@ -86,4 +86,9 @@
     color: #A73121;
     border: 1px solid #A73121;
     transition: all 250ms;
+}
+
+.SingleService:hover {
+    scale: 1.05;
+    transition: 200ms;
 }

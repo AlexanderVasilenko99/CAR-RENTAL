@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./SingleService.css";
 import SingleServiceModel from "../../../../../Models/SingleServiceModel";
 
-function SingleService(props:SingleServiceModel): JSX.Element {
+function SingleService(props: SingleServiceModel): JSX.Element {
     return (
         <div className="SingleService">
             <div className="background"></div>
