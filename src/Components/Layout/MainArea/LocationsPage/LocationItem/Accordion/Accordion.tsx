@@ -4,6 +4,7 @@ import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import LocationItemAccordionModel from "../../../../../../Models/LocationItemAccordionModel";
 import "./Accordion.css";
+import { NavLink } from 'react-router-dom';
 
 function Accordion(params: LocationItemAccordionModel): JSX.Element {
     return (
@@ -35,8 +36,11 @@ function Accordion(params: LocationItemAccordionModel): JSX.Element {
                 <div className="svgAndHeading">
                     <MailOutlineOutlinedIcon />Mails:
                 </div >
-                <div className="locationText">{params.email}<br/>Alexandervjr1@gmail.com</div>
-                <button className='btn'>All location details</button>
+                <div className="locationText">{params.email}<br />Alexandervjr1@gmail.com</div>
+                {/* <button className='btn'>All location details</button> */}
+                <NavLink to={params.redirectPath} className='btn'>
+                    All location details
+                </NavLink>
             </div>
         </div>
     );

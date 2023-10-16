@@ -10,7 +10,7 @@ function LocationItem(props: LocationItemModel): JSX.Element {
         setAccordionActive(!accordionActive)
     }, [])
     return (
-        <NavLink to={props.locationRedirectPath} className={accordionActive ? "LocationItem" : "LocationItemActive"}>
+        <NavLink to={'#'} className={accordionActive ? "LocationItem" : "LocationItemActive"}>
             <div className="row" onClick={() => { setAccordionActive(!accordionActive) }}>
                 <img src={require("../../../../../Assets/Images/" + props.locationImageName)} alt="broken-city-photo" />
                 <div className="row-text">
@@ -19,7 +19,7 @@ function LocationItem(props: LocationItemModel): JSX.Element {
                 </div>
             </div>
             <div className={accordionActive ? "" : "accordion-div"} onClick={() => setAccordionActive(!accordionActive)}>
-                <Accordion address={props.locationStreet} email={props.locationMail}/>
+                <Accordion address={props.locationStreet} email={props.locationMail} redirectPath={props.locationRedirectPath} />
             </div>
         </NavLink>
     );
