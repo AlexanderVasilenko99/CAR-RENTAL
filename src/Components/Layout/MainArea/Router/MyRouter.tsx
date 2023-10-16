@@ -40,7 +40,7 @@ function Router(): JSX.Element {
                 <Route path={appConfig.locationsBenGurionPath} element={< BenGurion />} />
                 <Route path={appConfig.locationsHaifaPath} element={< Haifa />} />
                 <Route path={appConfig.locationsBeerShevaPath} element={< BeerSheva />} />
-                <Route path={appConfig.locationsRaananaPath} element={< Raanana />} />
+                <Route path={appConfig.locationsRaananaPath} element={< Raanana email='vasirental@raa.co.il' address="Klauzner 8 st, Ra'anana." redirectPath="#" phoneNumber=""/>} />
                 <Route path={appConfig.locationsTiberiasPath} element={< Tiberias />} />
                 <Route path={appConfig.locationsEilatPath} element={< Eilat />} />
                 <Route path={appConfig.locationsEilatRamonPath} element={< Ramon />} />

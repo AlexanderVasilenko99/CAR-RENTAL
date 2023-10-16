@@ -1,3 +1,82 @@
-.Raanana {
-	
+.Raanana {}
+
+.Raanana .grid-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    margin: 0px 175px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.grid-container>* {
+    padding: 10px 20px 10px 20px;
+}
+
+.grid-container .content {
+    border: 1px solid gray;
+}
+.grid-container .content > div{
+    margin-bottom: 35px;
+}
+.grid-container p {
+    margin: 8px 0px;
+}
+
+.grid-container .link-tree-container {
+    background-color: #952323;
+}
+
+.grid-container .link-tree-container .link-tree {
+    position: sticky;
+    top: 80px;
+}
+.grid-container .content h3{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+.grid-container .content .hours-and-contact .subj-content {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+.subj-content .days {
+    color: #952323;
+    font-weight: 900;
+    margin: auto 0px;
+}
+
+.hours-and-contact .open {
+    width: fit-content;
+    background-color: rgb(70, 180, 70);
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: 500;
+}
+
+.hours-and-contact .closed {
+    width: fit-content;
+    background-color: rgb(205, 57, 57);
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: 500;
+}
+
+.hours-and-contact .contact{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 8px 0px;
+}
+.hours-and-contact .contact > *{
+    display: flex;
+    align-items: center;
+}
+.hours-and-contact .contact svg{
+    color: #952323;
+    margin: 0px 10px 0px 0px;
 }
