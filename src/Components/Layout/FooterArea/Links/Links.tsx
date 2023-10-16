@@ -10,10 +10,17 @@ function Links(): JSX.Element {
                 <div className="family-container">
                     <SingleLinkFamily header="Top Destinations"
                         firstLinkHeader="Tel Aviv"
+                        firstLinkPath={appConfig.locationsTelAvivPath}
                         secondLinkHeader="Jerusalem"
+                        secondLinkPath={appConfig.locationsJerusalemPath}
                         thirdLinkHeader="Haifa"
+                        thirdLinkPath={appConfig.locationsHaifaPath}
                         fourthLinkHeader="Be'er Sheva"
+                        fourthLinkPath={appConfig.locationsBeerShevaPath}
                         fifthLinkHeader="Ra'anana"
+                        fifthLinkPath={appConfig.locationsRaananaPath}
+                        sixthLinkHeader="Ben Gurion Airport"
+                        sixthLinkPath={appConfig.locationsBenGurionPath}
                     />
                 </div>
             </div>
