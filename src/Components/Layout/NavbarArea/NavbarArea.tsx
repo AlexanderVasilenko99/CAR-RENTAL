@@ -119,7 +119,24 @@ function NavbarArea(): JSX.Element {
                         itemSvgComponent={<DirectionsCarOutlinedIcon />} />
                 </div>
                 <div onClick={closeModal}>
-                    <NavbarItem isDropdown itemText='Services' itemDestinationPagePath={appConfig.servicesPagePath} itemSvgComponent={< ManageSearchOutlinedIcon />} />
+                    <NavbarItem isDropdown itemText='Services' itemDestinationPagePath={appConfig.servicesPagePath}
+                        firstSubItemHeading='Vehicle Rental'
+                        firstSubItemRedirectPath={appConfig.fleetPagePath}
+                        secondSubItemHeading='Monthly Rental'
+                        secondSubItemRedirectPath={appConfig.servicesPagePath}
+                        thirdSubItemHeading='Business Rental'
+                        thirdSubItemRedirectPath={appConfig.servicesPagePath}
+                        fourthSubItemHeading='Chauffeur Services'
+                        fourthSubItemRedirectPath={appConfig.servicesPagePath}
+                        fifthSubItemHeading='Group Car Rental'
+                        fifthSubItemRedirectPath={appConfig.servicesPagePath}
+                        sixthSubItemHeading='One Day Car Rental'
+                        sixthSubItemRedirectPath={appConfig.servicesPagePath}
+                        seventhSubItemHeading='One Way Car Rental'
+                        seventhSubItemRedirectPath={appConfig.servicesPagePath}
+                        eightSubItemHeading='All Services'
+                        eightSubItemRedirectPath={appConfig.servicesPagePath}
+                        itemSvgComponent={< ManageSearchOutlinedIcon />} />
                 </div>
                 <div onClick={closeModal}>
                     <NavbarItem isDropdown itemText='Locations' itemDestinationPagePath={appConfig.locationsPagePath}
