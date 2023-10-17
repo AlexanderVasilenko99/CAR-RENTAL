@@ -19,7 +19,7 @@ function LocationItem(props: LocationItemModel): JSX.Element {
                 </div>
             </div>
             <div className={accordionActive ? "" : "accordion-div"} onClick={() => setAccordionActive(!accordionActive)}>
-                <Accordion address={props.locationStreet} email={props.locationMail} redirectPath={props.locationRedirectPath} />
+                <Accordion city={props.locationCity} address={props.locationStreet} email={props.locationMail} redirectPath={props.locationRedirectPath} />
             </div>
         </NavLink>
     );
