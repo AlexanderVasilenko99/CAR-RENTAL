@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import FullCity from "../FullCity/FullCity";
 import "./Tiberias.css";
+import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 
 function Tiberias(): JSX.Element {
+    useEffect(() => {
+        const coords = locationsmapenum.locations[LocationsEnum.TIBERIAS]
+        console.log(coords);
+    }, []);
     return (
         <div className="Tiberias">
-            <FullCity city={"Tiberias"} email='vasirental@tib.co.il'
+            <FullCity city={"Tiberias"} email='vasirental@tib.co.il' locationId={LocationsEnum.TIBERIAS}
                 address="Yehuda Halevi 7 st, Tiberias." redirectPath="#" phoneNumber="" aboutLocation="The Tiberias branch is
                         located in a convenient to access central area of Tiberias. only 5 minutes away from the Tiberias Mall,
                         and 10 minutes from the beautiful beaches of The Sea Of Galilee. 60 kilometers from Haifa And only 30

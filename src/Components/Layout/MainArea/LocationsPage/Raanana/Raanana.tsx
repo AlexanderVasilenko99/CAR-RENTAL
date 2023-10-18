@@ -1,11 +1,18 @@
+
+import { useEffect } from "react";
+import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./Raanana.css";
 
 function Raanana(): JSX.Element {
-
+    useEffect(() => {
+        const coords = locationsmapenum.locations[LocationsEnum.RAANANA]
+        console.log(coords);
+    }, []);
+    
     return (
         <div className="Raanana">
-            <FullCity city={"Ra'anana"} email='vasirental@raa.co.il'
+            <FullCity city={"Ra'anana"} email='vasirental@raa.co.il' locationId={LocationsEnum.RAANANA}
                 address="Klauzner 8 st, Ra'anana." redirectPath="#" phoneNumber="" aboutLocation="The Ra'anana branch is
                         located in Ra'ananas city center. Placed in a strategic location between Herzelias and Ra'ananas infamous
                         High-Tec industrial zones. The location is merely a 10 minute drive from both Ra'ananas train stations,

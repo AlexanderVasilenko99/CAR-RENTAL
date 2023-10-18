@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import FullCity from "../FullCity/FullCity";
 import "./BenGurion.css";
+import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 
 function BenGurion(): JSX.Element {
+    useEffect(() => {
+        const coords = locationsmapenum.locations[LocationsEnum.BEN_GURION]
+        console.log(coords);
+    }, []);
     return (
         <div className="BenGurion">
-            <FullCity city={"Ben Gurion Airport (TLV)"} email='vasirental@bgu.co.il'
+            <FullCity city={"Ben Gurion Airport (TLV)"} email='vasirental@bgu.co.il' locationId={LocationsEnum.BEN_GURION}
                 address="Ben Gurion Airport 7015001" redirectPath="#" phoneNumber="" aboutLocation="The Ben Gurion branch is
                         located in Terminal 3 on the 1st floor. The location is perfect for you if you wish to start your rental
                         right after your arrival to Israel and have a headache-free beggining to your trip. The airport is

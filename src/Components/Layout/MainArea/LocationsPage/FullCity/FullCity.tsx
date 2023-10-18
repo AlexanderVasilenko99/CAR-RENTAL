@@ -1,15 +1,13 @@
-import { useEffect, useState } from "react";
-import Header from "../Header/Header";
-import "./FullCity.css";
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
-import LocationItemAccordionModel from "../../../../../Models/LocationItemAccordionModel";
-import { NavLink } from "react-router-dom";
-import appConfig from "../../../../../Utils/AppConfig";
+import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import React from "react";
-import Map from './Map/Map'
+import LocationItemAccordionModel from "../../../../../Models/LocationItemAccordionModel";
+import appConfig from "../../../../../Utils/AppConfig";
+import Header from "../Header/Header";
+import "./FullCity.css";
+import Map from './Map/Map';
 
 function FullCity(params: LocationItemAccordionModel): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -66,7 +64,7 @@ function FullCity(params: LocationItemAccordionModel): JSX.Element {
                     <h3 id="reachoffice">How To Reach Our Office in {params.city}</h3>
                     <p>{params.reachOfficeInstructions}</p>
 
-                    <Map></Map>
+                    <Map enumId={params.locationId}></Map>
                     <p></p>
 
                     <h3 id="availablevehicles">Available Vehicles</h3>

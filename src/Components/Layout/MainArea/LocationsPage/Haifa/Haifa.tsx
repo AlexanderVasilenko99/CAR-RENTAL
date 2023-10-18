@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import FullCity from "../FullCity/FullCity";
 import "./Haifa.css";
+import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 
 function Haifa(): JSX.Element {
+    useEffect(() => {
+        const coords = locationsmapenum.locations[LocationsEnum.HAIFA]
+        console.log(coords);
+    }, []);
     return (
         <div className="Haifa">
-            <FullCity city={"Haifa"} email='vasirental@hfa.co.il'
+            <FullCity city={"Haifa"} email='vasirental@hfa.co.il' locationId={LocationsEnum.HAIFA}
                 address="Yitshak Sadeh 10 st, Haifa." redirectPath="#" phoneNumber="" aboutLocation="The Haifa branch is
                         located in Haifa's city center. Placed in a strategic location between Haifa's Shrine Of The Bab,
                         Haifa's Museum of art, Haifa's old city, Haifa's zoo and the iconic Sderot Ben Gurion street and

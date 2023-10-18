@@ -7,5 +7,7 @@ class LocationItemAccordionModel {
     public redirectPath: string;
     public aboutLocation?: string;
     public reachOfficeInstructions?: string;
+
+    public locationId?:number;
 }
 export default LocationItemAccordionModel;
