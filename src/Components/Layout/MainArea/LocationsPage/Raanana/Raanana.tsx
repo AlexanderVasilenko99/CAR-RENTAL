@@ -1,15 +1,9 @@
 
-import { useEffect } from "react";
-import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
+import { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./Raanana.css";
 
 function Raanana(): JSX.Element {
-    useEffect(() => {
-        const coords = locationsmapenum.locations[LocationsEnum.RAANANA]
-        console.log(coords);
-    }, []);
-    
     return (
         <div className="Raanana">
             <FullCity city={"Ra'anana"} email='vasirental@raa.co.il' locationId={LocationsEnum.RAANANA}

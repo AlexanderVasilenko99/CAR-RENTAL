@@ -1,13 +1,8 @@
-import { useEffect } from "react";
+import { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./BenGurion.css";
-import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 
 function BenGurion(): JSX.Element {
-    useEffect(() => {
-        const coords = locationsmapenum.locations[LocationsEnum.BEN_GURION]
-        console.log(coords);
-    }, []);
     return (
         <div className="BenGurion">
             <FullCity city={"Ben Gurion Airport (TLV)"} email='vasirental@bgu.co.il' locationId={LocationsEnum.BEN_GURION}

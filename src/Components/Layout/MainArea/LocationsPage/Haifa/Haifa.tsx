@@ -1,13 +1,8 @@
-import { useEffect } from "react";
+import { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./Haifa.css";
-import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 
 function Haifa(): JSX.Element {
-    useEffect(() => {
-        const coords = locationsmapenum.locations[LocationsEnum.HAIFA]
-        console.log(coords);
-    }, []);
     return (
         <div className="Haifa">
             <FullCity city={"Haifa"} email='vasirental@hfa.co.il' locationId={LocationsEnum.HAIFA}

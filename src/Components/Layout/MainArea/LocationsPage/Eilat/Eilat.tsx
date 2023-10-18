@@ -1,13 +1,8 @@
-import { useEffect } from "react";
+import { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./Eilat.css";
-import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 
 function Eilat(): JSX.Element {
-    useEffect(() => {
-        const coords = locationsmapenum.locations[LocationsEnum.EILAT]
-        console.log(coords);
-    }, []);
     return (
         <div className="Eilat">
             <FullCity city={"Eilat"} email='vasirental@elt.co.il' locationId={LocationsEnum.EILAT}

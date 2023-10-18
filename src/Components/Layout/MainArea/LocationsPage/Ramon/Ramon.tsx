@@ -1,13 +1,8 @@
-import { useEffect } from "react";
+import { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./Ramon.css";
-import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 
 function Ramon(): JSX.Element {
-    useEffect(() => {
-        const coords = locationsmapenum.locations[LocationsEnum.RAMON]
-        console.log(coords);
-    }, []);
     return (
         <div className="Ramon">
             <FullCity city={"Be'er Ora"} email='vasirental@etm.co.il' locationId={LocationsEnum.RAMON}
