@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import appConfig from "../../../../../Utils/AppConfig";
 import { HashLink } from "react-router-hash-link";
 import React from "react";
+import Map from './Map/Map'
 
 function FullCity(params: LocationItemAccordionModel): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -65,7 +66,7 @@ function FullCity(params: LocationItemAccordionModel): JSX.Element {
                     <h3 id="reachoffice">How To Reach Our Office in {params.city}</h3>
                     <p>{params.reachOfficeInstructions}</p>
 
-                    <h3>Map</h3>
+                    <Map></Map>
                     <p></p>
 
                     <h3 id="availablevehicles">Available Vehicles</h3>
