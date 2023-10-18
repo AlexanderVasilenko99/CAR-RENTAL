@@ -1,11 +1,11 @@
-import { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
+import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./TelAviv.css";
 
 function TelAviv(): JSX.Element {
     return (
         <div className="TelAviv">
-            <FullCity city={"Tel Aviv"} email='vasirental@tlv.co.il' locationId={LocationsEnum.TEL_AVIV}
+            <FullCity city={"Tel Aviv"} email='vasirental@tlv.co.il' locationParams={locationsmapenum.locations[LocationsEnum.TEL_AVIV]}
                 address="Beit Ovad 4 st, Tel Aviv." redirectPath="#" phoneNumber="" aboutLocation="The Tel Aviv branch is
                         located in Tel Aviv city center. Placed at your convenience in a strategic location in the beating
                         heart of israel. The location is easily accessible by bus, or train via Tel Aviv Ha'Shalom and Tel Aviv

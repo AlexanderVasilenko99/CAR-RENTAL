@@ -1,9 +1,8 @@
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
-import locationsmapenum from '../../../../../../Enums/LocationsMapEnum';
+import LocationCoordinatesModel from '../../../../../../Models/LocationCoordinatesModel';
 import "./Map.css";
 
-function Map(id: { enumId: number }): JSX.Element {
-    const coords = locationsmapenum.locations[id.enumId];
+function Map(coordinates:LocationCoordinatesModel): JSX.Element {
     const containerStyle = {
         width: '100%',
         height: '400px'
@@ -18,13 +17,13 @@ function Map(id: { enumId: number }): JSX.Element {
             {isLoaded ?
                 <GoogleMap
                     mapContainerStyle={containerStyle}
-                    center={coords}
+                    center={coordinates}
                     zoom={14}
                 // onLoad={onLoad}
                 // onUnmount={onUnmount}
                 >
                     <></>
-                    <Marker position={coords} />
+                    <Marker position={coordinates} />
                 </GoogleMap> : <></>}
         </div >
     );

@@ -1,3 +1,4 @@
+import LocationCoordinatesModel from "./LocationCoordinatesModel";
 class LocationItemAccordionModel {
     public city: string;
     public address: string;
@@ -8,6 +9,6 @@ class LocationItemAccordionModel {
     public aboutLocation?: string;
     public reachOfficeInstructions?: string;
 
-    public locationId?:number;
+    public locationParams?:LocationCoordinatesModel;
 }
 export default LocationItemAccordionModel;

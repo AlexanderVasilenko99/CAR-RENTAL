@@ -1,11 +1,11 @@
-import { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
+import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
 import FullCity from "../FullCity/FullCity";
 import "./Eilat.css";
 
 function Eilat(): JSX.Element {
     return (
         <div className="Eilat">
-            <FullCity city={"Eilat"} email='vasirental@elt.co.il' locationId={LocationsEnum.EILAT}
+            <FullCity city={"Eilat"} email='vasirental@elt.co.il' locationParams={locationsmapenum.locations[LocationsEnum.EILAT]}
                 address="Sderot HaTmarim 3, Eilat." redirectPath="#" phoneNumber="" aboutLocation="The Eilat branch is
                         located in the heart of Eilat. Placed in a strategic location between all three big malls and only
                         10 minutes from it's beautiful beaches and marinas. The location makes it easy for you to enjoy the

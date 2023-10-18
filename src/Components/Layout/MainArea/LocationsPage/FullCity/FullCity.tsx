@@ -64,7 +64,7 @@ function FullCity(params: LocationItemAccordionModel): JSX.Element {
                     <h3 id="reachoffice">How To Reach Our Office in {params.city}</h3>
                     <p>{params.reachOfficeInstructions}</p>
 
-                    <Map enumId={params.locationId}></Map>
+                    <Map {...params.locationParams} ></Map>
                     <p></p>
 
                     <h3 id="availablevehicles">Available Vehicles</h3>
