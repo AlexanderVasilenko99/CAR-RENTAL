@@ -7,6 +7,7 @@
 .LocationItem div[class="row"],
 .LocationItemActive div[class="row"] {
     box-sizing: border-box;
+    transition: all 0.350s;
     height: 135px;
     width: 100%;
     padding: 10px;

@@ -1,6 +1,7 @@
 .SingleService {
     width: 410px;
     height: 370px;
+    transition: all 0.5s;
 }
 
 .SingleService * {

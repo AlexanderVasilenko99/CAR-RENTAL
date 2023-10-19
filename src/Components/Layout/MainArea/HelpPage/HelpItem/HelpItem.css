@@ -1,4 +1,5 @@
 .HelpItem {
+    transition: all 0.1s;
     box-sizing: border-box;
     height: 250px;
     padding: 12px;
