@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/car-rental/static/css/main.84a1261c.css",
+    "main.css": "/car-rental/static/css/main.5f315a8b.css",
     "main.js": "/car-rental/static/js/main.3f9d2268.js",
     "static/media/vid1.mp4": "/car-rental/static/media/vid1.ab7fd9d2b7e23d0f8bf7.mp4",
     "static/media/road2.png": "/car-rental/static/media/road2.843b236a9d58202145bd.png",
@@ -52,11 +52,11 @@
     "static/media/tnuvalogo.png": "/car-rental/static/media/tnuvalogo.3f05515a74a735ddb717.png",
     "static/media/playtikalogo.png": "/car-rental/static/media/playtikalogo.4d6fa5a4dc160c9ff374.png",
     "index.html": "/car-rental/index.html",
-    "main.84a1261c.css.map": "/car-rental/static/css/main.84a1261c.css.map",
+    "main.5f315a8b.css.map": "/car-rental/static/css/main.5f315a8b.css.map",
     "main.3f9d2268.js.map": "/car-rental/static/js/main.3f9d2268.js.map"
   },
   "entrypoints": [
-    "static/css/main.84a1261c.css",
+    "static/css/main.5f315a8b.css",
     "static/js/main.3f9d2268.js"
   ]
 }
