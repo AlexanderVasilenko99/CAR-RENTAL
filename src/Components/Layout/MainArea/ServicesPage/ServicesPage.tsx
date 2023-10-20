@@ -8,7 +8,7 @@ function ServicesPage(): JSX.Element {
             <div className="image-container">
                 {/* <img src={require("../../../../Assets/Images/road2.png")} /> */}
                 <div>
-                    <SingleService serviceHeader="Business Rental" serviceImageName="handshake2.png" serviceParagraph="Discover a unique program built exclusively for businesses of all scales." destinationUrl={appConfig.homePagePath} />
+                    <SingleService serviceHeader="Business Rental" serviceImageName="handshake2.png" serviceParagraph="Discover a unique program built exclusively for businesses of all scales." destinationUrl={appConfig.servicesBusinessRentalPagePath} />
                 </div>
                 <div>
                     <SingleService serviceHeader="Monthly Rental" serviceImageName="calendar.png" serviceParagraph="Looking to rent for a while? We got you covered!" destinationUrl="#" />

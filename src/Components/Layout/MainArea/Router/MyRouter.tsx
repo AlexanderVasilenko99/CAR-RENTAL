@@ -19,6 +19,7 @@ import PageNotFound from "../PageNotFound/PageNotFound";
 import ServicesPage from "../ServicesPage/ServicesPage";
 import SignInPage from "../SignInPage/SignInPage";
 import "./MyRouter.css";
+import BusinessRental from "../ServicesPage/BusinessRental/BusinessRental";
 
 
 
@@ -49,6 +50,7 @@ function Router(): JSX.Element {
                 <Route path={appConfig.helpPagePath} element={<  HelpPage />} />
                 <Route path={appConfig.signInPagePath} element={<  SignInPage />} />
                 <Route path={appConfig.servicesPagePath} element={<  ServicesPage />} />
+                <Route path={appConfig.servicesBusinessRentalPagePath} element={<  BusinessRental />} />
 
 
                 <Route path="/*" element={<PageNotFound />}></Route>
