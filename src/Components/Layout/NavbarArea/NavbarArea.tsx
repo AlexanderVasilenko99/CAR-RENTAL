@@ -125,7 +125,7 @@ function NavbarArea(): JSX.Element {
                         secondSubItemHeading='Monthly Rental'
                         secondSubItemRedirectPath={appConfig.servicesPagePath}
                         thirdSubItemHeading='Business Rental'
-                        thirdSubItemRedirectPath={appConfig.servicesPagePath}
+                        thirdSubItemRedirectPath={appConfig.servicesBusinessRentalPagePath}
                         fourthSubItemHeading='Chauffeur Services'
                         fourthSubItemRedirectPath={appConfig.servicesPagePath}
                         fifthSubItemHeading='Group Car Rental'
