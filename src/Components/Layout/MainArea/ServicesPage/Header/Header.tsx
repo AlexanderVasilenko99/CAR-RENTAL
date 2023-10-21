@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 import appConfig from "../../../../../Utils/AppConfig";
 
-function Header(): JSX.Element {
+function Header(props:): JSX.Element {
     return (
         <div className="Header">
             <h1>
