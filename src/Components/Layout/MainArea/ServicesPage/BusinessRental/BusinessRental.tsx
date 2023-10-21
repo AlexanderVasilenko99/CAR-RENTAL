@@ -24,6 +24,7 @@ function BusinessRental(): JSX.Element {
                         <ul>
                             <HashLink smooth to={appConfig.samePagePath + "aboutservice"}><li>About The Service</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "whoisitfor"}><li>Who Is The Service For?</li></HashLink>
+                            <HashLink smooth to={appConfig.samePagePath + "howitworks"}><li>How Does It Work?</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "taxesandwriteoff"}><li>Taxes & Business Write Off</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "welcomebonus"}><li>Welcome Bonus!</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "contactus"}><li>Contact Us</li></HashLink>
@@ -36,8 +37,13 @@ function BusinessRental(): JSX.Element {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
                         esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
                         vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
-                    <h3 id="whoisitfor">Who Is The Service For?</h3>
 
+                    <h3 id="whoisitfor">Who Is The Service For?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
+                        esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
+                        vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
+                        
+                    <h3 id="howitworks">How Does It Work?</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
                         esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
                         vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
