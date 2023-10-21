@@ -28,6 +28,7 @@ class AppConfig {
     public readonly signInPagePath = `/sign-in/`
     public readonly servicesPagePath = `/services/`
     public readonly servicesBusinessRentalPagePath = this.servicesPagePath + `business-rental/`;
+    public readonly servicesMonthlyRentalPagePath = this.servicesPagePath + `monthly-rental/`;
     public readonly pageNotFoundPath = `/404/`
 
     private readonly primaryColor = "#952323"

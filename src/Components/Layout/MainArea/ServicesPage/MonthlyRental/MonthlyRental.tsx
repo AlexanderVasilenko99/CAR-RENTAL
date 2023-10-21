@@ -1,18 +1,18 @@
 import { HashLink } from "react-router-hash-link";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
-import "./BusinessRental.css";
+import "./MonthlyRental.css";
 
 
-function BusinessRental(): JSX.Element {
+function MonthlyRental(): JSX.Element {
     return (
-        <div className="BusinessRental">
+        <div className="MonthlyRental">
             <div id="header">
                 <div className="img-container">
                     <img src={require("../../../../../Assets/Images/business.png")} />
                     <div className="img-container-content">
                         <div>
-                            <h1>Business Rental</h1>
+                            <h1>Monthly Rental</h1>
                         </div>
                     </div>
                 </div>
@@ -68,4 +68,4 @@ function BusinessRental(): JSX.Element {
     );
 }
 
-export default BusinessRental;
+export default MonthlyRental;
