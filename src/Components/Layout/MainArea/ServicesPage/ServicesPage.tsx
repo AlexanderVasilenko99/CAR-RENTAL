@@ -24,7 +24,8 @@ function ServicesPage(): JSX.Element {
                 </div>
                 <div>
                     <SingleService serviceHeader="Group Car Rental" serviceImageName="group.png"
-                        serviceParagraph="Discover the best prices and discounts for groups renting 3 cars or more!" destinationUrl="#" />
+                        serviceParagraph="Discover the best prices and discounts for groups renting 3 cars or more!"
+                        destinationUrl={appConfig.servicesGroupRentalPagePath} />
                 </div>
                 <div>
                     <SingleService serviceHeader="One Day Car Rental" serviceImageName="oneday.png"
