@@ -9,7 +9,7 @@ function MonthlyRental(): JSX.Element {
         <div className="MonthlyRental">
             <div id="header">
                 <div className="img-container">
-                    <img src={require("../../../../../Assets/Images/business.png")} />
+                    <img src={require("../../../../../Assets/Images/monthly2.png")} />
                     <div className="img-container-content">
                         <div>
                             <h1>Monthly Rental</h1>
