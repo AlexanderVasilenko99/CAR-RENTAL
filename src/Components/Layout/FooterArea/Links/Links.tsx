@@ -38,7 +38,7 @@ function Links(): JSX.Element {
                         seventhLinkHeader="Luxury"
                         seventhLinkPath={appConfig.fleetPageLuxuryPath}
                         eighthLinkHeader="Business Rental"
-                        eighthLinkPath="#"
+                        eighthLinkPath={appConfig.servicesBusinessRentalPagePath}
                         ninthLinkHeader="Our Fleet"
                         ninthLinkPath={appConfig.fleetPagePath}
                     />
@@ -48,8 +48,11 @@ function Links(): JSX.Element {
                 <div className="family-container">
                     <SingleLinkFamily header="Services"
                         firstLinkHeader="Vehicle Rental"
+                        firstLinkPath={appConfig.fleetPagePath}
                         secondLinkHeader="Business Rental"
+                        secondLinkPath={appConfig.servicesBusinessRentalPagePath}
                         thirdLinkHeader="Monthly Rental"
+                        thirdLinkPath={appConfig.servicesMonthlyRentalPagePath}
                         fourthLinkHeader="Group Car Rental"
                         fifthLinkHeader="One Day Car Rental"
                         sixthLinkHeader="One Way Car Rental"
