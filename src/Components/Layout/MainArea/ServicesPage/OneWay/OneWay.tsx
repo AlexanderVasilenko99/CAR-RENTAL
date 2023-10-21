@@ -12,7 +12,7 @@ function OneWay(): JSX.Element {
                     <img src={require("../../../../../Assets/Images/monthly2.png")} />
                     <div className="img-container-content">
                         <div>
-                            <h1>One Day Car Rental</h1>
+                            <h1>One Way Car Rental</h1>
                         </div>
                     </div>
                 </div>
