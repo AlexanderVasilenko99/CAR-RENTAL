@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/car-rental/static/css/main.5d1d7659.css",
-    "main.js": "/car-rental/static/js/main.0d75aa57.js",
+    "main.css": "/car-rental/static/css/main.61ebdb65.css",
+    "main.js": "/car-rental/static/js/main.51c4d2b5.js",
     "static/media/vid1.mp4": "/car-rental/static/media/vid1.ab7fd9d2b7e23d0f8bf7.mp4",
     "static/media/road2.png": "/car-rental/static/media/road2.843b236a9d58202145bd.png",
     "static/media/road22.png": "/car-rental/static/media/road22.dd27e5ef7e4e3922463b.png",
@@ -11,7 +11,9 @@
     "static/media/oneday.png": "/car-rental/static/media/oneday.a6950cd776bcc79143e1.png",
     "static/media/handshake.png": "/car-rental/static/media/handshake.5b2e2b1e60fcaab06d48.png",
     "static/media/destination.png": "/car-rental/static/media/destination.cacc61b05ff31eaaf207.png",
+    "static/media/monthly.png": "/car-rental/static/media/monthly.1675949bbedb392965d8.png",
     "static/media/tire.png": "/car-rental/static/media/tire.4324d2fe36ecf367bb3b.png",
+    "static/media/monthly2.png": "/car-rental/static/media/monthly2.d8f180a6a18c71305af7.png",
     "static/media/business.png": "/car-rental/static/media/business.2d6531b0e4b2855fec4b.png",
     "static/media/handshake2.png": "/car-rental/static/media/handshake2.de41a6d87abccd322362.png",
     "static/media/haifa.png": "/car-rental/static/media/haifa.44a8f29a4a1660b4d7c1.png",
@@ -53,11 +55,11 @@
     "static/media/tnuvalogo.png": "/car-rental/static/media/tnuvalogo.3f05515a74a735ddb717.png",
     "static/media/playtikalogo.png": "/car-rental/static/media/playtikalogo.4d6fa5a4dc160c9ff374.png",
     "index.html": "/car-rental/index.html",
-    "main.5d1d7659.css.map": "/car-rental/static/css/main.5d1d7659.css.map",
-    "main.0d75aa57.js.map": "/car-rental/static/js/main.0d75aa57.js.map"
+    "main.61ebdb65.css.map": "/car-rental/static/css/main.61ebdb65.css.map",
+    "main.51c4d2b5.js.map": "/car-rental/static/js/main.51c4d2b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d1d7659.css",
-    "static/js/main.0d75aa57.js"
+    "static/css/main.61ebdb65.css",
+    "static/js/main.51c4d2b5.js"
   ]
 }
