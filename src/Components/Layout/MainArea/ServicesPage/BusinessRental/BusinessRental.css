@@ -2,6 +2,38 @@
 	
 }
 
+#header .img-container{
+    position: relative;
+    height: 340px;
+}
+.img-container-content{
+    position: absolute;
+    top: 250px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    /* opacity: .3; */
+}
+.img-container-content > div{
+    padding-left: 175px;
+    color: #FAF6E9;
+    font-size: 26px;
+}
+.img-container-content > div h1{
+    margin: 10px 0px;
+}
+#header .img-container img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 340px;
+}
+
+
+
+
+
+
 .BusinessRental .grid-container {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -14,6 +46,7 @@
 }
 .grid-container .content {
     border: 1px solid gray;
+    border-top: none;
 }
 
 .grid-container .content>div {
@@ -31,7 +64,7 @@
 
 
 .grid-container .link-tree-container {
-    background-color: #952323;
+    background-color: #FAF6E9;
 }
 
 .grid-container .link-tree-container .link-tree {
@@ -39,7 +72,7 @@
     top: 80px;
 }
 .link-tree-container .link-tree h3{
-    color: #FAF6E9;
+    color: #952323;
     font-weight: 800;
 }
 .link-tree-container .link-tree ul{ 
@@ -50,13 +83,15 @@
     margin: 5px 0px;
     font-weight: 500;
     padding: 5px 0px;
+    transition: all 150ms;
 }
 .link-tree-container .link-tree ul li:hover{ 
     background-color: #A73121;
+    color: #FAF6E9;
 }
 
 .link-tree-container .link-tree ul a li { 
-    color: #FAF6E9;
+    color: #952323;
 }
 .link-tree-container .link-tree ul a{ 
     text-decoration: none;
