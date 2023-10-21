@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/car-rental/static/css/main.fd3913a0.css",
-    "main.js": "/car-rental/static/js/main.9c697aad.js",
+    "main.css": "/car-rental/static/css/main.5d1d7659.css",
+    "main.js": "/car-rental/static/js/main.0d75aa57.js",
     "static/media/vid1.mp4": "/car-rental/static/media/vid1.ab7fd9d2b7e23d0f8bf7.mp4",
     "static/media/road2.png": "/car-rental/static/media/road2.843b236a9d58202145bd.png",
     "static/media/road22.png": "/car-rental/static/media/road22.dd27e5ef7e4e3922463b.png",
@@ -12,6 +12,7 @@
     "static/media/handshake.png": "/car-rental/static/media/handshake.5b2e2b1e60fcaab06d48.png",
     "static/media/destination.png": "/car-rental/static/media/destination.cacc61b05ff31eaaf207.png",
     "static/media/tire.png": "/car-rental/static/media/tire.4324d2fe36ecf367bb3b.png",
+    "static/media/business.png": "/car-rental/static/media/business.2d6531b0e4b2855fec4b.png",
     "static/media/handshake2.png": "/car-rental/static/media/handshake2.de41a6d87abccd322362.png",
     "static/media/haifa.png": "/car-rental/static/media/haifa.44a8f29a4a1660b4d7c1.png",
     "static/media/bengurion.png": "/car-rental/static/media/bengurion.c188bd07748d76371342.png",
@@ -52,11 +53,11 @@
     "static/media/tnuvalogo.png": "/car-rental/static/media/tnuvalogo.3f05515a74a735ddb717.png",
     "static/media/playtikalogo.png": "/car-rental/static/media/playtikalogo.4d6fa5a4dc160c9ff374.png",
     "index.html": "/car-rental/index.html",
-    "main.fd3913a0.css.map": "/car-rental/static/css/main.fd3913a0.css.map",
-    "main.9c697aad.js.map": "/car-rental/static/js/main.9c697aad.js.map"
+    "main.5d1d7659.css.map": "/car-rental/static/css/main.5d1d7659.css.map",
+    "main.0d75aa57.js.map": "/car-rental/static/js/main.0d75aa57.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd3913a0.css",
-    "static/js/main.9c697aad.js"
+    "static/css/main.5d1d7659.css",
+    "static/js/main.0d75aa57.js"
   ]
 }
