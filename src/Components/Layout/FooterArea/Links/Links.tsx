@@ -60,6 +60,7 @@ function Links(): JSX.Element {
                         sixthLinkHeader="One Day Car Rental"
                         sixthLinkPath={appConfig.servicesOneDayRentalPagePath}
                         seventhLinkHeader="One Way Car Rental"
+                        seventhLinkPath={appConfig.servicesOneWayRentalPagePath}
                     />
                 </div>
             </div>

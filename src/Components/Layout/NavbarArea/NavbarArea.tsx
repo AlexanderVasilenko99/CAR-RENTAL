@@ -133,7 +133,7 @@ function NavbarArea(): JSX.Element {
                         sixthSubItemHeading='One Day Car Rental'
                         sixthSubItemRedirectPath={appConfig.servicesOneDayRentalPagePath}
                         seventhSubItemHeading='One Way Car Rental'
-                        seventhSubItemRedirectPath={appConfig.servicesPagePath}
+                        seventhSubItemRedirectPath={appConfig.servicesOneWayRentalPagePath}
                         eightSubItemHeading='All Services'
                         eightSubItemRedirectPath={appConfig.servicesPagePath}
                         itemSvgComponent={< ManageSearchOutlinedIcon />} />

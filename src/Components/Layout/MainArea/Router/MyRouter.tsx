@@ -24,6 +24,7 @@ import MonthlyRental from "../ServicesPage/MonthlyRental/MonthlyRental";
 import Chauffeur from "../ServicesPage/Chauffeur/Chauffeur";
 import GroupRental from "../ServicesPage/GroupRental/Chauffeur";
 import OneDay from "../ServicesPage/OneDay/OneDay";
+import OneWay from "../ServicesPage/OneWay/OneWay";
 
 
 
@@ -60,6 +61,7 @@ function Router(): JSX.Element {
                 <Route path={appConfig.servicesChauffeurPagePath} element={<  Chauffeur />} />
                 <Route path={appConfig.servicesGroupRentalPagePath} element={<  GroupRental />} />
                 <Route path={appConfig.servicesOneDayRentalPagePath} element={<  OneDay />} />
+                <Route path={appConfig.servicesOneWayRentalPagePath} element={<  OneWay />} />
 
 
                 <Route path="/*" element={<PageNotFound />}></Route>
