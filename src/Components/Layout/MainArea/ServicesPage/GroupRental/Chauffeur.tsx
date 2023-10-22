@@ -9,7 +9,7 @@ function GroupRental(): JSX.Element {
         <div className="GroupRental">
             <div id="header">
                 <div className="img-container">
-                    <img src={require("../../../../../Assets/Images/monthly2.png")} />
+                    <img src={require("../../../../../Assets/Images/group2.png")} />
                     <div className="img-container-content">
                         <div>
                             <h1>Group Car Rental</h1>
