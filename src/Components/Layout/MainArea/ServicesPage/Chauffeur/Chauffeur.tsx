@@ -34,29 +34,19 @@ function Chauffeur(): JSX.Element {
                 <div className="content">
 
                     <h3 id="aboutservice">About The  Service</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
-                        esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
-                        vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
+                    <p>Make this page more luxurious</p>
 
                     <h3 id="whoisitfor">Who Is The Service For?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
-                        esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
-                        vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
+                    <p></p>
 
                     <h3 id="howitworks">How Does It Work?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
-                        esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
-                        vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
+                    <p></p>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
-                        esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
-                        vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
+                    <p></p>
 
                     <h3 id="welcomebonus">Welcome Bonus!</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi tempore dolores laborum hic officia
-                        esse nemo id distinctio beatae incidunt earum aspernatur vel, facere labore rerum voluptatum voluptate
-                        vitae deleniti. Perspiciatis mollitia incidunt, expedita a cupiditate possimus numquam dolorem?</p>
+                    <p></p>
 
                     <h3 id="contactus">Contact Us!</h3>
                     <p>form</p>

@@ -22,7 +22,7 @@ import "./MyRouter.css";
 import BusinessRental from "../ServicesPage/BusinessRental/BusinessRental";
 import MonthlyRental from "../ServicesPage/MonthlyRental/MonthlyRental";
 import Chauffeur from "../ServicesPage/Chauffeur/Chauffeur";
-import GroupRental from "../ServicesPage/GroupRental/Chauffeur";
+import GroupRental from "../ServicesPage/GroupRental/GroupRental";
 import OneDay from "../ServicesPage/OneDay/OneDay";
 import OneWay from "../ServicesPage/OneWay/OneWay";
 

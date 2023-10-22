@@ -76,7 +76,7 @@ function MonthlyRental(): JSX.Element {
                     <p>משהו בסגנון של מה שעשיתי לגני</p>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
-                    <p>Vasilenko Car Rental, we're here to help you navigate the financial aspects of your car rental needs. One of
+                    <p>At Vasilenko Car Rental, we're here to help you navigate the financial aspects of your car rental needs. One of
                         the advantages of partnering with us is the potential for valuable tax deductions and business write-offs.
                         Depending on your business structure and the nature of your rentals, you may be eligible to claim a portion
                         of your car rental expenses as a tax deduction. By doing so, you can reduce your taxable income and ultimately
