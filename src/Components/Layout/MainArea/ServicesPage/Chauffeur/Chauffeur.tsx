@@ -2,6 +2,7 @@ import { HashLink } from "react-router-hash-link";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
 import "./Chauffeur.css";
+import LinkTree from "../LinkTree/LinkTree";
 
 
 function Chauffeur(): JSX.Element {
@@ -29,6 +30,8 @@ function Chauffeur(): JSX.Element {
                             <HashLink smooth to={appConfig.samePagePath + "welcomebonus"}><li>Welcome Bonus!</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "contactus"}><li>Contact Us</li></HashLink>
                         </ul>
+                        <h3>See Also</h3>
+                        <LinkTree />
                     </div>
                 </div>
                 <div className="content">

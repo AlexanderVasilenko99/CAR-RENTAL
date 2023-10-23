@@ -2,6 +2,7 @@ import { HashLink } from "react-router-hash-link";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
 import "./OneWay.css";
+import LinkTree from "../LinkTree/LinkTree";
 
 
 function OneWay(): JSX.Element {
@@ -27,6 +28,8 @@ function OneWay(): JSX.Element {
                             <HashLink smooth to={appConfig.samePagePath + "howitworks"}><li>How Does It Work?</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "contactus"}><li>Contact Us</li></HashLink>
                         </ul>
+                        <h3>See Also</h3>
+                        <LinkTree />
                     </div>
                 </div>
                 <div className="content">

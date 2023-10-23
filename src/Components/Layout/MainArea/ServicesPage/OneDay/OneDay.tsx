@@ -2,6 +2,7 @@ import { HashLink } from "react-router-hash-link";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
 import "./OneDay.css";
+import LinkTree from "../LinkTree/LinkTree";
 
 
 function OneDay(): JSX.Element {
@@ -28,6 +29,8 @@ function OneDay(): JSX.Element {
                             <HashLink smooth to={appConfig.samePagePath + "taxesandwriteoff"}><li>Taxes & Business Write Off</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "contactus"}><li>Contact Us</li></HashLink>
                         </ul>
+                        <h3>See Also</h3>
+                        <LinkTree />
                     </div>
                 </div>
                 <div className="content">

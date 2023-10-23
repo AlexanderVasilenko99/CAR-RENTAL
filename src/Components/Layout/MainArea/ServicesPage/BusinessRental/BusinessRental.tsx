@@ -3,6 +3,7 @@ import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
 import "./BusinessRental.css";
 import { NavLink } from "react-router-dom";
+import LinkTree from "../LinkTree/LinkTree";
 
 
 function BusinessRental(): JSX.Element {
@@ -31,6 +32,8 @@ function BusinessRental(): JSX.Element {
                             <HashLink smooth to={appConfig.samePagePath + "welcomebonus"}><li>Welcome Bonus!</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "contactus"}><li>Contact Us</li></HashLink>
                         </ul>
+                        <h3>See Also</h3>
+                        <LinkTree />
                     </div>
                 </div>
                 <div className="content">
