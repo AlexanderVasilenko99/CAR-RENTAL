@@ -73,7 +73,10 @@ function MonthlyRental(): JSX.Element {
                         offers the flexibility you need.</p>
 
                     <h3 id="howitworks">How Does It Work?</h3>
-                    <p>משהו בסגנון של מה שעשיתי לגני</p>
+                    <p>The process is very simple. It contains of four steps and usually takes 1-2 business days.</p>
+                    <div className="howitworks-img-container">
+                        <img src={require("../../../../../Assets/Images/monthlyrentalsteps2.png")} />
+                    </div>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
                     <p>At Vasilenko Car Rental, we're here to help you navigate the financial aspects of your car rental needs. One of

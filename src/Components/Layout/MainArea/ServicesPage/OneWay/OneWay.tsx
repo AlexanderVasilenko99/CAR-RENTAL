@@ -25,7 +25,6 @@ function OneWay(): JSX.Element {
                             <HashLink smooth to={appConfig.samePagePath + "aboutservice"}><li>About The Service</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "whoisitfor"}><li>Who Is The Service For?</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "howitworks"}><li>How Does It Work?</li></HashLink>
-                            <HashLink smooth to={appConfig.samePagePath + "welcomebonus"}><li>Welcome Bonus!</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "contactus"}><li>Contact Us</li></HashLink>
                         </ul>
                     </div>
@@ -53,7 +52,8 @@ function OneWay(): JSX.Element {
                         and enjoyable experience.</p>
 
                     <h3 id="howitworks">How Does It Work?</h3>
-                    <p></p>
+                    <p>When you search a car rental, under the 'rental type' section choose the 'one way' option. You choose pickup
+                        and dropdown locations and discount applies automatically!</p>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
                     <p>At Vasilenko Car Rental, we're here to help you navigate the financial aspects of your car rental needs. One of

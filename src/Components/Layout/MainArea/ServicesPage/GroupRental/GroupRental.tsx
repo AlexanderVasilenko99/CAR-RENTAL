@@ -28,7 +28,6 @@ function GroupRental(): JSX.Element {
                             <HashLink smooth to={appConfig.samePagePath + "businessclient"}><li>Business Client?</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "howitworks"}><li>How Does It Work?</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "taxesandwriteoff"}><li>Taxes & Business Write Off</li></HashLink>
-                            <HashLink smooth to={appConfig.samePagePath + "welcomebonus"}><li>Welcome Bonus!</li></HashLink>
                             <HashLink smooth to={appConfig.samePagePath + "contactus"}><li>Contact Us</li></HashLink>
                         </ul>
                     </div>
@@ -63,7 +62,10 @@ function GroupRental(): JSX.Element {
 
 
                     <h3 id="howitworks">How Does It Work?</h3>
-                    <p>כמו אצל גני</p>
+                    <p>The process is very simple. It contains of only three steps and usually takes 1-2 business days.</p>
+                    <div className="howitworks-img-container">
+                        <img src={require("../../../../../Assets/Images/grouprentalsteps2.png")} />
+                    </div>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
                     <p>At Vasilenko Car Rental, we're here to help you navigate the financial aspects of your car rental needs. One of

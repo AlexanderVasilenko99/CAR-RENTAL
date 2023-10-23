@@ -147,6 +147,14 @@
     color: #952323;
     margin: 0px 10px 0px 0px;
 }
+.content .howitworks-img-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.content img{
+    width: 100%;
+}
 
 .p{
     height: 70px;

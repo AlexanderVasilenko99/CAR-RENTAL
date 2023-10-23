@@ -73,7 +73,10 @@ function BusinessRental(): JSX.Element {
                         start tailoring the best business rental program for you!</p>
 
                     <h3 id="howitworks">How Does It Work?</h3>
-                    <p>משהו כמו שעשיתי לגני (פלואו)</p>
+                    <p>The process is very simple. It contains of four steps and usually takes 1-2 business days.</p>
+                    <div className="howitworks-img-container">
+                        <img src={require("../../../../../Assets/Images/monthlyrentalsteps2.png")} />
+                    </div>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
                     <p>At Vasilenko Car Rental, we're here to help you navigate the financial aspects of your car rental needs. One of

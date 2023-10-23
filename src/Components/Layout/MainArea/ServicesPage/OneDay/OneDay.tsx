@@ -53,7 +53,9 @@ function OneDay(): JSX.Element {
                         solution for those looking for a quick, hassle-free, and cost-effective way to get around.</p>
 
                     <h3 id="howitworks">How Does It Work?</h3>
-                    <p></p>
+                    <p>When you search a car rental, under the 'rental type' section choose the amount of hours you wish your rent
+                        to be.<br /> 12h, 18h, or 24h. Discount applies automatically!
+                    </p>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
                     <p>At Vasilenko Car Rental, we're here to help you navigate the financial aspects of your car rental needs. One of
