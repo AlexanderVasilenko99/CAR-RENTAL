@@ -9,6 +9,7 @@ function LinkTree(): JSX.Element {
                 <NavLink to={appConfig.servicesBusinessRentalPagePath}><li>Business Rental</li></NavLink>
                 <NavLink to={appConfig.servicesMonthlyRentalPagePath}><li>Monthly Rental</li></NavLink>
                 <NavLink to={appConfig.servicesGroupRentalPagePath}><li>Group Rental</li></NavLink>
+                <NavLink to={appConfig.servicesChauffeurPagePath}><li>Chauffeur Services</li></NavLink>
                 <NavLink to={appConfig.servicesOneWayRentalPagePath}><li>One Way Rental</li></NavLink>
                 <NavLink to={appConfig.servicesOneDayRentalPagePath}><li>One Day Rental</li></NavLink>
             </ul>
