@@ -67,7 +67,6 @@ function FullCity(params: LocationItemAccordionModel): JSX.Element {
 
                     <Map {...params.locationParams} ></Map>
                     <p></p>
-
                     <h3 id="availablevehicles"><NavLink to={appConfig.fleetPageAllVehiclesPath}>Available Vehicles</NavLink></h3>
                     <p>At {params.city} you can choose the car that best suits your needs, you will have all our vehicles in the fleet
                         at your disposal, with manual or automatic transmission: small cars, medium and large cars, convertibles,

@@ -66,6 +66,7 @@
 
 
 .FullCity .grid-container .content h3 {
+    scroll-margin-top: 80px;
     margin-bottom: 10px;
 }
 .FullCity .grid-container .content .hours-and-contact .subj-content {
