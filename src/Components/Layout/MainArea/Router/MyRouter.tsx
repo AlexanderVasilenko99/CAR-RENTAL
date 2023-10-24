@@ -16,15 +16,15 @@ import Ramon from "../LocationsPage/Ramon/Ramon";
 import TelAviv from "../LocationsPage/TelAviv/TelAviv";
 import Tiberias from "../LocationsPage/Tiberias/Tiberias";
 import PageNotFound from "../PageNotFound/PageNotFound";
+import BusinessRental from "../ServicesPage/BusinessRental/BusinessRental";
+import Chauffeur from "../ServicesPage/Chauffeur/Chauffeur";
+import GroupRental from "../ServicesPage/GroupRental/GroupRental";
+import MonthlyRental from "../ServicesPage/MonthlyRental/MonthlyRental";
+import OneDay from "../ServicesPage/OneDay/OneDay";
+import OneWay from "../ServicesPage/OneWay/OneWay";
 import ServicesPage from "../ServicesPage/ServicesPage";
 import SignInPage from "../SignInPage/SignInPage";
 import "./MyRouter.css";
-import BusinessRental from "../ServicesPage/BusinessRental/BusinessRental";
-import MonthlyRental from "../ServicesPage/MonthlyRental/MonthlyRental";
-import Chauffeur from "../ServicesPage/Chauffeur/Chauffeur";
-import GroupRental from "../ServicesPage/GroupRental/GroupRental";
-import OneDay from "../ServicesPage/OneDay/OneDay";
-import OneWay from "../ServicesPage/OneWay/OneWay";
 
 
 

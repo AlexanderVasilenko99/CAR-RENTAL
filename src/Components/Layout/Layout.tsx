@@ -1,14 +1,15 @@
-import { Router } from "react-router-dom";
 import FooterArea from "./FooterArea/FooterArea";
 import "./Layout.css";
-import HomePage from "./MainArea/HomePage/HomePage";
 import MyRouter from "./MainArea/Router/MyRouter";
+import ScrollToTop from "./MainArea/ScrollToTop/ScrollToTop";
 import NavbarArea from "./NavbarArea/NavbarArea";
+
 
 function Layout(): JSX.Element {
     return (
         <div className="Layout">
-			<nav><NavbarArea /></nav>
+            <ScrollToTop />
+            <nav><NavbarArea /></nav>
             <main><MyRouter /></main>
             <footer><FooterArea /></footer>
         </div>
