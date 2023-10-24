@@ -1,24 +1,24 @@
 .FullCity {}
 
-.FullCity .grid-container {
+.grid-container {
     display: grid;
     grid-template-columns: 350px 1fr;
     margin: 0px 175px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.FullCity.grid-container>* {
+.grid-container>* {
     padding: 10px 20px 10px 20px;
 }
-.FullCity .grid-container .content {
+.grid-container .content {
     border: 1px solid gray;
 }
 
-.FullCity .grid-container .content>div {
+.grid-container .content>div {
     margin-bottom: 35px;
 }
 
-.FullCity .grid-container p {
+.grid-container p {
     margin: 8px 0px;
 }
 
@@ -28,35 +28,35 @@
 
 
 
-.FullCity .grid-container .link-tree-container {
+.grid-container .link-tree-container {
     background-color: #952323;
 }
 
-.FullCity .grid-container .link-tree-container .link-tree {
+.grid-container .link-tree-container .link-tree {
     position: sticky;
     top: 80px;
 }
-.FullCity .link-tree-container .link-tree h3{
+.link-tree-container .link-tree h3{
     color: #FAF6E9;
     font-weight: 800;
 }
-.FullCity .link-tree-container .link-tree ul{ 
+.link-tree-container .link-tree ul{ 
     list-style: none;
     padding: 0;
 }
-.FullCity .link-tree-container .link-tree ul li{ 
+.link-tree-container .link-tree ul li{ 
     margin: 5px 0px;
     font-weight: 500;
     padding: 5px 0px;
 }
-.FullCity .link-tree-container .link-tree ul li:hover{ 
+.link-tree-container .link-tree ul li:hover{ 
     background-color: #A73121;
 }
 
-.FullCity .link-tree-container .link-tree ul a li { 
+.link-tree-container .link-tree ul a li { 
     color: #FAF6E9;
 }
-.FullCity .link-tree-container .link-tree ul a{ 
+.link-tree-container .link-tree ul a{ 
     text-decoration: none;
 }
 
@@ -65,22 +65,22 @@
 
 
 
-.FullCity .grid-container .content h3 {
+.grid-container .content h3 {
     scroll-margin-top: 80px;
     margin-bottom: 10px;
 }
-.FullCity .grid-container .content .hours-and-contact .subj-content {
+.grid-container .content .hours-and-contact .subj-content {
     display: grid;
     grid-template-columns: 150px 1fr;
 }
 
-.FullCity .subj-content .days {
+.subj-content .days {
     color: #952323;
     font-weight: 900;
     margin: auto 0px;
 }
 
-.FullCity .hours-and-contact .open {
+.hours-and-contact .open {
     width: fit-content;
     background-color: rgb(70, 180, 70);
     border-radius: 5px;
@@ -88,7 +88,7 @@
     font-weight: 500;
 }
 
-.FullCity .hours-and-contact .closed {
+.hours-and-contact .closed {
     width: fit-content;
     background-color: rgb(205, 57, 57);
     border-radius: 5px;
@@ -96,34 +96,34 @@
     font-weight: 500;
 }
 
-.FullCity .hours-and-contact .contact {
+.hours-and-contact .contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 8px 0px;
 }
 
-.FullCity .hours-and-contact .contact>* {
+.hours-and-contact .contact>* {
     display: flex;
     align-items: center;
 }
 
-.FullCity .hours-and-contact .contact svg {
+.hours-and-contact .contact svg {
     color: #952323;
     margin: 0px 10px 0px 0px;
 }
 
-.FullCity .p{
+.p{
     height: 70px;
 }
 
-.FullCity .content h3 a{
+.content h3 a{
     text-decoration: none;
     color: black;
 }
-.FullCity .content p a{
+.content p a{
     font-weight: 600;
     color: #A73121;
 }
-.FullCity .content p a:hover{
+.content p a:hover{
     color: #952323;
 }
