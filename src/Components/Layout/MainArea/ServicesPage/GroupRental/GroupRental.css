@@ -1,12 +1,11 @@
-.GroupRental {
-	
-}
+.GroupRental {}
 
-#header .img-container{
+.GroupRental #header .img-container {
     position: relative;
     height: 340px;
 }
-.img-container-content{
+
+.GroupRental .img-container-content {
     position: absolute;
     top: 250px;
     left: 0;
@@ -14,15 +13,18 @@
     width: 100%;
     /* opacity: .3; */
 }
-.img-container-content > div{
+
+.GroupRental .img-container-content>div {
     padding-left: 175px;
     color: #FAF6E9;
     font-size: 26px;
 }
-.img-container-content > div h1{
+
+.GroupRental .img-container-content>div h1 {
     margin: 10px 0px;
 }
-#header .img-container img{
+
+.GroupRental #header .img-container img {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -41,19 +43,20 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.grid-container>* {
+.GroupRental .grid-container>* {
     padding: 10px 20px 10px 20px;
 }
-.grid-container .content {
+
+.GroupRental .content {
     border: 1px solid gray;
     border-top: none;
 }
 
-.grid-container .content>div {
+.GroupRental .content>div {
     margin-bottom: 35px;
 }
 
-.grid-container p {
+.GroupRental .grid-container p {
     margin: 8px 0px;
 }
 
@@ -63,37 +66,42 @@
 
 
 
-.grid-container .link-tree-container {
+.GroupRental .link-tree-container {
     background-color: #FAF6E9;
 }
 
-.grid-container .link-tree-container .link-tree {
+.GroupRental .link-tree {
     position: sticky;
     top: 80px;
 }
-.link-tree-container .link-tree h3{
+
+.GroupRental .link-tree h3 {
     color: #952323;
     font-weight: 800;
 }
-.link-tree-container .link-tree ul{ 
+
+.GroupRental .link-tree ul {
     list-style: none;
     padding: 0;
 }
-.link-tree-container .link-tree ul li{ 
+
+.GroupRental .link-tree ul li {
     margin: 5px 0px;
     font-weight: 500;
     padding: 5px 0px;
     transition: all 150ms;
 }
-.link-tree-container .link-tree ul li:hover{ 
+
+.GroupRental .link-tree ul li:hover {
     background-color: #A73121;
     color: #FAF6E9;
 }
 
-.link-tree-container .link-tree ul a li { 
+.GroupRental .link-tree ul a li {
     color: #952323;
 }
-.link-tree-container .link-tree ul a{ 
+
+.GroupRental .link-tree ul a {
     text-decoration: none;
 }
 
@@ -102,22 +110,23 @@
 
 
 
-.grid-container .content h3 {
+.GroupRental .content h3 {
     scroll-margin-top: 80px;
     margin-bottom: 10px;
 }
-.grid-container .content .hours-and-contact .subj-content {
+
+.GroupRental .subj-content {
     display: grid;
     grid-template-columns: 150px 1fr;
 }
 
-.subj-content .days {
+.GroupRental .days {
     color: #952323;
     font-weight: 900;
     margin: auto 0px;
 }
 
-.hours-and-contact .open {
+.GroupRental .open {
     width: fit-content;
     background-color: rgb(70, 180, 70);
     border-radius: 5px;
@@ -125,7 +134,7 @@
     font-weight: 500;
 }
 
-.hours-and-contact .closed {
+.GroupRental .closed {
     width: fit-content;
     background-color: rgb(205, 57, 57);
     border-radius: 5px;
@@ -133,22 +142,22 @@
     font-weight: 500;
 }
 
-.hours-and-contact .contact {
+.GroupRental .contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 8px 0px;
 }
 
-.hours-and-contact .contact>* {
+.GroupRental .contact>* {
     display: flex;
     align-items: center;
 }
 
-.hours-and-contact .contact svg {
+.GroupRental .contact svg {
     color: #952323;
     margin: 0px 10px 0px 0px;
 }
 
-.p{
+.GroupRental .p {
     height: 70px;
 }

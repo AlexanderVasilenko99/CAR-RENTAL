@@ -1,12 +1,11 @@
-.MonthlyRental {
-	
-}
+.MonthlyRental {}
 
-#header .img-container{
+.MonthlyRental #header .img-container {
     position: relative;
     height: 340px;
 }
-.img-container-content{
+
+.MonthlyRental .img-container-content {
     position: absolute;
     top: 250px;
     left: 0;
@@ -14,15 +13,18 @@
     width: 100%;
     /* opacity: .3; */
 }
-.img-container-content > div{
+
+.MonthlyRental .img-container-content>div {
     padding-left: 175px;
     color: #FAF6E9;
     font-size: 26px;
 }
-.img-container-content > div h1{
+
+.MonthlyRental .img-container-content>div h1 {
     margin: 10px 0px;
 }
-#header .img-container img{
+
+.MonthlyRental #header .img-container img {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -41,19 +43,20 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.grid-container>* {
+.MonthlyRental .grid-container>* {
     padding: 10px 20px 10px 20px;
 }
-.grid-container .content {
+
+.MonthlyRental .content {
     border: 1px solid gray;
     border-top: none;
 }
 
-.grid-container .content>div {
+.MonthlyRental .content>div {
     margin-bottom: 35px;
 }
 
-.grid-container p {
+.MonthlyRental .grid-container p {
     margin: 8px 0px;
 }
 
@@ -63,37 +66,42 @@
 
 
 
-.grid-container .link-tree-container {
+.MonthlyRental .link-tree-container {
     background-color: #FAF6E9;
 }
 
-.grid-container .link-tree-container .link-tree {
+.MonthlyRental .link-tree {
     position: sticky;
     top: 80px;
 }
-.link-tree-container .link-tree h3{
+
+.MonthlyRental .link-tree h3 {
     color: #952323;
     font-weight: 800;
 }
-.link-tree-container .link-tree ul{ 
+
+.MonthlyRental .link-tree ul {
     list-style: none;
     padding: 0;
 }
-.link-tree-container .link-tree ul li{ 
+
+.MonthlyRental .link-tree ul li {
     margin: 5px 0px;
     font-weight: 500;
     padding: 5px 0px;
     transition: all 150ms;
 }
-.link-tree-container .link-tree ul li:hover{ 
+
+.MonthlyRental .link-tree ul li:hover {
     background-color: #A73121;
     color: #FAF6E9;
 }
 
-.link-tree-container .link-tree ul a li { 
+.MonthlyRental .link-tree ul a li {
     color: #952323;
 }
-.link-tree-container .link-tree ul a{ 
+
+.MonthlyRental .link-tree ul a {
     text-decoration: none;
 }
 
@@ -102,22 +110,23 @@
 
 
 
-.grid-container .content h3 {
+.MonthlyRental .content h3 {
     scroll-margin-top: 80px;
     margin-bottom: 10px;
 }
-.grid-container .content .hours-and-contact .subj-content {
+
+.MonthlyRental .subj-content {
     display: grid;
     grid-template-columns: 150px 1fr;
 }
 
-.subj-content .days {
+.MonthlyRental .days {
     color: #952323;
     font-weight: 900;
     margin: auto 0px;
 }
 
-.hours-and-contact .open {
+.MonthlyRental .open {
     width: fit-content;
     background-color: rgb(70, 180, 70);
     border-radius: 5px;
@@ -125,7 +134,7 @@
     font-weight: 500;
 }
 
-.hours-and-contact .closed {
+.MonthlyRental .closed {
     width: fit-content;
     background-color: rgb(205, 57, 57);
     border-radius: 5px;
@@ -133,30 +142,32 @@
     font-weight: 500;
 }
 
-.hours-and-contact .contact {
+.MonthlyRental .contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 8px 0px;
 }
 
-.hours-and-contact .contact>* {
+.MonthlyRental .contact>* {
     display: flex;
     align-items: center;
 }
 
-.hours-and-contact .contact svg {
+.MonthlyRental .contact svg {
     color: #952323;
     margin: 0px 10px 0px 0px;
 }
-.content .howitworks-img-container{
+
+.MonthlyRental .howitworks-img-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.content img{
+
+.MonthlyRental .content img {
     width: 100%;
 }
 
-.p{
+.MonthlyRental .p {
     height: 70px;
 }
