@@ -25,6 +25,15 @@ import OneWay from "../ServicesPage/OneWay/OneWay";
 import ServicesPage from "../ServicesPage/ServicesPage";
 import SignInPage from "../SignInPage/SignInPage";
 import "./MyRouter.css";
+import ClaimsAndForms from "../HelpPage/ClaimsAndForms/ClaimsAndForms";
+import CustomerService from "../HelpPage/CustomerService/CustomerService";
+import Disability from "../HelpPage/Disability/Disability";
+import FAQ from "../HelpPage/FAQ/FAQ";
+import Info from "../HelpPage/Info/Info";
+import LostFound from "../HelpPage/LostFound/LostFound";
+import LoyaltyProgram from "../HelpPage/LoyaltyProgram/LoyaltyProgram";
+import PastRentals from "../HelpPage/PastRentals/PastRentals";
+import TermsAndConditions from "../HelpPage/TermsAndConditions/TermsAndConditions";
 
 
 
@@ -54,7 +63,17 @@ function Router(): JSX.Element {
                 <Route path={appConfig.careersPagePath} element={< CareersPage />} />
 
                 <Route path={appConfig.helpPagePath} element={<  HelpPage />} />
-                
+                <Route path={appConfig.helpPageClaimsAndFormsPagePath} element={<  ClaimsAndForms />} />
+                <Route path={appConfig.helpPageCustomerServicePagePath} element={<  CustomerService />} />
+                <Route path={appConfig.helpPageDisabilityPagePath} element={<  Disability />} />
+                <Route path={appConfig.helpPageFAQPagePath} element={<  FAQ />} />
+                <Route path={appConfig.helpPageInfoPagePath} element={<  Info />} />
+                <Route path={appConfig.helpPageLostFoundPagePath} element={<  LostFound />} />
+                <Route path={appConfig.helpPagePastRentalsPagePath} element={<  PastRentals />} />
+                <Route path={appConfig.helpPageTermsConditionsPagePath} element={<  TermsAndConditions />} />
+
+                <Route path={appConfig.LoyaltyProgramPagePath} element={<  LoyaltyProgram />} />
+
 
                 <Route path={appConfig.signInPagePath} element={<  SignInPage />} />
 
