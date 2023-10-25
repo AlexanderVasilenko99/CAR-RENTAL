@@ -68,13 +68,21 @@ function Links(): JSX.Element {
                 <div className="family-container">
                     <SingleLinkFamily header="Information"
                         firstLinkHeader="Who We Are"
+
                         secondLinkHeader="Useful information"
+                        secondLinkPath={appConfig.helpPageInfoPagePath}
                         thirdLinkHeader="Help Page"
+                        thirdLinkPath={appConfig.helpPagePath}
                         fourthLinkHeader="Loyalty Program"
+                        fourthLinkPath={appConfig.LoyaltyProgramPagePath}
                         fifthLinkHeader="Work With Us"
+                        fifthLinkPath={appConfig.careersPagePath}
                         sixthLinkHeader="Lost & Found"
+                        sixthLinkPath={appConfig.helpPageLostFoundPagePath}
                         seventhLinkHeader="Terms And Conditions"
+                        seventhLinkPath={appConfig.helpPageTermsConditionsPagePath}
                         eighthLinkHeader="FAQ"
+                        eighthLinkPath={appConfig.helpPageFAQPagePath}
                     />
                 </div>
             </div>
