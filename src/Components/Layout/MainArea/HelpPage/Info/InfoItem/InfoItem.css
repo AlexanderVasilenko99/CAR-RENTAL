@@ -1,0 +1,35 @@
+.InfoItem {
+    width: 310px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid #A73121;
+}
+.InfoItem img{
+    width: 100%;
+}
+
+.InfoItem a {
+    text-decoration: none;
+    color: black;
+}
+
+.InfoItem a:hover {
+    color: #A73121;
+}
+
+.InfoItem h2 {
+    margin: 5px 0px;
+    color: #A73121;
+}
+
+.InfoItem p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.InfoItem p::first-letter {
+    font-size: 16px;
+    font-weight: 400;
+}
