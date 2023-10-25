@@ -74,6 +74,11 @@ function FAQ(): JSX.Element {
                     </li>
                 </ul>
             </div>
+            <div className="form-container">
+                <h1>Still have a question?</h1>
+                <h3>Our agents will happily assist you with anything you might require!</h3>
+                {/* form component */}
+            </div>
             <Back />
         </div>
     );
