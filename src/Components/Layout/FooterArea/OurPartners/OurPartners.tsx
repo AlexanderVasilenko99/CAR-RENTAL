@@ -7,7 +7,7 @@ function OurPartners(): JSX.Element {
             <p>
                 Annually trusted worldwide by thousands of individual clients and hundreds of leading corporations including:
             </p>
-            <div className="grid-container">
+            <div className="partners-grid-container">
                 <Partner imgName="tevalogo2.png" link="https://www.tevapharm.com/" />
                 <Partner imgName="elbitlogo.png" link="https://elbitsystems.com/" />
                 <Partner imgName="mobileyelogo.png" link="https://www.mobileye.com/" />

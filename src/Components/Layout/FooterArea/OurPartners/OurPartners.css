@@ -13,7 +13,7 @@
     font-weight: 600;
 }
 
-.OurPartners .grid-container {
+.OurPartners .partners-grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
