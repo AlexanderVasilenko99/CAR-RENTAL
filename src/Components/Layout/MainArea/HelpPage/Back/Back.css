@@ -1,0 +1,14 @@
+.Back>a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.Back>a h1 {
+    transition: all 150ms;
+    width: fit-content;
+}
+
+.Back>a h1:hover {
+    color: #A73121;
+}

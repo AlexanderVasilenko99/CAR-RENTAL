@@ -1,3 +1,52 @@
 .FAQ {
-	
+    /* padding: 0px 175px; */
+}
+
+.FAQ h1 {
+    padding: 0px 175px;
+}
+
+.FAQ img {
+    width: 100%;
+}
+
+.FAQ .grid-container {
+    display: grid;
+    grid-template-columns: 33% 1fr;
+}
+
+.FAQ .grid-container>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.FAQ ul {
+    font-size: 18px;
+}
+
+.FAQ li {
+    margin: 30px 0px;
+    padding: 10px 0px;
+}
+
+.FAQ li:nth-of-type(1) {
+    margin: 0px 0px;
+    padding: 10px 0px;
+}
+
+.FAQ li:nth-last-of-type(even) {
+    /* background-color: aqua; */
+}
+
+.FAQ li span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.FAQ .bold {
+    font-size: 18px;
 }

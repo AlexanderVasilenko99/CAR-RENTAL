@@ -1,6 +1,5 @@
-import { NavLink } from "react-router-dom";
+import Back from "../Back/Back";
 import "./TermsAndConditions.css";
-import appConfig from "../../../../../Utils/AppConfig";
 
 function TermsAndConditions(): JSX.Element {
     return (
@@ -24,10 +23,7 @@ function TermsAndConditions(): JSX.Element {
             <ul>
                 <li><a href="Terms And Conditions Loyalty Program" download="smiley-face.png">Terms And Conditions Loyalty Program</a></li>
             </ul>
-
-            <NavLink to={appConfig.helpPagePath}>
-                <h1 className="back">Back To Help Page</h1>
-            </NavLink>
+            <Back />
         </div>
     );
 }

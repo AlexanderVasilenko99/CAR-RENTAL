@@ -9,26 +9,9 @@
 }
 
 .TermsAndConditions ul li {
-
     margin: 5px 0px;
 }
 
-.TermsAndConditions .back {
-    margin-top: 100px;
-    color: black;
-    text-decoration: none;
-}
-
-.TermsAndConditions>a {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.TermsAndConditions>a h1 {
-    transition: all 150ms;
-    width: fit-content;
-}
-
-.TermsAndConditions>a h1:hover {
-    color: #A73121;
+.TermsAndConditions ul:nth-last-of-type(1) {
+    margin-bottom: 100px;
 }
