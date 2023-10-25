@@ -25,6 +25,18 @@ class AppConfig {
     public readonly locationsEilatRamonPath = this.locationsPagePath + `eilat-ramon/`;
 
     public readonly helpPagePath = `/help/`
+    public readonly helpPageClaimsAndFormsPagePath = this.helpPagePath + `claims&forms/`
+    public readonly helpPageCustomerServicePagePath = this.helpPagePath + `customer-service/`
+    public readonly helpPageDisabilityPagePath = this.helpPagePath + `disabilities/`
+    public readonly helpPageFAQPagePath = this.helpPagePath + `FAQ/`
+    public readonly helpPageInfoPagePath = this.helpPagePath + `general-information/`
+    public readonly helpPageLostFoundPagePath = this.helpPagePath + `lost&found/`
+    public readonly helpPagePastRentalsPagePath = this.helpPagePath + `past-rentals/`
+    public readonly helpPageTermsConditionsPagePath = this.helpPagePath + `terms&conditions/`
+
+    public readonly LoyaltyProgramPagePath = `/Loyalty-program/`
+    
+
     public readonly signInPagePath = `/sign-in/`
     public readonly servicesPagePath = `/services/`
     public readonly servicesBusinessRentalPagePath = this.servicesPagePath + `business-rental/`;

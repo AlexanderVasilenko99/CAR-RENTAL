@@ -52,7 +52,10 @@ function Router(): JSX.Element {
                 <Route path={appConfig.locationsEilatRamonPath} element={< Ramon />} />
 
                 <Route path={appConfig.careersPagePath} element={< CareersPage />} />
+
                 <Route path={appConfig.helpPagePath} element={<  HelpPage />} />
+                
+
                 <Route path={appConfig.signInPagePath} element={<  SignInPage />} />
 
                 <Route path={appConfig.servicesPagePath} element={<  ServicesPage />} />
