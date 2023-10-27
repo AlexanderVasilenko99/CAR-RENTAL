@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
+import appConfig from "../../../../Utils/AppConfig";
 import "./Links.css";
 import SingleLinkFamily from "./SingleLinkFamily/SingleLinkFamily";
-import appConfig from "../../../../Utils/AppConfig";
 
 function Links(): JSX.Element {
     return (

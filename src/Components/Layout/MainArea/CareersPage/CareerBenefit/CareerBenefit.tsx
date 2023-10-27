@@ -2,8 +2,6 @@ import CareerBenefitModel from "../../../../../Models/CareerBenefitModel";
 import "./CareerBenefit.css";
 
 function CareerBenefit(props: CareerBenefitModel): JSX.Element {
-    console.log(props.benefitImgSrc);
-
     return (
         <div className="CareerBenefit">
             <div>

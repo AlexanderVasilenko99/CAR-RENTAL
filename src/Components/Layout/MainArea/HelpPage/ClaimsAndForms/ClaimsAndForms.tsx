@@ -3,7 +3,7 @@ import "./ClaimsAndForms.css";
 function ClaimsAndForms(): JSX.Element {
     return (
         <div className="ClaimsAndForms">
-			claims and accident forms
+            claims and accident forms
         </div>
     );
 }

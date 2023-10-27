@@ -1,9 +1,11 @@
 .Info {
     padding: 0px 175px;
 }
-.Info .row-container{
+
+.Info .row-container {
     margin-bottom: 60px;
 }
+
 .Info p {
     font-size: 20px;
 }

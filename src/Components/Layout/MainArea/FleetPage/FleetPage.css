@@ -5,7 +5,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.FleetPage > a {
+.FleetPage>a {
     opacity: 0;
 }
 
@@ -51,33 +51,36 @@
 }
 
 
-.FleetPage h1 a{
+.FleetPage h1 a {
     color: #952323;
     text-decoration: none;
 }
-.FleetPage h1 a:hover{
+
+.FleetPage h1 a:hover {
     color: #A73121;
 }
 
-.FleetPage > a:nth-last-of-type(1) {
+.FleetPage>a:nth-last-of-type(1) {
     grid-column: span 3;
     opacity: 1;
     margin: auto;
     background-color: transparent;
     border: 0;
     box-shadow: none;
-    
+
     height: auto;
     width: auto;
     color: black;
 }
-.FleetPage > a:nth-last-of-type(1):hover {
+
+.FleetPage>a:nth-last-of-type(1):hover {
     color: #952323;
 }
 
 .FleetPage>h1 {
     margin: 35px 0px;
 }
+
 /* 
 .fleetPage h3 {
     opacity: 1;

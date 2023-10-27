@@ -19,7 +19,8 @@
 body::-webkit-scrollbar {
     display: none;
 }
+
 body *::selection {
     color: #FAF6E9;
     background: #952323;
-  }
+}

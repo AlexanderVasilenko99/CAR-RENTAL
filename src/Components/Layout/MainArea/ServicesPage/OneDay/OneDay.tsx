@@ -1,8 +1,8 @@
 import { HashLink } from "react-router-hash-link";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
-import "./OneDay.css";
 import LinkTree from "../LinkTree/LinkTree";
+import "./OneDay.css";
 
 
 function OneDay(): JSX.Element {

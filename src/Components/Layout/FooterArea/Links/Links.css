@@ -7,7 +7,7 @@
     border-top: 2px solid #A73121;
 }
 
-.Links .contact-icons{
+.Links .contact-icons {
     /* height: 100%;
     display: flex;
     
@@ -19,19 +19,23 @@
     right: 10px;
     mix-blend-mode: multiply;
 }
-.Links .contact-icons > div{
+
+.Links .contact-icons>div {
     align-self: flex-end;
 }
-.Links .contact-icons h3{
+
+.Links .contact-icons h3 {
     /* margin: 10px 0px; */
     margin: 0px;
     text-align: center;
     color: #952323;
 }
-.Links .contact-icons img{
+
+.Links .contact-icons img {
     width: 50px;
 }
-.family-container{
+
+.family-container {
     display: flex;
     justify-content: center;
 }

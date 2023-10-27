@@ -1,8 +1,8 @@
 import { HashLink } from "react-router-hash-link";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
-import "./MonthlyRental.css";
 import LinkTree from "../LinkTree/LinkTree";
+import "./MonthlyRental.css";
 
 
 function MonthlyRental(): JSX.Element {

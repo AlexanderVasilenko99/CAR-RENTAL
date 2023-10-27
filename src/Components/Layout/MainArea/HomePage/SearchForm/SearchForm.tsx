@@ -4,10 +4,8 @@ import "./SearchForm.css";
 function SearchForm(): JSX.Element {
     const { register, handleSubmit } = useForm();
 
-    function search(params:any) {
-        console.log("nigger");
+    function search(params: any): void {
         console.log(params);
-        
     }
     return (
 
@@ -18,15 +16,15 @@ function SearchForm(): JSX.Element {
                     <input type="text" placeholder='Pickup Location' {...register("pickupLocation")} />
                 </div>
                 <div>
-                    <label></label><input type="date" {...register("pickupDate")}/>
-                    <input type="time" {...register("pickupTime")}/>
+                    <label></label><input type="date" {...register("pickupDate")} />
+                    <input type="time" {...register("pickupTime")} />
                 </div>
                 <div>
-                    <input type="text" placeholder='Drop off Location' {...register("dropOffLocation")}/>
+                    <input type="text" placeholder='Drop off Location' {...register("dropOffLocation")} />
                 </div>
                 <div>
-                    <label></label><input type="date" {...register("dropOffDate")}/>
-                    <input type="time" {...register("dropOffTime")}/>
+                    <label></label><input type="date" {...register("dropOffDate")} />
+                    <input type="time" {...register("dropOffTime")} />
                 </div>
                 <div>
                     <select name="" {...register("age")}>
@@ -50,7 +48,7 @@ function SearchForm(): JSX.Element {
                     </select>
                     <div>
                         <label htmlFor="checkboxLoyaltyForm">&nbsp;&nbsp;Loyalty program member?</label>
-                        <input id='checkboxLoyaltyForm' type="checkbox" {...register("isLoyal")}/>
+                        <input id='checkboxLoyaltyForm' type="checkbox" {...register("isLoyal")} />
                     </div>
                 </div>
                 <button type="submit">Find my rental!</button>

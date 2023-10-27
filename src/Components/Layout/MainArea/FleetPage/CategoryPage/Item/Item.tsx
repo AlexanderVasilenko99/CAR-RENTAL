@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import FleetCategoryItemModel from "../../../../../../Models/FleetCategoryItemModel";
-import "./Item.css";
 import appConfig from "../../../../../../Utils/AppConfig";
+import "./Item.css";
 
 function FleetCategoryItem(props: FleetCategoryItemModel): JSX.Element {
     return (

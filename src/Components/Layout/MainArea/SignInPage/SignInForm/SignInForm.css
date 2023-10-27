@@ -1,18 +1,19 @@
 .SignInForm {
-	height: 400px;
-	width: 400px;
+    height: 400px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #952323;
 }
 
-.SignInForm h1{
+.SignInForm h1 {
     text-align: center;
     color: #FAF6E9;
     font-weight: 600;
 }
-.SignInForm input{
+
+.SignInForm input {
     width: 60%;
     height: 30px;
     margin: 7px 0px;
@@ -20,7 +21,8 @@
     background-color: #FAF6E9;
     border: 1px solid #A73121;
 }
-.SignInForm button{
+
+.SignInForm button {
     height: 40px;
     width: 100px;
     margin: 20px 0px;
@@ -31,28 +33,31 @@
     font-weight: 600;
     border: 1px solid #A73121;
 }
-.SignInForm button:hover{
+
+.SignInForm button:hover {
     color: #FAF6E9;
     background-color: #A73121;
     border-color: #FAF6E9;
     scale: 1.1;
     transition: 100ms;
 }
+
 /* .SignInForm button{
     scale: 1.0;
     transition: 100ms;
 } */
-.SignInForm div{
+.SignInForm div {
     color: #FAF6E9;
     font-weight: 600;
     text-align: center;
     margin: 30px 0px 0px 0px;
 }
-.SignInForm button:nth-of-type(2){
+
+.SignInForm button:nth-of-type(2) {
     margin: 10px 0px;
     scale: .85;
 }
 
-.SignInForm input::placeholder{
+.SignInForm input::placeholder {
     padding-left: 5px;
 }

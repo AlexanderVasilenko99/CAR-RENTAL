@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./Partner.css";
 import PartnerModel from "../../../../../Models/PartnerModel";
 
-function Partner(props:PartnerModel): JSX.Element {
+function Partner(props: PartnerModel): JSX.Element {
     return (
         <div className="Partner">
             <div>

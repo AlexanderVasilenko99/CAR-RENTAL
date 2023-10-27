@@ -14,27 +14,31 @@
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 }
+
 .HelpItem:hover {
     scale: 1.01;
     transition: 100ms;
 }
-.HelpItem h3{
+
+.HelpItem h3 {
     margin: 0;
     text-align: left;
 }
-.HelpItem p{
+
+.HelpItem p {
     text-align: left;
 }
 
 
 
-.HelpItem span{
+.HelpItem span {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     color: #952323;
     font-weight: 500;
 }
-.HelpItem .HelpItemLink{
+
+.HelpItem .HelpItemLink {
     margin-top: auto;
 }

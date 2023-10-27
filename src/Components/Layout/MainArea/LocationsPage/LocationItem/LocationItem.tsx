@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
-import "./LocationItem.css";
-import LocationItemModel from "../../../../../Models/LocationItemModel";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import LocationItemModel from "../../../../../Models/LocationItemModel";
 import Accordion from "./Accordion/Accordion";
+import "./LocationItem.css";
 
 function LocationItem(props: LocationItemModel): JSX.Element {
     const [accordionActive, setAccordionActive] = useState(false)

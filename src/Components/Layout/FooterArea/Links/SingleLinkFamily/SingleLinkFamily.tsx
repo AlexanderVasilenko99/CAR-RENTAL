@@ -9,8 +9,6 @@ function SingleLinkFamily(params: SingleLinkFamilyModel): JSX.Element {
                 {params.header}
             </h3>
             <div>
-
-
                 {params.firstLinkHeader &&
                     <NavLink to={params.firstLinkPath}>{params.firstLinkHeader}</NavLink>
                 }
@@ -41,7 +39,6 @@ function SingleLinkFamily(params: SingleLinkFamilyModel): JSX.Element {
                 {params.tenthLinkHeader &&
                     <NavLink to={params.tenthLinkPath}>{params.tenthLinkHeader}</NavLink>
                 }
-
             </div>
         </div>
     );

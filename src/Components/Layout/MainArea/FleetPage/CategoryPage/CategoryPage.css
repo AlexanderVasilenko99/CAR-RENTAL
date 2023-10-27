@@ -1,20 +1,25 @@
 .CategoryPage {
-	padding: 0px 175px;
+    padding: 0px 175px;
 }
-.CategoryPageGridContainer{
+
+.CategoryPageGridContainer {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 60px;
 }
-.CategoryPageGridContainer > *{
-    grid-column : span 2;
+
+.CategoryPageGridContainer>* {
+    grid-column: span 2;
 }
-.CategoryPage  h1{
+
+.CategoryPage h1 {
     margin-bottom: 0;
 }
-.CategoryPage h3{
-    margin-top: 10px;  
+
+.CategoryPage h3 {
+    margin-top: 10px;
 }
-.CategoryPage h3 a{
-    color: black;  
+
+.CategoryPage h3 a {
+    color: black;
 }

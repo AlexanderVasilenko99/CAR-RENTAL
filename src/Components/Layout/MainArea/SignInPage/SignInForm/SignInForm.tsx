@@ -1,10 +1,10 @@
-import "./SignInForm.css";
 import { useForm } from "react-hook-form";
+import "./SignInForm.css";
 
 function SignInForm(): JSX.Element {
 
     const { register, handleSubmit } = useForm();
-    function checkData(data: any) {
+    function checkData(data: any): void {
         console.log(data);
     }
 

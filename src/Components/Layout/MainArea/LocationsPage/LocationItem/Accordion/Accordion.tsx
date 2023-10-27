@@ -2,9 +2,9 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
+import { NavLink } from 'react-router-dom';
 import LocationItemAccordionModel from "../../../../../../Models/LocationItemAccordionModel";
 import "./Accordion.css";
-import { NavLink } from 'react-router-dom';
 
 function Accordion(params: LocationItemAccordionModel): JSX.Element {
     return (

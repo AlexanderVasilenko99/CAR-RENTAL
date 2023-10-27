@@ -1,6 +1,5 @@
-.SearchForm {
-	
-}
+.SearchForm {}
+
 .SearchForm {
     display: flex;
     flex-direction: column;
@@ -60,7 +59,8 @@
     width: 100%;
     padding-left: 10px;
 }
-.SearchForm label{
+
+.SearchForm label {
     color: #FFF;
     font-size: 20px;
 }

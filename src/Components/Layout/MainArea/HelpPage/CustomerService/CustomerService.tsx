@@ -3,7 +3,7 @@ import "./CustomerService.css";
 function CustomerService(): JSX.Element {
     return (
         <div className="CustomerService">
-			Customer Service
+            Customer Service
         </div>
     );
 }

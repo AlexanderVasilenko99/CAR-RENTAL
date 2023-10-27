@@ -10,6 +10,7 @@
 .grid-container>* {
     padding: 10px 20px 10px 20px;
 }
+
 .grid-container .content {
     border: 1px solid gray;
 }
@@ -36,27 +37,32 @@
     position: sticky;
     top: 80px;
 }
-.link-tree-container .link-tree h3{
+
+.link-tree-container .link-tree h3 {
     color: #FAF6E9;
     font-weight: 800;
 }
-.link-tree-container .link-tree ul{ 
+
+.link-tree-container .link-tree ul {
     list-style: none;
     padding: 0;
 }
-.link-tree-container .link-tree ul li{ 
+
+.link-tree-container .link-tree ul li {
     margin: 5px 0px;
     font-weight: 500;
     padding: 5px 0px;
 }
-.link-tree-container .link-tree ul li:hover{ 
+
+.link-tree-container .link-tree ul li:hover {
     background-color: #A73121;
 }
 
-.link-tree-container .link-tree ul a li { 
+.link-tree-container .link-tree ul a li {
     color: #FAF6E9;
 }
-.link-tree-container .link-tree ul a{ 
+
+.link-tree-container .link-tree ul a {
     text-decoration: none;
 }
 
@@ -69,6 +75,7 @@
     scroll-margin-top: 80px;
     margin-bottom: 10px;
 }
+
 .grid-container .content .hours-and-contact .subj-content {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -112,18 +119,20 @@
     margin: 0px 10px 0px 0px;
 }
 
-.p{
+.p {
     height: 70px;
 }
 
-.content h3 a{
+.content h3 a {
     text-decoration: none;
     color: black;
 }
-.content p a{
+
+.content p a {
     font-weight: 600;
     color: #A73121;
 }
-.content p a:hover{
+
+.content p a:hover {
     color: #952323;
 }

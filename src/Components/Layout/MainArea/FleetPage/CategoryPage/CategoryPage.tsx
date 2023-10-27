@@ -1,15 +1,13 @@
-import { NavLink, useParams } from "react-router-dom";
-import "./CategoryPage.css";
 import { useEffect, useState } from "react";
-import FleetCategoryItem from "./Item/Item";
+import { NavLink, useParams } from "react-router-dom";
+import { TransmissionTypes } from "../../../../../Models/FleetCategoryItemModel";
 import appConfig from "../../../../../Utils/AppConfig";
-import FleetCategoryItemModel, { TransmissionTypes } from "../../../../../Models/FleetCategoryItemModel";
+import "./CategoryPage.css";
+import FleetCategoryItem from "./Item/Item";
 
 function FleetCategoryPage(): JSX.Element {
 
     const params = useParams();
-    console.log(params);
-
     const [category, setCategory] = useState<string>();
     useEffect(() => {
         setCategory(params.vehicleCategory);

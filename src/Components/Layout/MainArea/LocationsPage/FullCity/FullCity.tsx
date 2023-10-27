@@ -2,13 +2,13 @@ import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import { useEffect, useState } from "react";
+import { NavLink } from 'react-router-dom';
 import { HashLink } from "react-router-hash-link";
 import LocationItemAccordionModel from "../../../../../Models/LocationItemAccordionModel";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
 import "./FullCity.css";
 import Map from './Map/Map';
-import { NavLink } from 'react-router-dom';
 
 function FullCity(params: LocationItemAccordionModel): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(true);
