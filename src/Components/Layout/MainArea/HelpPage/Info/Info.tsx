@@ -1,4 +1,5 @@
 import Back from "../Back/Back";
+import CultureEtiquette from "./CultureEtiquette/CultureEtiquette";
 import FamilyTravelAdvice from "./FamilyTravelAdvice/FamilyTravelAdvice";
 import "./Info.css";
 import LawsRegulations from "./LawsRegulations/LawsRegulations";
@@ -26,12 +27,7 @@ function Info(): JSX.Element {
             <LawsRegulations />
             <FamilyTravelAdvice />
             <PackingEssentials />
-            <div className="row-container">
-                <h2>Local Culture and Etiquette</h2>
-                <div className="row-content">
-
-                </div>
-            </div>
+            <CultureEtiquette />
             <Back />
         </div>
     );
