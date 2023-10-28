@@ -2,6 +2,7 @@ import Back from "../Back/Back";
 import FamilyTravelAdvice from "./FamilyTravelAdvice/FamilyTravelAdvice";
 import "./Info.css";
 import LawsRegulations from "./LawsRegulations/LawsRegulations";
+import PackingEssentials from "./PackingEssentials/PackingEssentials";
 import RentalTips from "./RentalTips/RentalTips";
 import RoadTripInspiration from "./RoadTripInspiration/RoadTripInspiration";
 
@@ -24,12 +25,7 @@ function Info(): JSX.Element {
             <RoadTripInspiration />
             <LawsRegulations />
             <FamilyTravelAdvice />
-            <div className="row-container">
-                <h2>Packing and Travel Essentials</h2>
-                <div className="row-content">
-
-                </div>
-            </div>
+            <PackingEssentials />
             <div className="row-container">
                 <h2>Local Culture and Etiquette</h2>
                 <div className="row-content">
