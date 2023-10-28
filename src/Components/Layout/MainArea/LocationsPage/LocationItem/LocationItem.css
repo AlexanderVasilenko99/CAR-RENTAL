@@ -2,6 +2,7 @@
 .LocationItemActive {
     color: #A73121;
     text-decoration: none;
+    /* min-width: 418px; */
 }
 
 .LocationItem div[class="row"],
