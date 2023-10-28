@@ -2,7 +2,7 @@
     padding: 0px 175px;
     padding-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fiLL, minmax(460px, 460px));
+    grid-template-columns: repeat(auto-fit, minmax(460px, 460px));
 }
 .FleetPage>a {
     opacity: 0;
