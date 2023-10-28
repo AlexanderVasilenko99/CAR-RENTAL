@@ -67,7 +67,7 @@ function GroupRental(): JSX.Element {
                     <h3 id="howitworks">How Does It Work?</h3>
                     <p>The process is very simple. It contains of only three steps and usually takes 1-2 business days.</p>
                     <div className="howitworks-img-container">
-                        <img src={require("../../../../../Assets/Images/grouprentalsteps2.png")} />
+                        <img src={require("../../../../../Assets/Images/Services/grouprentalsteps2.png")} />
                     </div>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>

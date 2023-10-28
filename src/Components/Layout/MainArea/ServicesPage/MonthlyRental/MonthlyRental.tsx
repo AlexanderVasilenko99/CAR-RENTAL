@@ -78,7 +78,7 @@ function MonthlyRental(): JSX.Element {
                     <h3 id="howitworks">How Does It Work?</h3>
                     <p>The process is very simple. It contains of four steps and usually takes 1-2 business days.</p>
                     <div className="howitworks-img-container">
-                        <img src={require("../../../../../Assets/Images/monthlyrentalsteps2.png")} />
+                        <img src={require("../../../../../Assets/Images/Services/monthlyrentalsteps2.png")} />
                     </div>
 
                     <h3 id="taxesandwriteoff">Taxes & Business Write Off</h3>
