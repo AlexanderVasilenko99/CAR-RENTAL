@@ -2,9 +2,8 @@
     padding: 0px 175px;
     padding-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fiLL, minmax(460px, 460px));
 }
-
 .FleetPage>a {
     opacity: 0;
 }
@@ -20,14 +19,10 @@
 
 .FleetPage>a:nth-of-type(2) {
     animation: slideIn 500ms 100ms linear forwards;
-    margin-left: auto;
-    margin-right: 0;
 }
 
 .FleetPage>a:nth-of-type(3) {
     animation: slideIn 500ms 200ms linear forwards;
-    margin-left: 0;
-    margin-right: auto;
 }
 
 .FleetPage>a:nth-of-type(4) {
@@ -36,8 +31,6 @@
 
 .FleetPage>a:nth-of-type(5) {
     animation: slideIn 500ms 400ms linear forwards;
-    margin-left: auto;
-    margin-right: 0;
 }
 
 .FleetPage>a:nth-of-type(6) {
@@ -47,7 +40,6 @@
 
 .FleetPage>a:nth-of-type(7) {
     animation: slideIn 500ms 600ms linear forwards;
-    margin-left: auto;
 }
 
 
