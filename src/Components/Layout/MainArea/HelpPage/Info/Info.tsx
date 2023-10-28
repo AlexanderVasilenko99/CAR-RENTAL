@@ -1,3 +1,4 @@
+import Back from "../Back/Back";
 import "./Info.css";
 import InfoItem from "./InfoItem/InfoItem";
 
@@ -108,6 +109,7 @@ function Info(): JSX.Element {
 
                 </div>
             </div>
+            <Back />
         </div>
     );
 }
