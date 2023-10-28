@@ -1,0 +1,7 @@
+.FamilyTravelAdvice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1357px;
+    margin-bottom: 60px;
+}
