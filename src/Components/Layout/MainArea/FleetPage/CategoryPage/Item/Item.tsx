@@ -7,7 +7,7 @@ function FleetCategoryItem(props: FleetCategoryItemModel): JSX.Element {
     return (
         <div className="Item">
             <div className="imgHolder">
-                <img src={require(`../../../../../../Assets/Images/${props.imageName}`)} />
+                <img src={require(`../../../../../../Assets/Images/Vehicles/${props.imageName}`)} />
             </div>
             <h1>{props.vehicleName}</h1>
             <div className="stats">

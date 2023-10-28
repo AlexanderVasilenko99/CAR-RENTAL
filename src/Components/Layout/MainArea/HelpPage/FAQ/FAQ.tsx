@@ -7,10 +7,10 @@ function FAQ(): JSX.Element {
             <h1>FAQ</h1>
             <div className="grid-container">
                 <div>
-                    <img src={require(`../../../../../Assets/Images/raanana.jpg`)} />
-                    <img src={require(`../../../../../Assets/Images/telaviv.jpg`)} />
-                    <img src={require(`../../../../../Assets/Images/tiberias.jpg`)} />
-                    <img src={require(`../../../../../Assets/Images/haifa.png`)} />
+                    <img src={require(`../../../../../Assets/Images/Locations/raanana.jpg`)} />
+                    <img src={require(`../../../../../Assets/Images/Locations/telaviv.jpg`)} />
+                    <img src={require(`../../../../../Assets/Images/Locations/tiberias.jpg`)} />
+                    <img src={require(`../../../../../Assets/Images/Locations/haifa.png`)} />
                 </div>
                 <ul>
                     <li><span>Q: How old do I need to be to rent a car?</span>

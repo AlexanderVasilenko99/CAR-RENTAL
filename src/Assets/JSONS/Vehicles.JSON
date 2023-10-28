@@ -7,6 +7,7 @@
             "Hyundai": {
                 "I10": {
                     "full_name": "Hyundai i10",
+                    "image_name": "",
                     "make_year": "2021",
                     "engine_size": 1.2,
                     "turbo": false,
@@ -25,8 +26,9 @@
             "Kia": {
                 "Picanto": {
                     "full_name": "Kia Picanto",
+                    "image_name": "",
                     "make_year": "2022",
-                    "engine_size": 1,
+                    "engine_size": 1.0,
                     "turbo": false,
                     "horse_power": 67,
                     "transmission": "automatic",
@@ -45,8 +47,9 @@
             "Mazda": {
                 "3": {
                     "full_name": "Mazda 3 Hatchback",
+                    "image_name": "",
                     "make_year": "2023",
-                    "engine_size": 2,
+                    "engine_size": 2.0,
                     "turbo": false,
                     "horse_power": 165,
                     "transmission": "automatic",
@@ -63,6 +66,7 @@
             "Ford": {
                 "Fiesta": {
                     "full_name": "Ford Fiesta st",
+                    "image_name": "",
                     "make_year": "2019",
                     "engine_size": 1.5,
                     "turbo": false,
@@ -83,8 +87,9 @@
             "Nissan": {
                 "Sentra": {
                     "full_name": "Nissan Sentra SR",
+                    "image_name": "",
                     "make_year": "2019",
-                    "engine_size": 2,
+                    "engine_size": 2.0,
                     "turbo": true,
                     "horse_power": 150,
                     "transmission": "automatic",
@@ -101,8 +106,9 @@
             "Toyota": {
                 "Corolla": {
                     "full_name": "Toyota Corolla",
+                    "image_name": "",
                     "make_year": "2021",
-                    "engine_size": 2,
+                    "engine_size": 2.0,
                     "turbo": false,
                     "horse_power": 169,
                     "transmission": "automatic",
@@ -123,8 +129,9 @@
                     "BMW": {
                         "GS1250": {
                             "full_name": "BMW GS-1250",
+                            "image_name": "",
                             "make_year": 2022,
-                            "engine_size": "1254cc",
+                            "engine_size": 1254,
                             "engine_configuration": "Parallel Twin",
                             "horse_power": 136,
                             "transmission": "standard",
@@ -139,8 +146,9 @@
                     "Suzuki": {
                         "SV650": {
                             "full_name": "Suzuki SV650A",
+                            "image_name": "",
                             "make_year": 2017,
-                            "engine_size": "645cc",
+                            "engine_size": 645,
                             "engine_configuration": "V Twin",
                             "horse_power": 75,
                             "transmission": "standard",
@@ -157,8 +165,9 @@
                     "Honda": {
                         "CB500F": {
                             "full_name": "Honda CB500F",
+                            "image_name": "",
                             "make_year": 2023,
-                            "engine_size": "645cc",
+                            "engine_size": 500,
                             "engine_configuration": "Parallel Twin",
                             "horse_power": 47,
                             "transmission": "standard",
@@ -177,8 +186,9 @@
                     "Honda": {
                         "Forza350": {
                             "full_name": "Honda Forza 350",
+                            "image_name": "",
                             "make_year": 2023,
-                            "engine_size": "330cc",
+                            "engine_size": 330,
                             "engine_configuration": "Single",
                             "horse_power": 29,
                             "transmission": "automatic",
@@ -195,8 +205,9 @@
                     "Honda": {
                         "Vision": {
                             "full_name": "Honda Vision 110",
+                            "image_name": "",
                             "make_year": 2020,
-                            "engine_size": "108cc",
+                            "engine_size": 108,
                             "engine_configuration": "Single",
                             "horse_power": 8.3,
                             "transmission": "automatic",

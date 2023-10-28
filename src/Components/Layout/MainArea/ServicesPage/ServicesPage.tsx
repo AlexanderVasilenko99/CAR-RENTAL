@@ -6,7 +6,7 @@ function ServicesPage(): JSX.Element {
     return (
         <div className="ServicesPage">
             <div className="image-container">
-                {/* <img src={require("../../../../Assets/Images/road2.png")} /> */}
+                {/* <img src={require("../../../../Assets/Images/Services/road2.png")} /> */}
                 <div>
                     <SingleService serviceHeader="Business Rental" serviceImageName="handshake2.png"
                         serviceParagraph="Discover a unique program built exclusively for businesses of all scales."

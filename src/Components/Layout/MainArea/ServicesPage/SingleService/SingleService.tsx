@@ -8,7 +8,7 @@ function SingleService(props: SingleServiceModel): JSX.Element {
             <div className="background"></div>
             <div className="content">
                 <div>
-                    <img src={require(`../../../../../Assets/Images/${props.serviceImageName}`)} alt="" />
+                    <img src={require(`../../../../../Assets/Images/Services/${props.serviceImageName}`)} alt="" />
                     <h3>{props.serviceHeader}</h3>
                     <p>{props.serviceParagraph}</p>
                 </div>

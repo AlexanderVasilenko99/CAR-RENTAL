@@ -10,7 +10,7 @@ function OneDay(): JSX.Element {
         <div className="OneDay">
             <div id="header">
                 <div className="img-container">
-                    <img src={require("../../../../../Assets/Images/oneday3.png")} />
+                    <img src={require("../../../../../Assets/Images/Services/oneday3.png")} />
                     <div className="img-container-content">
                         <div>
                             <h1>One Day Car Rental</h1>

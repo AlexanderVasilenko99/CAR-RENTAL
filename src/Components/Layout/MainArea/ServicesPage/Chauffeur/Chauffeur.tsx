@@ -10,7 +10,7 @@ function Chauffeur(): JSX.Element {
         <div className="Chauffeur">
             <div id="header">
                 <div className="img-container">
-                    <img src={require("../../../../../Assets/Images/oneday2.png")} />
+                    <img src={require("../../../../../Assets/Images/Services/oneday2.png")} />
                     <div className="img-container-content">
                         <div>
                             <h1>Chauffeur Services</h1>

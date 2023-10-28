@@ -12,7 +12,7 @@ function LocationItem(props: LocationItemModel): JSX.Element {
     return (
         <NavLink to={'#'} className={accordionActive ? "LocationItem" : "LocationItemActive"}>
             <div className="row" onClick={() => { setAccordionActive(!accordionActive) }}>
-                <img src={require("../../../../../Assets/Images/" + props.locationImageName)} alt="broken-city-photo" />
+                <img src={require("../../../../../Assets/Images/Locations/" + props.locationImageName)} alt="broken-city-photo" />
                 <div className="row-text">
                     <h2>{props.locationCity}</h2>
                     <h3>{props.locationSvgComponent}{props.locationStreet}</h3>

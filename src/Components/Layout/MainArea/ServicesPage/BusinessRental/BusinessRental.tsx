@@ -11,7 +11,7 @@ function BusinessRental(): JSX.Element {
         <div className="BusinessRental">
             <div id="header">
                 <div className="img-container">
-                    <img src={require("../../../../../Assets/Images/business.png")} />
+                    <img src={require("../../../../../Assets/Images/Services/business.png")} />
                     <div className="img-container-content">
                         <div>
                             <h1>Business Rental</h1>
