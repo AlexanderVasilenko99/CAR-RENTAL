@@ -5,7 +5,7 @@ function CareerBenefit(props: CareerBenefitModel): JSX.Element {
     return (
         <div className="CareerBenefit">
             <div>
-                <img src={require("../../../../../Assets/Images/" + props.benefitImgSrc)} />
+                <img src={require("../../../../../Assets/Images/Careers/" + props.benefitImgSrc)} />
                 <h2 className="career-benefit-header">
                     {props.benefitHeader}
                 </h2>
