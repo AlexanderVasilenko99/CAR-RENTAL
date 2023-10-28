@@ -2,6 +2,7 @@
     transition: all 0.1s;
     box-sizing: border-box;
     height: 250px;
+    width: 438px;
     padding: 12px;
     display: flex;
     flex-direction: column;
