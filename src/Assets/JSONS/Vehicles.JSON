@@ -6,6 +6,7 @@
         "small": {
             "Hyundai": {
                 "I10": {
+                    "id" : "",
                     "full_name": "Hyundai i10",
                     "image_name": "",
                     "make_year": "2021",
@@ -25,6 +26,7 @@
             },
             "Kia": {
                 "Picanto": {
+                    "id" : "",
                     "full_name": "Kia Picanto",
                     "image_name": "",
                     "make_year": "2022",
@@ -44,6 +46,7 @@
             },
             "Nissan": {
                 "Micra": {
+                    "id" : "",
                     "full_name": "Nissan Micra",
                     "image_name": "",
                     "make_year": "2017",
@@ -63,6 +66,7 @@
             },
             "Volkswagen": {
                 "Polo": {
+                    "id" : "",
                     "full_name": "Volkswagen Polo",
                     "image_name": "",
                     "make_year": "2019",
@@ -82,6 +86,7 @@
             },
             "Toyota": {
                 "Yaris": {
+                    "id" : "",
                     "full_name": "Toyota Yaris",
                     "image_name": "",
                     "make_year": "2022",
@@ -103,6 +108,7 @@
         "medium": {
             "Mazda": {
                 "3": {
+                    "id" : "",
                     "full_name": "Mazda 3 Hatchback",
                     "image_name": "",
                     "make_year": "2023",
@@ -122,6 +128,7 @@
             },
             "Ford": {
                 "Fiesta": {
+                    "id" : "",
                     "full_name": "Ford Fiesta st",
                     "image_name": "",
                     "make_year": "2019",
@@ -141,6 +148,7 @@
             },
             "Kia": {
                 "Rio": {
+                    "id" : "",
                     "full_name": "Kia Rio",
                     "image_name": "",
                     "make_year": "2020",
@@ -160,6 +168,7 @@
             },
             "Peugeot": {
                 "208": {
+                    "id" : "",
                     "full_name": "Peugeot 208",
                     "image_name": "",
                     "make_year": "2023",
@@ -181,6 +190,7 @@
         "large": {
             "Nissan": {
                 "Sentra": {
+                    "id" : "",
                     "full_name": "Nissan Sentra SR",
                     "image_name": "",
                     "make_year": "2019",
@@ -200,6 +210,7 @@
             },
             "Toyota": {
                 "Corolla": {
+                    "id" : "",
                     "full_name": "Toyota Corolla",
                     "image_name": "",
                     "make_year": "2021",
@@ -219,6 +230,7 @@
             },
             "Honda": {
                 "Accord": {
+                    "id" : "",
                     "full_name": "Honda Accord",
                     "image_name": "",
                     "make_year": "2023",
@@ -242,6 +254,7 @@
                 "A": {
                     "BMW": {
                         "GS1250": {
+                            "id" : "",
                             "full_name": "BMW GS-1250",
                             "image_name": "",
                             "make_year": 2022,
@@ -259,6 +272,7 @@
                     },
                     "Suzuki": {
                         "SV650": {
+                            "id" : "",
                             "full_name": "Suzuki SV650A",
                             "image_name": "",
                             "make_year": 2017,
@@ -278,6 +292,7 @@
                 "A1": {
                     "Honda": {
                         "CB500F": {
+                            "id" : "",
                             "full_name": "Honda CB500F",
                             "image_name": "",
                             "make_year": 2023,
@@ -299,6 +314,7 @@
                 "A1": {
                     "Honda": {
                         "Forza350": {
+                            "id" : "",
                             "full_name": "Honda Forza 350",
                             "image_name": "",
                             "make_year": 2023,
@@ -318,6 +334,7 @@
                 "A2": {
                     "Honda": {
                         "Vision": {
+                            "id" : "",
                             "full_name": "Honda Vision 110",
                             "image_name": "",
                             "make_year": 2020,
