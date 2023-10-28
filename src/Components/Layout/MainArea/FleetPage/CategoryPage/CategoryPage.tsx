@@ -4,13 +4,24 @@ import { TransmissionTypes } from "../../../../../Models/FleetCategoryItemModel"
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetCategoryItem from "./Item/Item";
+import vehicleServices from "../../../../../Services/VehicleServices";
+import VehicleModel from "../../../../../Models/VehicleModel";
 
 function FleetCategoryPage(): JSX.Element {
 
     const params = useParams();
     const [category, setCategory] = useState<string>();
+    const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
+
     useEffect(() => {
         setCategory(params.vehicleCategory);
+        vehicleServices.GetAllVehicles()
+            .then(beVehicles => {
+                setFeVehicles(beVehicles)
+                console.log(feVehicles);
+            })
+            .catch(err => {});
+
     }, [params]);
 
     return (

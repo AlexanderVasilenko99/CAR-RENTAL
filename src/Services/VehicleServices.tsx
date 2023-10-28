@@ -5,21 +5,15 @@ import { VehicleActionTypes, vehiclesState } from "../Redux/VehiclesState";
 class VehicleServices {
     public async GetAllVehicles(): Promise<VehicleModel[]> {
 
-        const response = await axios.get("../../src/Assets/JSONS/Vehicles.JSON");
+        const response = await axios.get("http://localhost:3030/api/products");
+        console.log(response.data);
+
         let vehicles: VehicleModel[];
+        vehicles = response.data;
 
-        try {
-            vehicles = response.data;
-            console.log("vehicles:");
-            console.log(vehicles);
+        const action = { type: VehicleActionTypes.GetAllVehicles, payload: vehicles }
+        vehiclesState.dispatch(action);
 
-
-            const action = { type: VehicleActionTypes.GetAllVehicles, payload: vehicles }
-            vehiclesState.dispatch(action);
-
-        } catch (err) {
-            console.log(err);
-        }
         return vehicles;
     }
 }
