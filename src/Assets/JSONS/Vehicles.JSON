@@ -1,0 +1,215 @@
+{
+    "vehicles": {
+        "suv&offraod": {},
+        "vans&trucks": {},
+        "luxury": {},
+        "small": {
+            "Hyundai": {
+                "I10": {
+                    "full_name": "Hyundai i10",
+                    "make_year": "2021",
+                    "engine_size": 1.2,
+                    "turbo": false,
+                    "horse_power": 66,
+                    "transmission": "automatic",
+                    "seats": 5,
+                    "doors": 4,
+                    "luggage": 2,
+                    "trunk_capacity": "220L",
+                    "tank_capacity": "40L",
+                    "fuel": "95 unleaded",
+                    "radio": true,
+                    "air_conditioner": true
+                }
+            },
+            "Kia": {
+                "Picanto": {
+                    "full_name": "Kia Picanto",
+                    "make_year": "2022",
+                    "engine_size": 1,
+                    "turbo": false,
+                    "horse_power": 67,
+                    "transmission": "automatic",
+                    "seats": 5,
+                    "doors": 4,
+                    "luggage": 1,
+                    "trunk_capacity": "200L",
+                    "tank_capacity": "40L",
+                    "fuel": "95 unleaded",
+                    "radio": true,
+                    "air_conditioner": true
+                }
+            }
+        },
+        "medium": {
+            "Mazda": {
+                "3": {
+                    "full_name": "Mazda 3 Hatchback",
+                    "make_year": "2023",
+                    "engine_size": 2,
+                    "turbo": false,
+                    "horse_power": 165,
+                    "transmission": "automatic",
+                    "seats": 5,
+                    "doors": 5,
+                    "luggage": 3,
+                    "trunk_capacity": "450L",
+                    "tank_capacity": "80L",
+                    "fuel": "95 unleaded",
+                    "radio": true,
+                    "air_conditioner": true
+                }
+            },
+            "Ford": {
+                "Fiesta": {
+                    "full_name": "Ford Fiesta st",
+                    "make_year": "2019",
+                    "engine_size": 1.5,
+                    "turbo": false,
+                    "horse_power": 197,
+                    "transmission": "automatic",
+                    "seats": 5,
+                    "doors": 5,
+                    "luggage": 3,
+                    "trunk_capacity": "420L",
+                    "tank_capacity": "85L",
+                    "fuel": "95 unleaded",
+                    "radio": true,
+                    "air_conditioner": true
+                }
+            }
+        },
+        "large": {
+            "Nissan": {
+                "Sentra": {
+                    "full_name": "Nissan Sentra SR",
+                    "make_year": "2019",
+                    "engine_size": 2,
+                    "turbo": true,
+                    "horse_power": 150,
+                    "transmission": "automatic",
+                    "seats": 5,
+                    "doors": 4,
+                    "luggage": 3,
+                    "trunk_capacity": "500L",
+                    "tank_capacity": "100L",
+                    "fuel": "95 unleaded",
+                    "radio": true,
+                    "air_conditioner": true
+                }
+            },
+            "Toyota": {
+                "Corolla": {
+                    "full_name": "Toyota Corolla",
+                    "make_year": "2021",
+                    "engine_size": 2,
+                    "turbo": false,
+                    "horse_power": 169,
+                    "transmission": "automatic",
+                    "seats": 5,
+                    "doors": 4,
+                    "luggage": 3,
+                    "trunk_capacity": "480L",
+                    "tank_capacity": "90L",
+                    "fuel": "95 unleaded",
+                    "radio": true,
+                    "air_conditioner": true
+                }
+            }
+        },
+        "motorcycles&scooters": {
+            "motorcycles": {
+                "A": {
+                    "BMW": {
+                        "GS1250": {
+                            "full_name": "BMW GS-1250",
+                            "make_year": 2022,
+                            "engine_size": "1254cc",
+                            "engine_configuration": "Parallel Twin",
+                            "horse_power": 136,
+                            "transmission": "standard",
+                            "tank_capacity": "45L",
+                            "fuel": "95 unleaded",
+                            "ABS": true,
+                            "CBS": false,
+                            "weight": "250kg",
+                            "luggage_available": true
+                        }
+                    },
+                    "Suzuki": {
+                        "SV650": {
+                            "full_name": "Suzuki SV650A",
+                            "make_year": 2017,
+                            "engine_size": "645cc",
+                            "engine_configuration": "V Twin",
+                            "horse_power": 75,
+                            "transmission": "standard",
+                            "tank_capacity": "15L",
+                            "fuel": "95 unleaded",
+                            "ABS": true,
+                            "CBS": false,
+                            "weight": "196kg",
+                            "luggage_available": false
+                        }
+                    }
+                },
+                "A1": {
+                    "Honda": {
+                        "CB500F": {
+                            "full_name": "Honda CB500F",
+                            "make_year": 2023,
+                            "engine_size": "645cc",
+                            "engine_configuration": "Parallel Twin",
+                            "horse_power": 47,
+                            "transmission": "standard",
+                            "tank_capacity": "17L",
+                            "fuel": "95 unleaded",
+                            "ABS": true,
+                            "CBS": false,
+                            "weight": "189kg",
+                            "luggage_available": true
+                        }
+                    }
+                }
+            },
+            "scooters": {
+                "A1": {
+                    "Honda": {
+                        "Forza350": {
+                            "full_name": "Honda Forza 350",
+                            "make_year": 2023,
+                            "engine_size": "330cc",
+                            "engine_configuration": "Single",
+                            "horse_power": 29,
+                            "transmission": "automatic",
+                            "tank_capacity": "23L",
+                            "fuel": "95 unleaded",
+                            "ABS": true,
+                            "CBS": false,
+                            "weight": "147kg",
+                            "luggage_available": false
+                        }
+                    }
+                },
+                "A2": {
+                    "Honda": {
+                        "Vision": {
+                            "full_name": "Honda Vision 110",
+                            "make_year": 2020,
+                            "engine_size": "108cc",
+                            "engine_configuration": "Single",
+                            "horse_power": 8.3,
+                            "transmission": "automatic",
+                            "tank_capacity": "4.2L",
+                            "fuel": "95 unleaded",
+                            "ABS": false,
+                            "CBS": true,
+                            "weight": "102kg",
+                            "luggage_available": false
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
