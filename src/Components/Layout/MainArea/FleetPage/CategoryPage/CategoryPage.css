@@ -4,8 +4,9 @@
 
 .CategoryPageGridContainer {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, 176px);
     gap: 60px;
+    margin-bottom: 30px;
 }
 
 .CategoryPageGridContainer>* {

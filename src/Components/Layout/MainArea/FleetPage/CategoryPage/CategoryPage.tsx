@@ -31,10 +31,17 @@ function FleetCategoryPage(): JSX.Element {
                     luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
                     radio trunkCapacity="3000L" />
 
-                <div>{category} item 1</div>
-                <div>{category} item 2</div>
-                <div>{category} item 3</div>
-                <div>{category} item 4</div>
+                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
+                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
+                    radio trunkCapacity="3000L" />
+
+                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
+                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
+                    radio trunkCapacity="3000L" />
+
+                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
+                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
+                    radio trunkCapacity="3000L" />
             </div>
         </div>
     );
