@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import AllVehiclesByCategories from "../../../../../Models/AllVehiclesByCategories";
 import { TransmissionTypes } from "../../../../../Models/FleetCategoryItemModel";
-import VehicleManufacturer from "../../../../../Models/VehicleManufacturer";
 import VehicleModel from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
@@ -24,17 +23,22 @@ function FleetCategoryPage(): JSX.Element {
     vehicleServices.GetAllVehicles()
         .then(allBeVehicles => {
             const allVehicles: AllVehiclesByCategories = allBeVehicles;
-            let category: VehicleManufacturer[];
+            let vehicles: VehicleModel[];
+
 
             switch (paramsCategory) {
                 case "small":
-                    category = allVehicles.small;
+                    vehicles = allVehicles.small;
+                    console.log(vehicles);
+
                     break;
                 case "medium":
-                    category = allVehicles.medium;
+                    vehicles = allVehicles.medium;
+                    console.log(vehicles);
                     break;
                 case "large":
-                    category = allVehicles.large;
+                    vehicles = allVehicles.large;
+                    console.log(vehicles);
                     break;
                 case "luxury":
                     // fill this later

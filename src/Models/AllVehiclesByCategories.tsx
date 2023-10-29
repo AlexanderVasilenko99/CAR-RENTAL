@@ -1,12 +1,12 @@
-import VehicleCategory from "./VehicleCategory";
+import VehicleModel from "./VehicleModel";
 
 class AllVehiclesByCategories {
-    public small?: VehicleCategory[]
-    public medium?:  VehicleCategory[]
-    public large?:  VehicleCategory[]
-    public luxury?:  VehicleCategory[]
-    public suvOffroad?:  VehicleCategory[]
-    public vansTrucks?:  VehicleCategory[]
-    public motorcyclesScooters?:  VehicleCategory[]
+    public small?: VehicleModel[]
+    public medium?: VehicleModel[]
+    public large?: VehicleModel[]
+    public luxury?: VehicleModel[]
+    public suvOffroad?: VehicleModel[]
+    public vansTrucks?: VehicleModel[]
+    public motorcyclesScooters?: VehicleModel[]
 }
 export default AllVehiclesByCategories;
