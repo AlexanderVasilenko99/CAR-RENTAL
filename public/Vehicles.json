@@ -1,7 +1,7 @@
 {
     "vehicles": {
-        "suv&offraod": [],
-        "vans&trucks": [],
+        "suv_offroad": [],
+        "vans_trucks": [],
         "luxury": [],
         "small": [
             {
@@ -14,7 +14,7 @@
                 "engine_size": 1.2,
                 "turbo": false,
                 "horse_power": 66,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "seats": 5,
                 "doors": 4,
                 "luggage": 2,
@@ -41,7 +41,7 @@
                 "engine_size": 1.2,
                 "turbo": false,
                 "horse_power": 66,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "seats": 5,
                 "doors": 4,
                 "luggage": 2,
@@ -68,7 +68,7 @@
                 "engine_size": 1,
                 "turbo": false,
                 "horse_power": 67,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "seats": 5,
                 "doors": 4,
                 "luggage": 1,
@@ -97,7 +97,7 @@
                 "engine_size": 2,
                 "turbo": false,
                 "horse_power": 165,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "seats": 5,
                 "doors": 5,
                 "luggage": 3,
@@ -124,7 +124,7 @@
                 "engine_size": 1.5,
                 "turbo": false,
                 "horse_power": 197,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "seats": 5,
                 "doors": 5,
                 "luggage": 3,
@@ -153,7 +153,7 @@
                 "engine_size": 2,
                 "turbo": true,
                 "horse_power": 150,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "seats": 5,
                 "doors": 4,
                 "luggage": 3,
@@ -180,7 +180,7 @@
                 "engine_size": 2,
                 "turbo": false,
                 "horse_power": 169,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "seats": 5,
                 "doors": 4,
                 "luggage": 3,
@@ -198,7 +198,7 @@
                 "luggage_available": null
             }
         ],
-        "motorcycles&scooters": [
+        "motorcycles_scooters": [
             {
                 "id": 0,
                 "full_name": "BMW GS-1250",
@@ -217,7 +217,14 @@
                 "ABS": true,
                 "CBS": false,
                 "weight": "250kg",
-                "luggage_available": true
+                "luggage_available": true,
+                "turbo": false,
+                "seats": null,
+                "doors": null,
+                "luggage": null,
+                "trunk_capacity": null,
+                "radio": null,
+                "air_conditioner": null
             },
             {
                 "id": 0,
@@ -285,7 +292,7 @@
                 "engine_size": 330,
                 "engine_configuration": "Single",
                 "horse_power": 29,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "tank_capacity": "23L",
                 "fuel": "95 unleaded",
                 "ABS": true,
@@ -312,7 +319,7 @@
                 "engine_size": 108,
                 "engine_configuration": "Single",
                 "horse_power": 8.3,
-                "transmission": "automatic",
+                "transmission": "Automatic",
                 "tank_capacity": "4.2L",
                 "fuel": "95 unleaded",
                 "ABS": false,

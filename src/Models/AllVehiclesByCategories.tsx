@@ -5,8 +5,8 @@ class AllVehiclesByCategories {
     public medium?: VehicleModel[]
     public large?: VehicleModel[]
     public luxury?: VehicleModel[]
-    public suvOffroad?: VehicleModel[]
-    public vansTrucks?: VehicleModel[]
-    public motorcyclesScooters?: VehicleModel[]
+    public suv_offroad?: VehicleModel[]
+    public vans_trucks?: VehicleModel[]
+    public motorcycles_scooters?: VehicleModel[]
 }
 export default AllVehiclesByCategories;

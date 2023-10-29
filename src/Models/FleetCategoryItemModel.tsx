@@ -1,7 +1,7 @@
 class FleetCategoryItemModel {
     public vehicleName: string;
     public imageName: string;
-    public transmission: TransmissionTypes;
+    public transmission: string;
     public passengers: number;
     public doors: number;
     public luggage: number;
