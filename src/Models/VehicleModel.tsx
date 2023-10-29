@@ -1,4 +1,6 @@
-class VehicleModel {
+import VehicleName from "./VehicleName";
+
+class VehicleModel extends VehicleName{
     public id: number
 
     public full_name: string;

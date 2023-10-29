@@ -1,20 +1,16 @@
 import axios from "axios";
-import VehicleModel from "../Models/VehicleModel";
-import { VehicleActionTypes, vehiclesState } from "../Redux/VehiclesState";
+import AllVehiclesByCategories from "../Models/AllVehiclesByCategories";
 
 class VehicleServices {
-    public async GetAllVehicles(): Promise<VehicleModel[]> {
+    public async GetAllVehicles(): Promise<AllVehiclesByCategories> {
+        const response = await axios.get("/Vehicles.json");
 
-        const response = await axios.get("http://localhost:3030/api/products");
-        console.log(response.data);
+        const data: AllVehiclesByCategories = response.data.vehicles;
+        
+        // const action = { type: VehicleActionTypes.GetAllVehicles, payload: vehicles }
+        // vehiclesState.dispatch(action);
 
-        let vehicles: VehicleModel[];
-        vehicles = response.data;
-
-        const action = { type: VehicleActionTypes.GetAllVehicles, payload: vehicles }
-        vehiclesState.dispatch(action);
-
-        return vehicles;
+        return data;
     }
 }
 

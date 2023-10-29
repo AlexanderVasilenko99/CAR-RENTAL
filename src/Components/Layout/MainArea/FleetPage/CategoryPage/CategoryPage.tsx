@@ -1,32 +1,84 @@
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { TransmissionTypes } from "../../../../../Models/FleetCategoryItemModel";
+import VehicleCategory from "../../../../../Models/VehicleCategory";
+import VehicleManufacturer from "../../../../../Models/VehicleManufacturer";
+import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetCategoryItem from "./Item/Item";
-import vehicleServices from "../../../../../Services/VehicleServices";
-import VehicleModel from "../../../../../Models/VehicleModel";
+import AllVehiclesByCategories from "../../../../../Models/AllVehiclesByCategories";
 
 function FleetCategoryPage(): JSX.Element {
 
     const params = useParams();
-    const [category, setCategory] = useState<string>();
-    const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
+    const [paramsCategory, setParamsCategory] = useState<string>();
+    const [feVehicles, setFeVehicles] = useState<VehicleManufacturer[]>();
 
     useEffect(() => {
-        setCategory(params.vehicleCategory);
-        vehicleServices.GetAllVehicles()
-            .then(beVehicles => {
-                setFeVehicles(beVehicles)
-                console.log(feVehicles);
-            })
-            .catch(err => {});
-
+        setParamsCategory(params.vehicleCategory);
     }, [params]);
+
+
+
+    vehicleServices.GetAllVehicles()
+        .then(allBeVehicles => {
+            const allVehicles: AllVehiclesByCategories = allBeVehicles;
+            let category: VehicleManufacturer[];
+            
+            switch (paramsCategory) {
+                case "small":
+                    console.log("small activated");
+                    category = allVehicles.small;
+                    console.log(category);
+                    break;
+                case "medium":
+                    console.log("medium activated");
+                    category = allVehicles.medium;
+                    console.log(category);
+                    break;
+                case "large":
+                    console.log("large activated");
+                    category = allVehicles.large;
+                    console.log(category);
+                    break;
+                case "luxury":
+                    console.log("luxury activated");
+                    category = allVehicles.luxury;
+                    console.log(category);
+                    break;
+                case "suv&offraod":
+                    console.log("suv&offraod activated");
+                    category = allVehicles.suvOffroad;
+                    console.log(category);
+                    break;
+                case "vans&trucks":
+                    console.log("vans&trucks activated");
+                    category = allVehicles.vansTrucks;
+                    console.log(category);
+                    break;
+                case "motorcycles&scooters":
+                    console.log("motorcycles&scooters activated");
+                    category = allVehicles.motorcyclesScooters;
+                    console.log(category);
+                    break;
+                case "all":
+                    console.log("all activated");
+                    // fill this later
+                    break;
+            }
+            // console.log("feVehicles: " + feVehicles);
+
+        })
+        .catch(err => { console.log(err) });
+
+
+
+
 
     return (
         <div className="CategoryPage">
-            <h1>Browse {category}</h1>
+            <h1>Browse {paramsCategory}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
             <div className="CategoryPageGridContainer">
 
