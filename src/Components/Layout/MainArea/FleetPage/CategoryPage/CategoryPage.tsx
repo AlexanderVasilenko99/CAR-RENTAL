@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import AllVehiclesByCategories from "../../../../../Models/AllVehiclesByCategories";
 import { TransmissionTypes } from "../../../../../Models/FleetCategoryItemModel";
-import VehicleCategory from "../../../../../Models/VehicleCategory";
 import VehicleManufacturer from "../../../../../Models/VehicleManufacturer";
+import VehicleModel from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetCategoryItem from "./Item/Item";
-import AllVehiclesByCategories from "../../../../../Models/AllVehiclesByCategories";
 
 function FleetCategoryPage(): JSX.Element {
 
     const params = useParams();
     const [paramsCategory, setParamsCategory] = useState<string>();
-    const [feVehicles, setFeVehicles] = useState<VehicleManufacturer[]>();
+    const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
 
     useEffect(() => {
         setParamsCategory(params.vehicleCategory);
@@ -25,45 +25,30 @@ function FleetCategoryPage(): JSX.Element {
         .then(allBeVehicles => {
             const allVehicles: AllVehiclesByCategories = allBeVehicles;
             let category: VehicleManufacturer[];
-            
+
             switch (paramsCategory) {
                 case "small":
-                    console.log("small activated");
                     category = allVehicles.small;
-                    console.log(category);
                     break;
                 case "medium":
-                    console.log("medium activated");
                     category = allVehicles.medium;
-                    console.log(category);
                     break;
                 case "large":
-                    console.log("large activated");
                     category = allVehicles.large;
-                    console.log(category);
                     break;
                 case "luxury":
-                    console.log("luxury activated");
-                    category = allVehicles.luxury;
-                    console.log(category);
+                    // fill this later
                     break;
                 case "suv&offraod":
-                    console.log("suv&offraod activated");
-                    category = allVehicles.suvOffroad;
-                    console.log(category);
+                    // fill this later
                     break;
                 case "vans&trucks":
-                    console.log("vans&trucks activated");
-                    category = allVehicles.vansTrucks;
-                    console.log(category);
+                    // fill this later
                     break;
                 case "motorcycles&scooters":
-                    console.log("motorcycles&scooters activated");
-                    category = allVehicles.motorcyclesScooters;
-                    console.log(category);
+                    // fill this later
                     break;
                 case "all":
-                    console.log("all activated");
                     // fill this later
                     break;
             }
