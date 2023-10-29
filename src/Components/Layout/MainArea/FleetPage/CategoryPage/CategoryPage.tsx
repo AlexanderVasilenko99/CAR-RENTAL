@@ -53,45 +53,17 @@ function FleetCategoryPage(): JSX.Element {
             .catch(err => { console.log(err) });
     }, [params]);
 
-
-
-
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
-                    <FleetCategoryItem vehicleName={v.full_name} imageName="sentra.png" airConditioning doors={v.doors} fuel={v.fuel}
+                    <FleetCategoryItem vehicleName={v.full_name} imageName={v.image_name} airConditioning doors={v.doors} fuel={v.fuel}
                         luggage={v.luggage} passengers={v.seats} redirectPath={appConfig.samePagePath} tankCapacity={v.tank_capacity}
                         transmission={v.transmission}
                         radio trunkCapacity="3000L" />
                 </div>)}
-
-                {/* 
-                <FleetCategoryItem vehicleName="Nissan Sentra SR 1.6" imageName="sentra.png" airConditioning doors={4} fuel="Unleaded"
-                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
-                    radio trunkCapacity="3000L" />
-
-                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
-                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
-                    radio trunkCapacity="3000L" />
-
-                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
-                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
-                    radio trunkCapacity="3000L" />
-
-                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
-                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
-                    radio trunkCapacity="3000L" />
-
-                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
-                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
-                    radio trunkCapacity="3000L" />
-
-                <FleetCategoryItem vehicleName="Ford Focus 1.2 Turbo" imageName="focus.png" airConditioning doors={4} fuel="Unleaded"
-                    luggage={3} passengers={5} redirectPath={appConfig.samePagePath} tankCapacity="100L" transmission={TransmissionTypes.automatic}
-                    radio trunkCapacity="3000L" /> */}
             </div>
         </div>
     );

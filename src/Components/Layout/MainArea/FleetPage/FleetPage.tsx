@@ -12,12 +12,12 @@ function FleetPage(): JSX.Element {
                 </NavLink>
             </h1>
 
-            <FleetItem vehicleCategoryName="Suv & Off Road" vehicleCategoryImgName="jeep3.png" vehicleCategoryRedirectPath={appConfig.fleetPageSuvOffRoadPath} />
+            <FleetItem vehicleCategoryName="Suv & Off Road" vehicleCategoryImgName="jeep.png" vehicleCategoryRedirectPath={appConfig.fleetPageSuvOffRoadPath} />
             <FleetItem vehicleCategoryName="Luxury" vehicleCategoryImgName="porsche.png" vehicleCategoryRedirectPath={appConfig.fleetPageLuxuryPath} />
             <FleetItem vehicleCategoryName="Small" vehicleCategoryImgName="micra.png" vehicleCategoryRedirectPath={appConfig.fleetPageSmallPath} />
             <FleetItem vehicleCategoryName="Medium" vehicleCategoryImgName="focus.png" vehicleCategoryRedirectPath={appConfig.fleetPageMediumPath} />
             <FleetItem vehicleCategoryName="Large" vehicleCategoryImgName="sentra.png" vehicleCategoryRedirectPath={appConfig.fleetPageLargePath} />
-            <FleetItem vehicleCategoryName="Vans & Trucks" vehicleCategoryImgName="mercedes4.png" vehicleCategoryRedirectPath={appConfig.fleetPageVansTrucksPath} />
+            <FleetItem vehicleCategoryName="Vans & Trucks" vehicleCategoryImgName="mercedes.png" vehicleCategoryRedirectPath={appConfig.fleetPageVansTrucksPath} />
             <FleetItem vehicleCategoryName="Motorcycles & Scooters" vehicleCategoryImgName="sv650.png" vehicleCategoryRedirectPath={appConfig.fleetPageMotorcyclesScootersPath} />
 
             <NavLink to={appConfig.fleetPageAllVehiclesPath}>
