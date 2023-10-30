@@ -2,90 +2,59 @@ import { NavLink } from "react-router-dom";
 import appConfig from "../../../../Utils/AppConfig";
 import "./Links.css";
 import SingleLinkFamily from "./SingleLinkFamily/SingleLinkFamily";
+import { SingleLink } from "../../../../Models/SingleLink";
+import { SingleLinkFamilyModel } from "../../../../Models/SingleLinkFamilyModel";
 
 function Links(): JSX.Element {
+    const topDestinations: SingleLink[] = [
+        new SingleLink("Tel Aviv", appConfig.locationsTelAvivPath),
+        new SingleLink("Jerusalem", appConfig.locationsJerusalemPath),
+        new SingleLink("Haifa", appConfig.locationsHaifaPath),
+        new SingleLink("Be'er Sheva", appConfig.locationsBeerShevaPath),
+        new SingleLink("Ra'anana", appConfig.locationsRaananaPath),
+        new SingleLink("Ben Gurion Airport", appConfig.locationsBenGurionPath),
+    ];
+    const carRentals: SingleLink[] = [
+        new SingleLink("All Family Cars", appConfig.fleetPagePath),
+        new SingleLink("Suv & Off Road", appConfig.fleetPageSuvOffRoadPath),
+        new SingleLink("Vans & Trucks", appConfig.fleetPageVansTrucksPath),
+        new SingleLink("Two Wheels", appConfig.fleetPageMotorcyclesScootersPath),
+        new SingleLink("Luxury", appConfig.fleetPageLuxuryPath),
+        new SingleLink("Business Rental", appConfig.servicesBusinessRentalPagePath),
+        new SingleLink("Our Fleet", appConfig.fleetPagePath),
+    ];
+    const services: SingleLink[] = [
+        new SingleLink("Vehicle Rental", appConfig.fleetPagePath),
+        new SingleLink("Business Rental", appConfig.servicesBusinessRentalPagePath),
+        new SingleLink("Monthly Rental", appConfig.servicesMonthlyRentalPagePath),
+        new SingleLink("Group Car Rental", appConfig.servicesGroupRentalPagePath),
+        new SingleLink("Chauffeur Services", appConfig.servicesChauffeurPagePath),
+        new SingleLink("One Day Car Rental", appConfig.servicesOneDayRentalPagePath),
+        new SingleLink("One Way Car Rental", appConfig.servicesOneWayRentalPagePath),
+    ];
+    const information: SingleLink[] = [
+        new SingleLink("Who We Are", appConfig.samePagePath),
+        new SingleLink("Useful information", appConfig.helpPageInfoPagePath),
+        new SingleLink("Help Page", appConfig.helpPagePath),
+        new SingleLink("Loyalty Program", appConfig.LoyaltyProgramPagePath),
+        new SingleLink("Work With Us", appConfig.careersPagePath),
+        new SingleLink("Lost & Found", appConfig.helpPageLostFoundPagePath),
+        new SingleLink("Terms And Conditions", appConfig.helpPageTermsConditionsPagePath),
+        new SingleLink("FAQ", appConfig.helpPageFAQPagePath),
+    ];
+    const dad: SingleLinkFamilyModel[] = [
+        new SingleLinkFamilyModel("Top Destinations", topDestinations),
+        new SingleLinkFamilyModel("Car Rental", carRentals),
+        new SingleLinkFamilyModel("Services", services),
+        new SingleLinkFamilyModel("Information", information),
+    ];
     return (
         <div className="Links">
-            <div>
+            {dad.map(family => <div>
                 <div className="family-container">
-                    <SingleLinkFamily header="Top Destinations"
-                        firstLinkHeader="Tel Aviv"
-                        firstLinkPath={appConfig.locationsTelAvivPath}
-                        secondLinkHeader="Jerusalem"
-                        secondLinkPath={appConfig.locationsJerusalemPath}
-                        thirdLinkHeader="Haifa"
-                        thirdLinkPath={appConfig.locationsHaifaPath}
-                        fourthLinkHeader="Be'er Sheva"
-                        fourthLinkPath={appConfig.locationsBeerShevaPath}
-                        fifthLinkHeader="Ra'anana"
-                        fifthLinkPath={appConfig.locationsRaananaPath}
-                        sixthLinkHeader="Ben Gurion Airport"
-                        sixthLinkPath={appConfig.locationsBenGurionPath}
-                    />
+                    <SingleLinkFamily header={family.header} singleLinks={family.singleLinks} />
                 </div>
-            </div>
-            <div>
-                <div className="family-container">
-                    <SingleLinkFamily header="Cat Rental"
-                        firstLinkHeader="All Family Cars"
-                        firstLinkPath={appConfig.fleetPagePath}
-                        secondLinkHeader="Suv & Off Road"
-                        secondLinkPath={appConfig.fleetPageSuvOffRoadPath}
-                        fifthLinkHeader="Vans & Trucks"
-                        fifthLinkPath={appConfig.fleetPageVansTrucksPath}
-                        sixthLinkHeader="Two Wheels"
-                        sixthLinkPath={appConfig.fleetPageMotorcyclesScootersPath}
-                        seventhLinkHeader="Luxury"
-                        seventhLinkPath={appConfig.fleetPageLuxuryPath}
-                        eighthLinkHeader="Business Rental"
-                        eighthLinkPath={appConfig.servicesBusinessRentalPagePath}
-                        ninthLinkHeader="Our Fleet"
-                        ninthLinkPath={appConfig.fleetPagePath}
-                    />
-                </div>
-            </div>
-            <div>
-                <div className="family-container">
-                    <SingleLinkFamily header="Services"
-                        firstLinkHeader="Vehicle Rental"
-                        firstLinkPath={appConfig.fleetPagePath}
-                        secondLinkHeader="Business Rental"
-                        secondLinkPath={appConfig.servicesBusinessRentalPagePath}
-                        thirdLinkHeader="Monthly Rental"
-                        thirdLinkPath={appConfig.servicesMonthlyRentalPagePath}
-                        fourthLinkHeader="Group Car Rental"
-                        fourthLinkPath={appConfig.servicesGroupRentalPagePath}
-                        fifthLinkHeader="Chauffeur Services"
-                        fifthLinkPath={appConfig.servicesChauffeurPagePath}
-                        sixthLinkHeader="One Day Car Rental"
-                        sixthLinkPath={appConfig.servicesOneDayRentalPagePath}
-                        seventhLinkHeader="One Way Car Rental"
-                        seventhLinkPath={appConfig.servicesOneWayRentalPagePath}
-                    />
-                </div>
-            </div>
-            <div>
-                <div className="family-container">
-                    <SingleLinkFamily header="Information"
-                        firstLinkHeader="Who We Are"
-
-                        secondLinkHeader="Useful information"
-                        secondLinkPath={appConfig.helpPageInfoPagePath}
-                        thirdLinkHeader="Help Page"
-                        thirdLinkPath={appConfig.helpPagePath}
-                        fourthLinkHeader="Loyalty Program"
-                        fourthLinkPath={appConfig.LoyaltyProgramPagePath}
-                        fifthLinkHeader="Work With Us"
-                        fifthLinkPath={appConfig.careersPagePath}
-                        sixthLinkHeader="Lost & Found"
-                        sixthLinkPath={appConfig.helpPageLostFoundPagePath}
-                        seventhLinkHeader="Terms And Conditions"
-                        seventhLinkPath={appConfig.helpPageTermsConditionsPagePath}
-                        eighthLinkHeader="FAQ"
-                        eighthLinkPath={appConfig.helpPageFAQPagePath}
-                    />
-                </div>
-            </div>
+            </div>)}
             <div className="contact-icons">
                 <h3>Get In Touch!</h3>
                 <div>
