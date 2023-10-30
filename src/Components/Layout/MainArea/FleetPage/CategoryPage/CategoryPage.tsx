@@ -61,9 +61,10 @@ function CategoryPage(): JSX.Element {
                 {feVehicles?.map(v => <div>
                     <FleetItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}
                         doors={v.doors} fuel={v.fuel} luggage={v.luggage} seats={v.seats} redirect_path={v.redirect_path}
-                        tank_capacity={v.tank_capacity}
-                        transmission={v.transmission}
-                        radio={v.radio} trunk_capacity={v.trunk_capacity} />
+                        tank_capacity={v.tank_capacity} abs={v.abs} cbs={v.cbs} engine_configuration={v.engine_configuration}
+                        transmission={v.transmission} engine_size={v.engine_size} horse_power={v.horse_power} id={v.id} make={v.make}
+                        license={v.license} luggage_available={v.luggage_available} model={v.model} make_year={v.make_year}
+                        turbo={v.turbo} type={v.type} weight={v.weight} radio={v.radio} trunk_capacity={v.trunk_capacity} />
                 </div>)}
             </div>
         </div>

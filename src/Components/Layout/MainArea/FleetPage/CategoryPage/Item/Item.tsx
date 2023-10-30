@@ -3,7 +3,9 @@ import VehicleModel from "../../../../../../Models/VehicleModel";
 import appConfig from "../../../../../../Utils/AppConfig";
 import "./Item.css";
 
-function FleetCategoryItem(props: VehicleModel): JSX.Element {
+function FleetItem(props: VehicleModel): JSX.Element {
+    console.log(props);
+
     return (
         <div className="Item">
             <div className="imgHolder">
@@ -77,4 +79,4 @@ function FleetCategoryItem(props: VehicleModel): JSX.Element {
     );
 }
 
-export default FleetCategoryItem;
+export default FleetItem;
