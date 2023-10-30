@@ -1,7 +1,7 @@
-import CareerBenefitModel from "../../../../../Models/CareerBenefitModel";
+import { CareerBenefitModel } from "../../../../../Models/CareerBenefitModel";
 import "./CareerBenefit.css";
 
-function CareerBenefit(props: CareerBenefitModel): JSX.Element {
+export function CareerBenefit(props: CareerBenefitModel): JSX.Element {
     return (
         <div className="CareerBenefit">
             <div>
