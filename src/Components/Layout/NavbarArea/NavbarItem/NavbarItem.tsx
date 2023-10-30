@@ -14,7 +14,7 @@ function NavbarItem(props: NavbarItemModel): JSX.Element {
                     {arr?.map(i => <div>
                         <NavLink to={i.subNavItemRedirectPath}>{i.subNavItemHeading}</NavLink>
                     </div>
-                    )};
+                    )}
                 </div>
             }
         </NavLink >
