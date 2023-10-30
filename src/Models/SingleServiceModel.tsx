@@ -4,4 +4,3 @@ export class SingleServiceModel {
     public serviceImageName: string;
     public destinationUrl: string;
 }
-// export default SingleServiceModel;

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import SingleLinkFamilyModel from "../../../../../Models/SingleLinkFamilyModel";
+import { SingleLinkFamilyModel } from "../../../../../Models/SingleLinkFamilyModel";
 import "./SingleLinkFamily.css";
 
 function SingleLinkFamily(params: SingleLinkFamilyModel): JSX.Element {

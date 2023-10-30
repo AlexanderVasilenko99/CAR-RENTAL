@@ -1,35 +1,33 @@
-class SingleLinkFamilyModel{
-    public header:string;
+export class SingleLinkFamilyModel {
+    public header: string;
 
-    firstLinkHeader?:string;
-    firstLinkPath?:string = '#';
+    firstLinkHeader?: string;
+    firstLinkPath?: string = '#';
 
-    secondLinkHeader?:string;
-    secondLinkPath?:string = '#';
+    secondLinkHeader?: string;
+    secondLinkPath?: string = '#';
 
-    thirdLinkHeader?:string;
-    thirdLinkPath?:string = '#';
+    thirdLinkHeader?: string;
+    thirdLinkPath?: string = '#';
 
-    fourthLinkHeader?:string;
-    fourthLinkPath?:string = '#';
+    fourthLinkHeader?: string;
+    fourthLinkPath?: string = '#';
 
-    fifthLinkHeader?:string;
-    fifthLinkPath?:string = '#';
+    fifthLinkHeader?: string;
+    fifthLinkPath?: string = '#';
 
-    sixthLinkHeader?:string;
-    sixthLinkPath?:string = '#';
+    sixthLinkHeader?: string;
+    sixthLinkPath?: string = '#';
 
-    seventhLinkHeader?:string;
-    seventhLinkPath?:string = '#';
+    seventhLinkHeader?: string;
+    seventhLinkPath?: string = '#';
 
-    eighthLinkHeader?:string;
-    eighthLinkPath?:string = '#';
+    eighthLinkHeader?: string;
+    eighthLinkPath?: string = '#';
 
-    ninthLinkHeader?:string;
-    ninthLinkPath?:string = '#';
+    ninthLinkHeader?: string;
+    ninthLinkPath?: string = '#';
 
-    tenthLinkHeader?:string;
-    tenthLinkPath?:string = '#';
-
+    tenthLinkHeader?: string;
+    tenthLinkPath?: string = '#';
 }
-export default SingleLinkFamilyModel;
