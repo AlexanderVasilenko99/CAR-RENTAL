@@ -1,4 +1,4 @@
-import AllVehiclesByCategories from "./AllVehiclesByCategories";
+import { AllVehiclesByCategories } from "./AllVehiclesByCategories";
 
 export class VehicleModel extends AllVehiclesByCategories {
     public id: number

@@ -1,6 +1,5 @@
 import { VehicleModel } from "./VehicleModel";
-
-class AllVehiclesByCategories {
+export class AllVehiclesByCategories {
     public small?: VehicleModel[]
     public medium?: VehicleModel[]
     public large?: VehicleModel[]
@@ -9,4 +8,3 @@ class AllVehiclesByCategories {
     public vans_trucks?: VehicleModel[]
     public motorcycles_scooters?: VehicleModel[]
 }
-export default AllVehiclesByCategories;

@@ -1,5 +1,5 @@
 import axios from "axios";
-import AllVehiclesByCategories from "../Models/AllVehiclesByCategories";
+import { AllVehiclesByCategories } from "../Models/AllVehiclesByCategories";
 
 class VehicleServices {
     public async GetAllVehicles(): Promise<AllVehiclesByCategories> {

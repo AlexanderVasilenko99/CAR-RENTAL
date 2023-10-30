@@ -5,7 +5,7 @@ import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetItem from "./Item/Item";
-import AllVehiclesByCategories from "../../../../../Models/AllVehiclesByCategories";
+import { AllVehiclesByCategories } from "../../../../../Models/AllVehiclesByCategories";
 
 function CategoryPage(): JSX.Element {
 
