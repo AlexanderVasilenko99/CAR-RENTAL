@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import VehicleModel from "../Models/VehicleModel";
+import { VehicleModel } from "../Models/VehicleModel";
 
 export class VehiclesState {
     public vehicles: VehicleModel[];

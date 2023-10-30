@@ -1,6 +1,6 @@
 import AllVehiclesByCategories from "./AllVehiclesByCategories";
 
-class VehicleModel extends AllVehiclesByCategories {
+export class VehicleModel extends AllVehiclesByCategories {
     public id: number
 
     public full_name: string;
@@ -31,4 +31,3 @@ class VehicleModel extends AllVehiclesByCategories {
     public weight: number;
     public luggage_available: string;
 }
-export default VehicleModel

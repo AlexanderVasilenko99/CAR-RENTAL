@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import VehicleModel from "../../../../../../Models/VehicleModel";
+import { VehicleModel } from "../../../../../../Models/VehicleModel";
 import appConfig from "../../../../../../Utils/AppConfig";
 import "./Item.css";
 

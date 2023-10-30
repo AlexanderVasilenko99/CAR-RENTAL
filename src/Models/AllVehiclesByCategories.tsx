@@ -1,4 +1,4 @@
-import VehicleModel from "./VehicleModel";
+import { VehicleModel } from "./VehicleModel";
 
 class AllVehiclesByCategories {
     public small?: VehicleModel[]

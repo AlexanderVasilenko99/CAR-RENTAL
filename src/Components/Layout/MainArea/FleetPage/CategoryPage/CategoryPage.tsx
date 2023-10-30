@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import VehicleModel from "../../../../../Models/VehicleModel";
+import { VehicleModel } from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
