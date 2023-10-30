@@ -32,6 +32,18 @@ function FleetCategoryItem(props: VehicleModel): JSX.Element {
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/suitcaseicon.png`)} />
                         Optional Luggage
                     </div>}
+                    {props.abs && <div>
+                        <img src={require(`../../../../../../Assets/Images/Fleet/Icons/abs.png`)} />
+                        ABS
+                    </div>}
+                    {props.cbs && <div>
+                        <img src={require(`../../../../../../Assets/Images/Fleet/Icons/abs.png`)} />
+                        CBS
+                    </div>}
+                    {props.type == "Motorcycle" || props.type == "Scooter" && props.horse_power && <div>
+                        <img src={require(`../../../../../../Assets/Images/Fleet/Icons/horsepower.png`)} />
+                        Horsepower
+                    </div>}
                 </div>
                 <div className="moreStats">
                     {props.trunk_capacity && <div>
@@ -53,6 +65,10 @@ function FleetCategoryItem(props: VehicleModel): JSX.Element {
                     {props.air_conditioner && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/snowflake.png`)} />
                         Air Conditioning
+                    </div>}
+                    {props.turbo && <div>
+                        <img src={require(`../../../../../../Assets/Images/Fleet/Icons/turbo.png`)} />
+                        Turbocharger
                     </div>}
                 </div>
                 <div className="btnHolder"><NavLink to={appConfig.samePagePath}>View Availability</NavLink></div>
