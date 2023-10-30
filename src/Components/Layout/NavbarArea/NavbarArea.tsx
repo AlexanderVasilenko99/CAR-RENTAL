@@ -13,19 +13,40 @@ import "./NavbarArea.css";
 import 'react-dropdown/style.css';
 import { useForm } from 'react-hook-form';
 import NavbarItem from './NavbarItem/NavbarItem';
-
-
 import { useState } from "react";
 import Modal from 'react-modal';
-
-
 import SignInForm from '../MainArea/SignInPage/SignInForm/SignInForm';
+import { subNavItem } from '../../../Models/subNavItem';
+
+const fleetSubNavItems: subNavItem[] = [
+    new subNavItem('Small', appConfig.fleetPageSmallPath),
+    new subNavItem('Medium', appConfig.fleetPageMediumPath),
+    new subNavItem('Large', appConfig.fleetPageLargePath),
+    new subNavItem('Suv & Off Road', appConfig.fleetPageSuvOffRoadPath),
+    new subNavItem('Luxury', appConfig.fleetPageLuxuryPath),
+    new subNavItem('Motorcycles & Scooters', appConfig.fleetPageMotorcyclesScootersPath),
+    new subNavItem('Vans & Trucks', appConfig.fleetPageVansTrucksPath),
+    new subNavItem('All Vehicles', appConfig.fleetPageAllVehiclesPath),
+];
+const servicesSubNavItems: subNavItem[] = [
+    new subNavItem('Vehicle Rental', appConfig.fleetPagePath),
+    new subNavItem('Monthly Rental', appConfig.servicesMonthlyRentalPagePath),
+    new subNavItem('Business Rental', appConfig.servicesBusinessRentalPagePath),
+    new subNavItem('Chauffeur Services', appConfig.servicesChauffeurPagePath),
+    new subNavItem('Group Car Rental', appConfig.servicesGroupRentalPagePath),
+    new subNavItem('One Day Car Rental', appConfig.servicesOneDayRentalPagePath),
+    new subNavItem('One Way Car Rental', appConfig.servicesOneWayRentalPagePath),
+    new subNavItem('All Services', appConfig.servicesPagePath),
+];
+const locationsSubNavItems: subNavItem[] = [
+    new subNavItem('Israel', appConfig.locationsPagePath),
+];
+
 
 
 function NavbarArea(): JSX.Element {
     const { register, handleSubmit } = useForm();
     function search2(params: any) {
-        console.log("nigger2");
         console.log(params);
     }
     const [modalIsOpen, setIsOpen] = useState<boolean>(false);
@@ -107,40 +128,19 @@ function NavbarArea(): JSX.Element {
                 </div>
                 {/* <NavbarItem itemText='Search' itemDestinationPagePath={appConfig.samePagePath} itemSvgComponent={<SearchIcon />} /> */}
                 <div onClick={closeModal}>
-                    <NavbarItem isDropdown itemText='Fleet' itemDestinationPagePath={appConfig.fleetPagePath}
-                        firstSubItemHeading='Small' firstSubItemRedirectPath={appConfig.fleetPageSmallPath}
-                        secondSubItemHeading='Medium' secondSubItemRedirectPath={appConfig.fleetPageMediumPath}
-                        thirdSubItemHeading='Large' thirdSubItemRedirectPath={appConfig.fleetPageLargePath}
-                        fourthSubItemHeading='Suv & Off Road' fourthSubItemRedirectPath={appConfig.fleetPageSuvOffRoadPath}
-                        fifthSubItemHeading='Luxury' fifthSubItemRedirectPath={appConfig.fleetPageLuxuryPath}
-                        sixthSubItemHeading='Motorcycles & Scooters' sixthSubItemRedirectPath={appConfig.fleetPageMotorcyclesScootersPath}
-                        seventhSubItemHeading='Vans & Trucks' seventhSubItemRedirectPath={appConfig.fleetPageVansTrucksPath}
-                        eightSubItemHeading='All Vehicles' eightSubItemRedirectPath={appConfig.fleetPageAllVehiclesPath}
+                    <NavbarItem isDropdown
+                        itemText='Fleet' itemDestinationPagePath={appConfig.fleetPagePath}
+                        subNavItems={fleetSubNavItems}
                         itemSvgComponent={<DirectionsCarOutlinedIcon />} />
                 </div>
                 <div onClick={closeModal}>
                     <NavbarItem isDropdown itemText='Services' itemDestinationPagePath={appConfig.servicesPagePath}
-                        firstSubItemHeading='Vehicle Rental'
-                        firstSubItemRedirectPath={appConfig.fleetPagePath}
-                        secondSubItemHeading='Monthly Rental'
-                        secondSubItemRedirectPath={appConfig.servicesMonthlyRentalPagePath}
-                        thirdSubItemHeading='Business Rental'
-                        thirdSubItemRedirectPath={appConfig.servicesBusinessRentalPagePath}
-                        fourthSubItemHeading='Chauffeur Services'
-                        fourthSubItemRedirectPath={appConfig.servicesChauffeurPagePath}
-                        fifthSubItemHeading='Group Car Rental'
-                        fifthSubItemRedirectPath={appConfig.servicesGroupRentalPagePath}
-                        sixthSubItemHeading='One Day Car Rental'
-                        sixthSubItemRedirectPath={appConfig.servicesOneDayRentalPagePath}
-                        seventhSubItemHeading='One Way Car Rental'
-                        seventhSubItemRedirectPath={appConfig.servicesOneWayRentalPagePath}
-                        eightSubItemHeading='All Services'
-                        eightSubItemRedirectPath={appConfig.servicesPagePath}
+                        subNavItems={servicesSubNavItems}
                         itemSvgComponent={< ManageSearchOutlinedIcon />} />
                 </div>
                 <div onClick={closeModal}>
                     <NavbarItem isDropdown itemText='Locations' itemDestinationPagePath={appConfig.locationsPagePath}
-                        firstSubItemHeading='Israel' firstSubItemRedirectPath={appConfig.locationsPagePath}
+                        subNavItems={locationsSubNavItems}
                         itemSvgComponent={<PlaceOutlinedIcon />} />
                 </div>
                 <div onClick={closeModal}>
