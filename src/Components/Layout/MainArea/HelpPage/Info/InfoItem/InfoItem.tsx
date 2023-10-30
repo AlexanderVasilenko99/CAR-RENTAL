@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import InfoItemModel from "../../../../../../Models/InfoItemModel";
+import { InfoItemModel } from "../../../../../../Models/InfoItemModel";
 import "./InfoItem.css";
-
+    
 function InfoItem(props: InfoItemModel): JSX.Element {
     return (
         <div className='InfoItem'>
