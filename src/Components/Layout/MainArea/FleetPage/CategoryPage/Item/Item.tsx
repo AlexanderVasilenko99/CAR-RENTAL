@@ -4,7 +4,8 @@ import appConfig from "../../../../../../Utils/AppConfig";
 import "./Item.css";
 
 function FleetItem(props: VehicleModel): JSX.Element {
-    console.log(props);
+    console.log(props.type);
+    console.log(props.horse_power);
 
     return (
         <div className="Item">
@@ -32,7 +33,7 @@ function FleetItem(props: VehicleModel): JSX.Element {
                     </div>}
                     {props.luggage_available && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/suitcaseicon.png`)} />
-                        Optional Luggage
+                        Optional
                     </div>}
                     {props.abs && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/abs.png`)} />
@@ -42,9 +43,9 @@ function FleetItem(props: VehicleModel): JSX.Element {
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/abs.png`)} />
                         CBS
                     </div>}
-                    {props.type == "Motorcycle" || props.type == "Scooter" && props.horse_power && <div>
+                    {props.type == "motorcycle" || props.type == "scooter" && props.horse_power && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/horsepower.png`)} />
-                        Horsepower
+                        {props.horse_power}
                     </div>}
                 </div>
                 <div className="moreStats">
