@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import NavbarItemModel from "../../../../Models/NavbarItemModel";
+import { NavbarItemModel } from "../../../../Models/NavbarItemModel";
 import "./NavbarItem.css";
 import { SubNavItem } from "../../../../Models/SubNavItem";
 
