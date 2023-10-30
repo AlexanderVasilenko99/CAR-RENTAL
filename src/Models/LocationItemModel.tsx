@@ -1,4 +1,4 @@
-class LocationItemModel {
+export class LocationItemModel {
     public locationCity: string;
     public locationStreet: string;
     public locationMail: string;
@@ -16,4 +16,3 @@ class LocationItemModel {
         this.locationRedirectPath = locationRedirectPath;
     }
 }
-export default LocationItemModel;

@@ -3,7 +3,7 @@ import 'react-dropdown/style.css';
 import LocationItem from "./LocationItem/LocationItem";
 import "./LocationsPage.css";
 import appConfig from '../../../../Utils/AppConfig';
-import LocationItemModel from '../../../../Models/LocationItemModel';
+import { LocationItemModel } from '../../../../Models/LocationItemModel';
 
 
 const locations: LocationItemModel[] = [

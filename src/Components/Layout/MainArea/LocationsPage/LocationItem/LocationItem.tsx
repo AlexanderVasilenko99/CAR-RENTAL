@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import LocationItemModel from "../../../../../Models/LocationItemModel";
+import { LocationItemModel } from "../../../../../Models/LocationItemModel";
 import Accordion from "./Accordion/Accordion";
 import "./LocationItem.css";
 
