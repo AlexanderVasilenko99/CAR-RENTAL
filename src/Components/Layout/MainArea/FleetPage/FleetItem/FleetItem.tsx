@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./FleetItem.css";
-import VehicleCategoryItem from "../../../../../Models/VehicleCategoryItem";
+import { VehicleCategoryItem } from "../../../../../Models/VehicleCategoryItem";
 
 function FleetItem(props: VehicleCategoryItem): JSX.Element {
     return (

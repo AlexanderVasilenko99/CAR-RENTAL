@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./FleetPage.css";
 import FleetItem from "./FleetItem/FleetItem";
 import appConfig from "../../../../Utils/AppConfig";
-import VehicleCategoryItem from "../../../../Models/VehicleCategoryItem";
+import { VehicleCategoryItem } from "../../../../Models/VehicleCategoryItem";
 
 function FleetPage(): JSX.Element {
     const fleetItems: VehicleCategoryItem[] = [

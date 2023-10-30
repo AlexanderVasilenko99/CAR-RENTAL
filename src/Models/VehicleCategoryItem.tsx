@@ -1,4 +1,4 @@
-class VehicleCategoryItem {
+export class VehicleCategoryItem {
     public vehicleCategoryName: string;
     public vehicleCategoryImgName: string;
     public vehicleCategoryRedirectPath: string;
@@ -10,4 +10,4 @@ class VehicleCategoryItem {
 
     }
 }
-export default VehicleCategoryItem;
+// export default VehicleCategoryItem;
