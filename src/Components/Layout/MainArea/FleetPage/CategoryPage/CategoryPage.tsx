@@ -4,10 +4,10 @@ import VehicleModel from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
-import FleetCategoryItem from "./Item/Item";
+import FleetItem from "./Item/Item";
 import AllVehiclesByCategories from "../../../../../Models/AllVehiclesByCategories";
 
-function FleetCategoryPage(): JSX.Element {
+function CategoryPage(): JSX.Element {
 
     const params = useParams();
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
@@ -59,7 +59,7 @@ function FleetCategoryPage(): JSX.Element {
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
-                    <FleetCategoryItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}
+                    <FleetItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}
                         doors={v.doors} fuel={v.fuel} luggage={v.luggage} seats={v.seats} redirect_path={v.redirect_path}
                         tank_capacity={v.tank_capacity}
                         transmission={v.transmission}
@@ -70,4 +70,4 @@ function FleetCategoryPage(): JSX.Element {
     );
 }
 
-export default FleetCategoryPage;
+export default CategoryPage;

@@ -63,6 +63,7 @@
     margin: 10px 10px 0px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
     row-gap: 15px;
     height: 105px;
     border-radius: 10px;

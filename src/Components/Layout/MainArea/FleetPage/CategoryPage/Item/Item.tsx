@@ -12,10 +12,10 @@ function FleetCategoryItem(props: VehicleModel): JSX.Element {
             <h1>{props.full_name}</h1>
             <div className="stats">
                 <div className="initialStats">
-                    <div>
+                    {props.transmission && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/transmissionicon.png`)} />
                         {props.transmission}
-                    </div>
+                    </div>}
                     {props.seats && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/personicon.png`)} />
                         {props.seats}
@@ -34,18 +34,18 @@ function FleetCategoryItem(props: VehicleModel): JSX.Element {
                     </div>}
                 </div>
                 <div className="moreStats">
-                    <div>
+                    {props.trunk_capacity && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/trunkicon.png`)} />
                         Storage: {props.trunk_capacity}
-                    </div>
-                    <div>
+                    </div>}
+                    {props.fuel && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/fuelpumpicon.png`)} />
                         Fuel: {props.fuel}
-                    </div>
-                    <div>
+                    </div>}
+                    {props.tank_capacity && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/gascanicon.png`)} />
                         Tank Capacity: {props.tank_capacity}
-                    </div>
+                    </div>}
                     {props.radio && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/radioicon.png`)} />
                         Radio
@@ -57,7 +57,7 @@ function FleetCategoryItem(props: VehicleModel): JSX.Element {
                 </div>
                 <div className="btnHolder"><NavLink to={appConfig.samePagePath}>View Availability</NavLink></div>
             </div>
-        </div>
+        </div >
     );
 }
 
