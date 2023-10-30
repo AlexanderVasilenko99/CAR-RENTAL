@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import NavbarItemModel from "../../../../Models/NavbarItemModel";
 import "./NavbarItem.css";
-import { subNavItem } from "../../../../Models/subNavItem";
+import { SubNavItem } from "../../../../Models/SubNavItem";
 
 function NavbarItem(props: NavbarItemModel): JSX.Element {
     // console.log(props.subNavItems);
-    let arr: subNavItem[] = props.subNavItems;
+    let arr: SubNavItem[] = props.subNavItems;
     return (
         <NavLink to={props.itemDestinationPagePath} className="NavbarItem">
             <li>{props.itemSvgComponent}|&nbsp;{props.itemText}</li>

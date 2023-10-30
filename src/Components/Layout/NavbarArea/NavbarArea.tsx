@@ -16,30 +16,30 @@ import NavbarItem from './NavbarItem/NavbarItem';
 import { useState } from "react";
 import Modal from 'react-modal';
 import SignInForm from '../MainArea/SignInPage/SignInForm/SignInForm';
-import { subNavItem } from '../../../Models/subNavItem';
+import { SubNavItem } from '../../../Models/SubNavItem';
 
-const fleetSubNavItems: subNavItem[] = [
-    new subNavItem('Small', appConfig.fleetPageSmallPath),
-    new subNavItem('Medium', appConfig.fleetPageMediumPath),
-    new subNavItem('Large', appConfig.fleetPageLargePath),
-    new subNavItem('Suv & Off Road', appConfig.fleetPageSuvOffRoadPath),
-    new subNavItem('Luxury', appConfig.fleetPageLuxuryPath),
-    new subNavItem('Motorcycles & Scooters', appConfig.fleetPageMotorcyclesScootersPath),
-    new subNavItem('Vans & Trucks', appConfig.fleetPageVansTrucksPath),
-    new subNavItem('All Vehicles', appConfig.fleetPageAllVehiclesPath),
+const fleetSubNavItems: SubNavItem[] = [
+    new SubNavItem('Small', appConfig.fleetPageSmallPath),
+    new SubNavItem('Medium', appConfig.fleetPageMediumPath),
+    new SubNavItem('Large', appConfig.fleetPageLargePath),
+    new SubNavItem('Suv & Off Road', appConfig.fleetPageSuvOffRoadPath),
+    new SubNavItem('Luxury', appConfig.fleetPageLuxuryPath),
+    new SubNavItem('Motorcycles & Scooters', appConfig.fleetPageMotorcyclesScootersPath),
+    new SubNavItem('Vans & Trucks', appConfig.fleetPageVansTrucksPath),
+    new SubNavItem('All Vehicles', appConfig.fleetPageAllVehiclesPath),
 ];
-const servicesSubNavItems: subNavItem[] = [
-    new subNavItem('Vehicle Rental', appConfig.fleetPagePath),
-    new subNavItem('Monthly Rental', appConfig.servicesMonthlyRentalPagePath),
-    new subNavItem('Business Rental', appConfig.servicesBusinessRentalPagePath),
-    new subNavItem('Chauffeur Services', appConfig.servicesChauffeurPagePath),
-    new subNavItem('Group Car Rental', appConfig.servicesGroupRentalPagePath),
-    new subNavItem('One Day Car Rental', appConfig.servicesOneDayRentalPagePath),
-    new subNavItem('One Way Car Rental', appConfig.servicesOneWayRentalPagePath),
-    new subNavItem('All Services', appConfig.servicesPagePath),
+const servicesSubNavItems: SubNavItem[] = [
+    new SubNavItem('Vehicle Rental', appConfig.fleetPagePath),
+    new SubNavItem('Monthly Rental', appConfig.servicesMonthlyRentalPagePath),
+    new SubNavItem('Business Rental', appConfig.servicesBusinessRentalPagePath),
+    new SubNavItem('Chauffeur Services', appConfig.servicesChauffeurPagePath),
+    new SubNavItem('Group Car Rental', appConfig.servicesGroupRentalPagePath),
+    new SubNavItem('One Day Car Rental', appConfig.servicesOneDayRentalPagePath),
+    new SubNavItem('One Way Car Rental', appConfig.servicesOneWayRentalPagePath),
+    new SubNavItem('All Services', appConfig.servicesPagePath),
 ];
-const locationsSubNavItems: subNavItem[] = [
-    new subNavItem('Israel', appConfig.locationsPagePath),
+const locationsSubNavItems: SubNavItem[] = [
+    new SubNavItem('Israel', appConfig.locationsPagePath),
 ];
 
 

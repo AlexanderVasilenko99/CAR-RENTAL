@@ -1,4 +1,4 @@
-export class subNavItem {
+export class SubNavItem {
     public subNavItemHeading: string;
     public subNavItemRedirectPath: string;
 
