@@ -5,7 +5,7 @@ import ScrollToTop from "./MainArea/ScrollToTop/ScrollToTop";
 import NavbarArea from "./NavbarArea/NavbarArea";
 
 
-function Layout(): JSX.Element {
+export function Layout(): JSX.Element {
     return (
         <div className="Layout">
             <ScrollToTop />
@@ -16,4 +16,4 @@ function Layout(): JSX.Element {
     );
 }
 
-export default Layout;
+// export default Layout;
