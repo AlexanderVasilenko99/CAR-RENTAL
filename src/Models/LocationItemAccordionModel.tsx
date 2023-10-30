@@ -1,4 +1,4 @@
-import LocationCoordinatesModel from "./LocationCoordinatesModel";
+import { LocationCoordinatesModel } from "./LocationCoordinatesModel";
 export class LocationItemAccordionModel {
     public city: string;
     public address: string;

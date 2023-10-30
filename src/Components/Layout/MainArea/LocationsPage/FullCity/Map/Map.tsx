@@ -1,5 +1,5 @@
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
-import LocationCoordinatesModel from '../../../../../../Models/LocationCoordinatesModel';
+import { LocationCoordinatesModel } from '../../../../../../Models/LocationCoordinatesModel';
 import "./Map.css";
 
 function Map(coordinates: LocationCoordinatesModel): JSX.Element {
