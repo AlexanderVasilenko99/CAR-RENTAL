@@ -1,5 +1,5 @@
 import LocationCoordinatesModel from "./LocationCoordinatesModel";
-class LocationItemAccordionModel {
+export class LocationItemAccordionModel {
     public city: string;
     public address: string;
     public workingHours?: string;
@@ -9,6 +9,5 @@ class LocationItemAccordionModel {
     public aboutLocation?: string;
     public reachOfficeInstructions?: string;
 
-    public locationParams?:LocationCoordinatesModel;
+    public locationParams?: LocationCoordinatesModel;
 }
-export default LocationItemAccordionModel;

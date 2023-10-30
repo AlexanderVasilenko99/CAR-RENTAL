@@ -4,7 +4,7 @@ import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import { useEffect, useState } from "react";
 import { NavLink } from 'react-router-dom';
 import { HashLink } from "react-router-hash-link";
-import LocationItemAccordionModel from "../../../../../Models/LocationItemAccordionModel";
+import { LocationItemAccordionModel } from "../../../../../Models/LocationItemAccordionModel";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
 import "./FullCity.css";
