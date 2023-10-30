@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import SingleServiceModel from "../../../../../Models/SingleServiceModel";
+import { SingleServiceModel } from "../../../../../Models/SingleServiceModel";
 import "./SingleService.css";
 
 function SingleService(props: SingleServiceModel): JSX.Element {

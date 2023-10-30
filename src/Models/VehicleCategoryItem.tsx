@@ -10,4 +10,3 @@ export class VehicleCategoryItem {
 
     }
 }
-// export default VehicleCategoryItem;
