@@ -59,10 +59,11 @@ function FleetCategoryPage(): JSX.Element {
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
-                    <FleetCategoryItem vehicleName={v.full_name} imageName={v.image_name} airConditioning doors={v.doors} fuel={v.fuel}
-                        luggage={v.luggage} passengers={v.seats} redirectPath={appConfig.samePagePath} tankCapacity={v.tank_capacity}
+                    <FleetCategoryItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}
+                        doors={v.doors} fuel={v.fuel} luggage={v.luggage} seats={v.seats} redirect_path={v.redirect_path}
+                        tank_capacity={v.tank_capacity}
                         transmission={v.transmission}
-                        radio trunkCapacity="3000L" />
+                        radio={v.radio} trunk_capacity={v.trunk_capacity} />
                 </div>)}
             </div>
         </div>
