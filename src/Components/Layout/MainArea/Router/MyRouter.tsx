@@ -3,7 +3,16 @@ import appConfig from "../../../../Utils/AppConfig";
 import CareersPage from "../CareersPage/CareersPage";
 import FleetCategoryPage from "../FleetPage/CategoryPage/CategoryPage";
 import FleetPage from "../FleetPage/FleetPage";
+import ClaimsAndForms from "../HelpPage/ClaimsAndForms/ClaimsAndForms";
+import CustomerService from "../HelpPage/CustomerService/CustomerService";
+import Disability from "../HelpPage/Disability/Disability";
+import FAQ from "../HelpPage/FAQ/FAQ";
 import HelpPage from "../HelpPage/HelpPage";
+import Info from "../HelpPage/Info/Info";
+import LostFound from "../HelpPage/LostFound/LostFound";
+import LoyaltyProgram from "../HelpPage/LoyaltyProgram/LoyaltyProgram";
+import PastRentals from "../HelpPage/PastRentals/PastRentals";
+import TermsAndConditions from "../HelpPage/TermsAndConditions/TermsAndConditions";
 import HomePage from "../HomePage/HomePage";
 import BeerSheva from "../LocationsPage/BeerSheva/BeerSheva";
 import BenGurion from "../LocationsPage/BenGurion/BenGurion";
@@ -25,17 +34,6 @@ import OneWay from "../ServicesPage/OneWay/OneWay";
 import ServicesPage from "../ServicesPage/ServicesPage";
 import SignInPage from "../SignInPage/SignInPage";
 import "./MyRouter.css";
-import ClaimsAndForms from "../HelpPage/ClaimsAndForms/ClaimsAndForms";
-import CustomerService from "../HelpPage/CustomerService/CustomerService";
-import Disability from "../HelpPage/Disability/Disability";
-import FAQ from "../HelpPage/FAQ/FAQ";
-import Info from "../HelpPage/Info/Info";
-import LostFound from "../HelpPage/LostFound/LostFound";
-import LoyaltyProgram from "../HelpPage/LoyaltyProgram/LoyaltyProgram";
-import PastRentals from "../HelpPage/PastRentals/PastRentals";
-import TermsAndConditions from "../HelpPage/TermsAndConditions/TermsAndConditions";
-
-
 
 function Router(): JSX.Element {
     return (

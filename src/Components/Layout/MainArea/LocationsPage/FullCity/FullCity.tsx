@@ -2,21 +2,20 @@ import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import { useEffect, useState } from "react";
-import { NavLink } from 'react-router-dom';
 import { HashLink } from "react-router-hash-link";
 import { LocationItemAccordionModel } from "../../../../../Models/LocationItemAccordionModel";
 import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
-import "./FullCity.css";
-import Map from './Map/Map';
 import { AvailableVehicles } from './AvailableVehicles/AvailableVehicles';
-import { ChauffeurServices } from './ChauffeurServices/ChauffeurServices';
-import { MonthlyRental } from './MonthlyRental/MonthlyRental';
 import { BusinessRental } from './BusinessRental/BusinessRental';
-import { ReturnAfterHours } from './ReturnAfterHours/ReturnAfterHours';
-import { OneWayCarRental } from './OneWayCarRental/OneWayCarRental';
-import { OneDayCarRental } from './OneDayCarRental/OneDayCarRental';
+import { ChauffeurServices } from './ChauffeurServices/ChauffeurServices';
+import "./FullCity.css";
 import { GroupCarRental } from './GroupCarRental/GroupCarRental';
+import Map from './Map/Map';
+import { MonthlyRental } from './MonthlyRental/MonthlyRental';
+import { OneDayCarRental } from './OneDayCarRental/OneDayCarRental';
+import { OneWayCarRental } from './OneWayCarRental/OneWayCarRental';
+import { ReturnAfterHours } from './ReturnAfterHours/ReturnAfterHours';
 
 function FullCity(params: LocationItemAccordionModel): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(true);
