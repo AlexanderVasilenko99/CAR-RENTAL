@@ -1,8 +1,12 @@
 import locationsmapenum, { LocationsEnum } from "../../../../../Enums/LocationsMapEnum";
+import { LocationModel } from "../../../../../Models/LocationModel";
 import FullCity from "../FullCity/FullCity";
 import "./Eilat.css";
 
 function Eilat(): JSX.Element {
+    const cities: LocationModel[] = [
+        
+    ];
     return (
         <div className="Eilat">
             <FullCity city={"Eilat"} email='vasirental@elt.co.il' locationParams={locationsmapenum.locations[LocationsEnum.EILAT]}

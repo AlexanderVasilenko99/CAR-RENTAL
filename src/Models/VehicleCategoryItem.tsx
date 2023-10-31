@@ -7,6 +7,5 @@ export class VehicleCategoryItem {
         this.vehicleCategoryName = vehicleCategoryName;
         this.vehicleCategoryImgName = vehicleCategoryImgName;
         this.vehicleCategoryRedirectPath = vehicleCategoryRedirectPath;
-
     }
 }
