@@ -9,6 +9,13 @@
     margin-bottom: 30px;
 }
 
+.CategoryPage .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
 .CategoryPageGridContainer>* {
     grid-column: span 2;
 }

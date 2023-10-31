@@ -6,6 +6,7 @@ import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetItem from "./Item/Item";
 import { AllVehiclesByCategories } from "../../../../../Models/AllVehiclesByCategories";
+import BeatLoader from "react-spinners/BeatLoader";
 
 function CategoryPage(): JSX.Element {
 
@@ -57,6 +58,7 @@ function CategoryPage(): JSX.Element {
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
+            {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
                     <FleetItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}

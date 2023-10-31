@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import "./FleetPage.css";
-import FleetItem from "./FleetItem/FleetItem";
-import appConfig from "../../../../Utils/AppConfig";
 import { VehicleCategoryItem } from "../../../../Models/VehicleCategoryItem";
+import appConfig from "../../../../Utils/AppConfig";
+import FleetItem from "./FleetItem/FleetItem";
+import "./FleetPage.css";
 
 function FleetPage(): JSX.Element {
     const fleetItems: VehicleCategoryItem[] = [
@@ -21,6 +21,7 @@ function FleetPage(): JSX.Element {
                     View All
                 </NavLink>
             </h1>
+
             {fleetItems.map(i => <FleetItem vehicleCategoryName={i.vehicleCategoryName}
                 vehicleCategoryImgName={i.vehicleCategoryImgName} vehicleCategoryRedirectPath={i.vehicleCategoryRedirectPath} />)}
             <NavLink to={appConfig.fleetPageAllVehiclesPath}>
