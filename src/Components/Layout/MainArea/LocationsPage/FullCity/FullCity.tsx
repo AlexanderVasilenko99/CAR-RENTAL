@@ -9,6 +9,14 @@ import appConfig from "../../../../../Utils/AppConfig";
 import Header from "../Header/Header";
 import "./FullCity.css";
 import Map from './Map/Map';
+import { AvailableVehicles } from './AvailableVehicles/AvailableVehicles';
+import { ChauffeurServices } from './ChauffeurServices/ChauffeurServices';
+import { MonthlyRental } from './MonthlyRental/MonthlyRental';
+import { BusinessRental } from './BusinessRental/BusinessRental';
+import { ReturnAfterHours } from './ReturnAfterHours/ReturnAfterHours';
+import { OneWayCarRental } from './OneWayCarRental/OneWayCarRental';
+import { OneDayCarRental } from './OneDayCarRental/OneDayCarRental';
+import { GroupCarRental } from './GroupCarRental/GroupCarRental';
 
 function FullCity(params: LocationItemAccordionModel): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -67,46 +75,15 @@ function FullCity(params: LocationItemAccordionModel): JSX.Element {
 
                     <Map {...params.locationParams} ></Map>
                     <p></p>
-                    <h3 id="availablevehicles"><NavLink to={appConfig.fleetPageAllVehiclesPath}>Available Vehicles</NavLink></h3>
-                    <p>At {params.city} you can choose the car that best suits your needs, you will have all our vehicles in the fleet
-                        at your disposal, with manual or automatic transmission: small cars, medium and large cars, convertibles,
-                        SUVs and offroaders, minivans and trucks, motorcycles and scooters, and even luxury cars.&nbsp;
-                        <NavLink to={appConfig.fleetPageAllVehiclesPath}>See All Available Vehicles</NavLink></p>
 
-                    <h3 id="chauffeurservices"><NavLink to={appConfig.servicesChauffeurPagePath}>Chauffeur Services</NavLink></h3>
-                    <p>Whether it's a business trip or a carefree leisure stay, evaluate our luxury cars also in the rental
-                        formula with a chauffeur. The car rental with a chauffeur service is available at every hour of the
-                        day and night. Our drivers are at your service. Book the top of comfort, rent Vasilenko!&nbsp;
-                        <NavLink to={appConfig.servicesChauffeurPagePath}>Read More</NavLink></p>
-
-                    <h3 id="monthlyrental"><NavLink to={appConfig.servicesMonthlyRentalPagePath}>Monthly Rental</NavLink></h3>
-                    <p>If your needs are more related to the duration of the rental rather than the mileage, our
-                        monthly rental service with limited kilometres could be the ideal solution. For rentals exceeding 26 days
-                        and up to 90 days, you can choose our rates at 1500, 200 or 2500 kilometres/month.&nbsp;
-                        <NavLink to={appConfig.servicesMonthlyRentalPagePath}>Read More</NavLink></p>
-
-                    <h3 id="returnafterhours">Return After Hours</h3>
-                    <p>Do you need to return your car when our offices are closed? You can do it without problems with the key
-                        box service that allows you to drop off your car leaving the keys in a special box.</p>
-
-                    <h3 id="businessrental"><NavLink to={appConfig.servicesBusinessRentalPagePath}>Business Rental</NavLink></h3>
-                    <p>Are you a business client? or renting on behalf of one? If so, contact us during the booking process or get
-                        in touch with us via phone or email to discover more regarding business rates and discounts.&nbsp;
-                        <NavLink to={appConfig.servicesBusinessRentalPagePath}>Read More</NavLink>
-                    </p>
-
-                    <h3 id="onewaycarrental"><NavLink to={appConfig.servicesOneWayRentalPagePath}>One Way Car Rental</NavLink></h3>
-                    <p>You can pick up your car at any location and you wish to return it at another city, a surcharge will be
-                        applied. <NavLink to={appConfig.servicesOneWayRentalPagePath}>Read More</NavLink></p>
-
-                    <h3 id="onedaycarrental"><NavLink to={appConfig.servicesOneDayRentalPagePath}>One Day Car Rental</NavLink></h3>
-                    <p>Looking for a one day rental? We offer special prices for rentals up to and including 12 hours ,18 hours,
-                        and 24 hours. <NavLink to={appConfig.servicesOneDayRentalPagePath}>Read More</NavLink></p>
-
-                    <h3 id={"groupcarrental"}><NavLink to={appConfig.servicesGroupRentalPagePath}>Group Car Rental</NavLink></h3>
-                    <p>Looking to rent as part of a large group? contact us prior to booking to receive better prices for groups
-                        renting 3 cars or more! <NavLink to={appConfig.servicesGroupRentalPagePath}>Read More</NavLink></p>
-
+                    <AvailableVehicles />
+                    <ChauffeurServices />
+                    <MonthlyRental />
+                    <ReturnAfterHours />
+                    <BusinessRental />
+                    <OneWayCarRental />
+                    <OneDayCarRental />
+                    <GroupCarRental />
                 </div>
             </div>
         </div>
