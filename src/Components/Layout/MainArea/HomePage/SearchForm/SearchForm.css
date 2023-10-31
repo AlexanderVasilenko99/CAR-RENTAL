@@ -70,20 +70,28 @@
     margin: 30px 200px;
     height: 50px;
     font-size: 22px;
-    color: #FAF6E9;
-    background-color: #A73121;
     border: 1px solid #952323;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-
 .SearchForm form button:hover {
     cursor: pointer;
-    background-color: #FAF6E9;
-    color: #A73121;
+    /* background-color: #FAF6E9;
+    color: #A73121; */
     scale: 1.03;
     transition: 250ms;
 }
+
+.SearchForm form .redBack {
+    background-color: #A73121;
+    color: #FAF6E9;
+}
+
+.SearchForm .whiteBack {
+    background-color: #FAF6E9;
+    color: #A73121;
+}
+
 
 .SearchForm form div:nth-of-type(5) {
     grid-column: span 2;

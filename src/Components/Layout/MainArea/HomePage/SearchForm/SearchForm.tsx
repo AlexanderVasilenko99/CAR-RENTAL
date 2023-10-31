@@ -1,15 +1,54 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import BeatLoader from "react-spinners/BeatLoader";
+import appConfig from "../../../../../Utils/AppConfig";
 import "./SearchForm.css";
 
 function SearchForm(): JSX.Element {
+    const [isHovering, setIsHovering] = useState<boolean>(false);
+    const [hasClicked, setHasClicked] = useState<boolean>(false);
+
     const { register, handleSubmit } = useForm();
+    const navigate = useNavigate();
 
     function search(params: any): void {
-        console.log(params);
+        let str = "";
+        switch (params.category) {
+            case "all":
+                str = appConfig.fleetPageAllVehiclesPath;
+                break;
+            case "small":
+                str = appConfig.fleetPageSmallPath;
+                break;
+            case "medium":
+                str = appConfig.fleetPageMediumPath;
+                break;
+            case "large":
+                str = appConfig.fleetPageLargePath;
+                break;
+            case "luxury":
+                str = appConfig.fleetPageLuxuryPath;
+                break;
+            case "suv&offroad":
+                str = appConfig.fleetPageSuvOffRoadPath;
+                break;
+            case "motorcycles&scooters":
+                str = appConfig.fleetPageMotorcyclesScootersPath;
+                break;
+            case "vans&trucks":
+                str = appConfig.fleetPageVansTrucksPath;
+                break;
+        }
+        setTimeout(() => {
+            setHasClicked(false);
+            navigate(str);
+        }, 2000)
     }
     return (
 
         <div className='SearchForm'>
+
             <h2>Find your next car rental here!</h2>
             <form onSubmit={handleSubmit(search)}>
                 <div>
@@ -28,7 +67,7 @@ function SearchForm(): JSX.Element {
                 </div>
                 <div>
                     <select name="" {...register("age")}>
-                        <option value="all" selected disabled>Drivers Age</option>
+                        <option value="all" disabled defaultValue={"all"}>Drivers Age</option>
                         <option value="7000">All</option>
                         <option value="1823">18-23</option>
                         <option value="2346">23-46</option>
@@ -36,7 +75,7 @@ function SearchForm(): JSX.Element {
                         <option value="7000">70+</option>
                     </select>
                     <select name="" {...register("category")}>
-                        <option value="all" selected disabled>Vehicle Category</option>
+                        <option value="all" disabled defaultValue={"all"}>Vehicle Category</option>
                         <option value="all">All</option>
                         <option value="small">Small</option>
                         <option value="medium">Medium</option>
@@ -48,10 +87,18 @@ function SearchForm(): JSX.Element {
                     </select>
                     <div>
                         <label htmlFor="checkboxLoyaltyForm">&nbsp;&nbsp;Loyalty program member?</label>
-                        <input id='checkboxLoyaltyForm' type="checkbox" {...register("isLoyal")} />
+                        <input id='' type="checkbox" {...register("isLoyal")} />
+                        {/* <input id='checkboxLoyaltyForm' type="checkbox" {...register("isLoyal")} /> */}
                     </div>
                 </div>
-                <button type="submit">Find my rental!</button>
+                <button type="submit" className={hasClicked ? "whiteBack" : (isHovering ? "whiteBack" : "redBack")}
+
+                    onClick={(e) => { e.currentTarget.blur(); setHasClicked(true) }}
+                    onMouseOver={e => setIsHovering(true)}
+                    onMouseOut={e => setIsHovering(false)}>
+
+                    {hasClicked ? <BeatLoader color="#A73121" loading size={15} /> : "Find my rental!"}
+                </button>
             </form>
 
         </div>

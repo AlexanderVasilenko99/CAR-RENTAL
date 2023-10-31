@@ -16,7 +16,6 @@ function HomePage(): JSX.Element {
 
     return (
         <div className="HomePage">
-
             <HashLink smooth to={appConfig.samePagePath + "searchform"} ref={hashlink}>
                 <ReactPlayer url={require("../../../../Assets/Videos/vid1.mp4")} muted playing onEnded={scrollDown} width="100%"
                     height="100%" />

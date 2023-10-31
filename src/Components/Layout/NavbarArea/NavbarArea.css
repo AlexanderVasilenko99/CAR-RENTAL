@@ -68,21 +68,22 @@
 
 
 .SearchDropdownContent {
-    display: none;
+    overflow: hidden;
+    display: block;
+    height: 0;
     box-sizing: border-box;
     position: absolute;
     top: 70px;
     left: 0;
     right: 0;
-    width: 102vw;
-    height: 360px;
+    width: 100vw;
     background-color: #952323;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
 .searchItem:hover .SearchDropdownContent {
     display: block;
+    height: 360px;
 }
 
 .SearchDropdownContent h2 {
@@ -95,70 +96,6 @@
     justify-content: center;
     align-items: center;
 }
-
-.SearchDropdownContent form {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    column-gap: 30px;
-    row-gap: 10px;
-    margin: 30px;
-}
-
-.SearchDropdownContent form input[type="text"],
-.SearchDropdownContent form input[type="date"],
-.SearchDropdownContent form input[type="time"],
-.SearchDropdownContent form input[type="select"] {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    height: 40px;
-    line-height: 100%;
-    font-size: 20px;
-}
-
-.SearchDropdownContent form input:focus {
-    outline-width: 0;
-}
-
-.SearchDropdownContent form div:nth-of-type(1) input,
-.SearchDropdownContent form div:nth-of-type(3) input {
-    width: 100%;
-    padding-left: 10px;
-}
-
-.searchFormContainer form button {
-    grid-column: span 2;
-    margin: 30px 200px;
-    height: 50px;
-    font-size: 22px;
-    color: #FAF6E9;
-    background-color: #A73121;
-    border: 1px solid #952323;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.searchFormContainer form button:hover {
-    cursor: pointer;
-    background-color: #FAF6E9;
-    color: #A73121;
-    scale: 1.03;
-    transition: 250ms;
-}
-
-.searchFormContainer form div:nth-of-type(5) {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-}
-
-select>* {
-    height: 30px;
-    font-size: 16px;
-}
-
-/* } */
 
 /* @media only screen and (max-width: 1099px) and (min-width:300px) {
     .NavbarArea > .NavbarItem{

@@ -10,13 +10,13 @@ import appConfig from "../../../Utils/AppConfig";
 import "./NavbarArea.css";
 // import navbarLogo from "../../../Assets/Images/navbar-logo.png";
 // import navbarLogo from "../../../Assets/Images"
-import 'react-dropdown/style.css';
-import { useForm } from 'react-hook-form';
-import NavbarItem from './NavbarItem/NavbarItem';
 import { useState } from "react";
+import 'react-dropdown/style.css';
 import Modal from 'react-modal';
-import SignInForm from '../MainArea/SignInPage/SignInForm/SignInForm';
 import { SubNavItem } from '../../../Models/SubNavItem';
+import SearchForm from '../MainArea/HomePage/SearchForm/SearchForm';
+import SignInForm from '../MainArea/SignInPage/SignInForm/SignInForm';
+import NavbarItem from './NavbarItem/NavbarItem';
 
 const fleetSubNavItems: SubNavItem[] = [
     new SubNavItem('Small', appConfig.fleetPageSmallPath),
@@ -45,10 +45,6 @@ const locationsSubNavItems: SubNavItem[] = [
 
 
 function NavbarArea(): JSX.Element {
-    const { register, handleSubmit } = useForm();
-    function search2(params: any) {
-        console.log(params);
-    }
     const [modalIsOpen, setIsOpen] = useState<boolean>(false);
     function openModal(): void {
         setIsOpen(true);
@@ -68,6 +64,7 @@ function NavbarArea(): JSX.Element {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
         },
+
     };
     return (
         <div className="NavbarArea">
@@ -76,55 +73,14 @@ function NavbarArea(): JSX.Element {
                     <li><img src={require("../../../Assets/Images/navbar-logo-1-min.png")} alt="brokenLogo" /></li>
                 </NavLink>
                 <div onClick={closeModal}>
-                    <NavLink to={appConfig.samePagePath} className="NavbarItem searchItem"><SearchIcon />Search
-                        <div className="SearchDropdownContent">
-                            <h2>Find your next car rental here!</h2>
+                    <a className="NavbarItem searchItem">
+                        <SearchIcon />Search
+                        <div className="SearchDropdownContent" >
                             <div className='searchFormContainer'>
-                                <form onSubmit={handleSubmit(search2)}>
-                                    <div>
-                                        <input type="text" placeholder='Pickup Location' {...register("pickupLocation")} />
-                                    </div>
-                                    <div>
-                                        <label></label><input type="date" {...register("pickupDate")} />
-                                        <input type="time" {...register("pickupTime")} />
-                                    </div>
-                                    <div>
-                                        <input type="text" placeholder='Drop off Location' {...register("dropOffLocation")} />
-                                    </div>
-                                    <div>
-                                        <label></label><input type="date" {...register("dropOffDate")} />
-                                        <input type="time" {...register("dropOffTime")} />
-                                    </div>
-                                    <div>
-                                        <select name="" {...register("age")}>
-                                            <option value="all" selected disabled>Drivers Age</option>
-                                            <option value="7000">All</option>
-                                            <option value="1823">18-23</option>
-                                            <option value="2346">23-46</option>
-                                            <option value="4670">46-70</option>
-                                            <option value="7000">70+</option>
-                                        </select>
-                                        <select name="" {...register("category")}>
-                                            <option value="all" selected disabled>Vehicle Category</option>
-                                            <option value="all">All</option>
-                                            <option value="small">Small</option>
-                                            <option value="medium">Medium</option>
-                                            <option value="large">Large</option>
-                                            <option value="luxury">Luxury</option>
-                                            <option value="suv&offroad">Suv & Off Road</option>
-                                            <option value="motorcycles&scooters">Motorcycles & Scooters</option>
-                                            <option value="vans&trucks">Vans & Trucks</option>
-                                        </select>
-                                        <div>
-                                            <label htmlFor="checkboxLoyalty">Loyalty program member?</label>
-                                            <input id='checkboxLoyalty' type="checkbox" {...register("isLoyal")} />
-                                        </div>
-                                    </div>
-                                    <button type='submit'>Find my rental!</button>
-                                </form>
+                                <SearchForm />
                             </div>
                         </div>
-                    </NavLink>
+                    </a>
                 </div>
                 {/* <NavbarItem itemText='Search' itemDestinationPagePath={appConfig.samePagePath} itemSvgComponent={<SearchIcon />} /> */}
                 <div onClick={closeModal}>
