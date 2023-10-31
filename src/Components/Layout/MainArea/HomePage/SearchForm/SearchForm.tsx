@@ -91,13 +91,13 @@ function SearchForm(): JSX.Element {
                         {/* <input id='checkboxLoyaltyForm' type="checkbox" {...register("isLoyal")} /> */}
                     </div>
                 </div>
-                <button type="submit" className={hasClicked ? "whiteBack" : (isHovering ? "whiteBack" : "redBack")}
+                <button type="submit" className={(isHovering ? "whiteBack" : "redBack")}
 
                     onClick={(e) => { e.currentTarget.blur(); setHasClicked(true) }}
                     onMouseOver={e => setIsHovering(true)}
                     onMouseOut={e => setIsHovering(false)}>
 
-                    {hasClicked ? <BeatLoader color="#A73121" loading size={15} /> : "Find my rental!"}
+                    {hasClicked ? (isHovering ? <BeatLoader color="#A73121" loading size={15} /> : <BeatLoader color="#FAF6E9" loading size={15} />) : "Find my rental!"}
                 </button>
             </form>
 

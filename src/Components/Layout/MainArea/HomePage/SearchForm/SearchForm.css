@@ -8,27 +8,11 @@
     background-color: #952323;
 }
 
-/* .SearchDropdownContent {
-    display: none;
-    box-sizing: border-box;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    width: 102vw;
-    height: 360px;
-    background-color: #952323;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-} */
-
-
 .SearchForm h2 {
     font-size: 30px;
     color: #FFF;
     font-weight: 700;
 }
-
 
 .SearchForm form {
     display: grid;
@@ -74,10 +58,9 @@
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
+
 .SearchForm form button:hover {
     cursor: pointer;
-    /* background-color: #FAF6E9;
-    color: #A73121; */
     scale: 1.03;
     transition: 250ms;
 }
