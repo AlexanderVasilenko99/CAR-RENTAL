@@ -91,9 +91,9 @@ function SearchForm(): JSX.Element {
                         {/* <input id='checkboxLoyaltyForm' type="checkbox" {...register("isLoyal")} /> */}
                     </div>
                 </div>
-                <button type="submit" className={(isHovering ? "whiteBack" : "redBack")}
+                <button type="submit" className={hasClicked ? (isHovering ? "whiteBack fixedSize" : "redBack fixedSize") : (isHovering ? "whiteBack" : "redBack")}
 
-                    onClick={(e) => { e.currentTarget.blur(); setHasClicked(true) }}
+                    onClick={(e) => { e.currentTarget.blur(); setHasClicked(true); }}
                     onMouseOver={e => setIsHovering(true)}
                     onMouseOut={e => setIsHovering(false)}>
 

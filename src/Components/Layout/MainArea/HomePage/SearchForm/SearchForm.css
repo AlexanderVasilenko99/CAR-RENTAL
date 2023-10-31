@@ -59,11 +59,11 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.SearchForm form button:hover {
+/* .SearchForm form button:hover {
     cursor: pointer;
     scale: 1.03;
     transition: 250ms;
-}
+} */
 
 .SearchForm form .redBack {
     background-color: #A73121;
@@ -73,6 +73,11 @@
 .SearchForm .whiteBack {
     background-color: #FAF6E9;
     color: #A73121;
+    scale: 1.03;
+    transition: all 250ms;
+}
+.SearchForm .fixedSize{
+    scale: 1.03;
 }
 
 
