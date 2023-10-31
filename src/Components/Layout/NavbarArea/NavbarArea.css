@@ -68,6 +68,7 @@
 
 
 .SearchDropdownContent {
+    font-size: 24px;
     overflow: hidden;
     display: block;
     height: 0;
@@ -83,7 +84,7 @@
 
 .searchItem:hover .SearchDropdownContent {
     display: block;
-    height: 360px;
+    height: fit-content;
 }
 
 .SearchDropdownContent h2 {
@@ -92,9 +93,10 @@
 }
 
 .searchFormContainer {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    /* height: fit-content; */
 }
 
 /* @media only screen and (max-width: 1099px) and (min-width:300px) {

@@ -20,8 +20,9 @@ function HomePage(): JSX.Element {
                 <ReactPlayer url={require("../../../../Assets/Videos/vid1.mp4")} muted playing onEnded={scrollDown} width="100%"
                     height="100%" />
             </HashLink>
-            <div className="navbar-placeholder" id="searchform"></div>
-            <SearchForm />
+            <div id="searchform">
+                <SearchForm />
+            </div>
 
         </div>
     );

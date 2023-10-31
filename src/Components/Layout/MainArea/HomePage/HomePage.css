@@ -8,3 +8,6 @@
     height: 70px;
     background-color: #952323;
 }
+#searchform{
+    scroll-margin-top: 70px;
+}

@@ -1,11 +1,10 @@
-.SearchForm {}
-
 .SearchForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #952323;
+    height: fit-content;
 }
 
 .SearchForm h2 {
@@ -59,12 +58,6 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* .SearchForm form button:hover {
-    cursor: pointer;
-    scale: 1.03;
-    transition: 250ms;
-} */
-
 .SearchForm form .redBack {
     background-color: #A73121;
     color: #FAF6E9;
@@ -76,7 +69,8 @@
     scale: 1.03;
     transition: all 250ms;
 }
-.SearchForm .fixedSize{
+
+.SearchForm .fixedSize {
     scale: 1.03;
 }
 
