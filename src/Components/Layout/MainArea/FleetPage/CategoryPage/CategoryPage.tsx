@@ -12,97 +12,81 @@ function CategoryPage(): JSX.Element {
 
     const params = useParams();
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
-    // const [searchParams, setSearchParams] = useSearchParams({ s: "" });
-    const [serachOrder, setSerachOrder] = useState<string>("")
+    const [searchParams, setSearchParams] = useSearchParams({ s: "" });
 
-    function handleSort(): void {
-        const arr: VehicleModel[] = Object.assign([], feVehicles);
-        // console.log(arr);
+    const order: string = searchParams.get("s");
+    // order === "lth" ? setSerachOrder("Low To High") : setSerachOrder("High To Low");
 
-        // setSearchParams(prev => {
-        //     prev.set("s", "lth");
-        //     return prev;
-        // });
-        // if (searchParams.get("s") == "lth" || searchParams.get("s") === "x") {
-        if (serachOrder == "" || serachOrder == "High to Low") {
-            arr.sort((v1, v2) => v1.price > v2.price ? 1 : -1);
-            setSerachOrder("Low To High")
-        }
-        else {
-            arr.sort((v1, v2) => v1.price > v2.price ? -1 : 1);
-            setSerachOrder("High to Low")
-        }
-        // }
-        // else {
-        //     arr.sort((v1, v2) => v1.price > v2.price ? -1 : 1);
-        //     setSearchParams({ s: 'htl' })
-        // }
-        setFeVehicles(arr);
+    function changeParamsLTH(): void {
+        console.log("changing params to LTH");
+        setSearchParams(prev => { prev.set("s", "lth"); return prev; });
     }
+    function changeParamsHTL(): void {
+        console.log("changing params to HTL");
+        setSearchParams(prev => { prev.set("s", "htl"); return prev; });
+    }
+    function changeURL(): void {
+        order === "lth" ? changeParamsHTL() : changeParamsLTH();
+    }
+
     useEffect(() => {
         vehicleServices.GetAllVehicles()
             .then((allBeVehicles: AllVehiclesByCategories) => {
+                let arr: VehicleModel[] = [];
                 switch (params.vehicleCategory) {
                     case "small":
-                        setFeVehicles(allBeVehicles.small)
+                        arr = allBeVehicles.small;
                         break;
                     case "medium":
-                        setFeVehicles(allBeVehicles.medium)
+                        arr = allBeVehicles.medium;
                         break;
                     case "large":
-                        setFeVehicles(allBeVehicles.large)
+                        arr = allBeVehicles.large
                         break;
                     case "luxury":
-                        setFeVehicles(allBeVehicles.luxury)
+                        arr = allBeVehicles.luxury
                         break;
                     case "suv&offraod":
-                        setFeVehicles(allBeVehicles.suv_offroad)
+                        arr = allBeVehicles.suv_offroad
                         break;
                     case "vans&trucks":
-                        setFeVehicles(allBeVehicles.vans_trucks)
+                        arr = allBeVehicles.vans_trucks
                         break;
                     case "motorcycles&scooters":
-                        setFeVehicles(allBeVehicles.motorcycles_scooters)
+                        arr = allBeVehicles.motorcycles_scooters
                         break;
                     case "all":
-                        let arr: VehicleModel[] = [];
-                        for (const v of allBeVehicles.small) { arr.push(v); }
-                        for (const v of allBeVehicles.medium) { arr.push(v); }
-                        for (const v of allBeVehicles.large) { arr.push(v); }
-                        for (const v of allBeVehicles.luxury) { arr.push(v); }
-                        for (const v of allBeVehicles.suv_offroad) { arr.push(v); }
-                        for (const v of allBeVehicles.vans_trucks) { arr.push(v); }
-                        for (const v of allBeVehicles.motorcycles_scooters) { arr.push(v); }
-                        setFeVehicles(arr);
+                        let subArr: VehicleModel[] = [];
+                        for (const v of allBeVehicles.small) { subArr.push(v); }
+                        for (const v of allBeVehicles.medium) { subArr.push(v); }
+                        for (const v of allBeVehicles.large) { subArr.push(v); }
+                        for (const v of allBeVehicles.luxury) { subArr.push(v); }
+                        for (const v of allBeVehicles.suv_offroad) { subArr.push(v); }
+                        for (const v of allBeVehicles.vans_trucks) { subArr.push(v); }
+                        for (const v of allBeVehicles.motorcycles_scooters) { subArr.push(v); }
+                        arr = (subArr);
                         break;
                 }
-
+                arr = sortByPrice(arr);
+                setFeVehicles(arr);
             })
             .catch(err => { console.log(err) });
     }, [params]);
-    useEffect(() => {
-        const arr: VehicleModel[] = Object.assign([], feVehicles);
-        // setSearchParams(prev => {
-        //     prev.set("s", "lth");
-        //     return prev;
-        // });
 
-        // if (searchParams.get("s") === "lth") {
-        //     console.log("s = ltn");
-        //     arr.sort((v1, v2) => v1.price > v2.price ? 1 : -1);
-        //     setFeVehicles(arr);
-        // }
-        // else {
-        //     console.log("s = nothing");
-        // }
-    }, [])
+    function sortByPrice(v: VehicleModel[]): VehicleModel[] {
+        const clone: VehicleModel[] = Object.assign([], v);
+        if (order == "lth") { clone.sort((v1, v2) => v1.price > v2.price ? 1 : -1) }
+        else if (order === "htl") { clone.sort((v1, v2) => v1.price > v2.price ? -1 : 1) };
+        return clone;
+    }
 
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
-            <h5>Sort by&nbsp;<a onClick={handleSort}> Price {serachOrder}</a></h5>
-            {/* ADD HANDLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+            <h5>Sort by&nbsp;<a onClick={changeURL}>
+                Price {order === "" ? "" : (order === "lth" ? "Low To High" : "High To Low")}
+            </a></h5>
             {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
