@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import { VehicleModel } from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
@@ -12,7 +12,33 @@ function CategoryPage(): JSX.Element {
 
     const params = useParams();
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
+    // const [searchParams, setSearchParams] = useSearchParams({ s: "" });
+    const [serachOrder, setSerachOrder] = useState<string>("")
 
+    function handleSort(): void {
+        const arr: VehicleModel[] = Object.assign([], feVehicles);
+        // console.log(arr);
+
+        // setSearchParams(prev => {
+        //     prev.set("s", "lth");
+        //     return prev;
+        // });
+        // if (searchParams.get("s") == "lth" || searchParams.get("s") === "x") {
+        if (serachOrder == "" || serachOrder == "High to Low") {
+            arr.sort((v1, v2) => v1.price > v2.price ? 1 : -1);
+            setSerachOrder("Low To High")
+        }
+        else {
+            arr.sort((v1, v2) => v1.price > v2.price ? -1 : 1);
+            setSerachOrder("High to Low")
+        }
+        // }
+        // else {
+        //     arr.sort((v1, v2) => v1.price > v2.price ? -1 : 1);
+        //     setSearchParams({ s: 'htl' })
+        // }
+        setFeVehicles(arr);
+    }
     useEffect(() => {
         vehicleServices.GetAllVehicles()
             .then((allBeVehicles: AllVehiclesByCategories) => {
@@ -50,18 +76,38 @@ function CategoryPage(): JSX.Element {
                         setFeVehicles(arr);
                         break;
                 }
+
             })
             .catch(err => { console.log(err) });
     }, [params]);
+    useEffect(() => {
+        const arr: VehicleModel[] = Object.assign([], feVehicles);
+        // setSearchParams(prev => {
+        //     prev.set("s", "lth");
+        //     return prev;
+        // });
+
+        // if (searchParams.get("s") === "lth") {
+        //     console.log("s = ltn");
+        //     arr.sort((v1, v2) => v1.price > v2.price ? 1 : -1);
+        //     setFeVehicles(arr);
+        // }
+        // else {
+        //     console.log("s = nothing");
+        // }
+    }, [])
 
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
+            <h5>Sort by&nbsp;<a onClick={handleSort}> Price {serachOrder}</a></h5>
+            {/* ADD HANDLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
             {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
-                    <FleetItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner} price={v.price}
+                    <FleetItem key={v.full_name} full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}
+                        price={v.price} //change v.fullname to id later
                         doors={v.doors} fuel={v.fuel} luggage={v.luggage} seats={v.seats} redirect_path={v.redirect_path}
                         tank_capacity={v.tank_capacity} abs={v.abs} cbs={v.cbs} engine_configuration={v.engine_configuration}
                         transmission={v.transmission} engine_size={v.engine_size} horse_power={v.horse_power} id={v.id} make={v.make}

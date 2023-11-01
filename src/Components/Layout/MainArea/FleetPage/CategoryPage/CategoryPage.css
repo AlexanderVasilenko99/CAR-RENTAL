@@ -31,3 +31,12 @@
 .CategoryPage h3 a {
     color: black;
 }
+.CategoryPage h5{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+.CategoryPage h5 a{
+    color: #A73121;
+    cursor: pointer;
+}

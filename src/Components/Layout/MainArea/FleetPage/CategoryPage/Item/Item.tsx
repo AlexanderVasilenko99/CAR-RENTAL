@@ -4,8 +4,6 @@ import appConfig from "../../../../../../Utils/AppConfig";
 import "./Item.css";
 
 function FleetItem(props: VehicleModel): JSX.Element {
-    console.log(props.type);
-    console.log(props.horse_power);
 
     return (
         <div className="Item">
