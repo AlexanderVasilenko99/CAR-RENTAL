@@ -15,18 +15,14 @@ function CategoryPage(): JSX.Element {
     const [searchParams, setSearchParams] = useSearchParams({ s: "" });
 
     const order: string = searchParams.get("s");
-    // order === "lth" ? setSerachOrder("Low To High") : setSerachOrder("High To Low");
 
-    function changeParamsLTH(): void {
-        console.log("changing params to LTH");
-        setSearchParams(prev => { prev.set("s", "lth"); return prev; });
-    }
-    function changeParamsHTL(): void {
-        console.log("changing params to HTL");
-        setSearchParams(prev => { prev.set("s", "htl"); return prev; });
-    }
-    function changeURL(): void {
-        order === "lth" ? changeParamsHTL() : changeParamsLTH();
+    function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
+    function changeParams(order: string): void { setSearchParams(prev => { prev.set("s", order); return prev; }); }
+    function sortByPrice(v: VehicleModel[]): VehicleModel[] {
+        const clone: VehicleModel[] = Object.assign([], v);
+        if (order == "lth") { clone.sort((v1, v2) => v1.price > v2.price ? 1 : -1) }
+        else if (order === "htl") { clone.sort((v1, v2) => v1.price > v2.price ? -1 : 1) };
+        return clone;
     }
 
     useEffect(() => {
@@ -73,12 +69,6 @@ function CategoryPage(): JSX.Element {
             .catch(err => { console.log(err) });
     }, [params]);
 
-    function sortByPrice(v: VehicleModel[]): VehicleModel[] {
-        const clone: VehicleModel[] = Object.assign([], v);
-        if (order == "lth") { clone.sort((v1, v2) => v1.price > v2.price ? 1 : -1) }
-        else if (order === "htl") { clone.sort((v1, v2) => v1.price > v2.price ? -1 : 1) };
-        return clone;
-    }
 
     return (
         <div className="CategoryPage">
@@ -90,13 +80,35 @@ function CategoryPage(): JSX.Element {
             {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
-                    <FleetItem key={v.full_name} full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}
-                        price={v.price} //change v.fullname to id later
-                        doors={v.doors} fuel={v.fuel} luggage={v.luggage} seats={v.seats} redirect_path={v.redirect_path}
-                        tank_capacity={v.tank_capacity} abs={v.abs} cbs={v.cbs} engine_configuration={v.engine_configuration}
-                        transmission={v.transmission} engine_size={v.engine_size} horse_power={v.horse_power} id={v.id} make={v.make}
-                        license={v.license} luggage_available={v.luggage_available} model={v.model} make_year={v.make_year}
-                        turbo={v.turbo} type={v.type} weight={v.weight} radio={v.radio} trunk_capacity={v.trunk_capacity} />
+                    <FleetItem key={v.full_name} //change v.fullname to id later
+                        id={v.id}
+                        abs={v.abs}
+                        cbs={v.cbs}
+                        fuel={v.fuel}
+                        type={v.type}
+                        make={v.make}
+                        price={v.price}
+                        doors={v.doors}
+                        turbo={v.turbo}
+                        model={v.model}
+                        seats={v.seats}
+                        radio={v.radio}
+                        weight={v.weight}
+                        license={v.license}
+                        luggage={v.luggage}
+                        make_year={v.make_year}
+                        full_name={v.full_name}
+                        image_name={v.image_name}
+                        engine_size={v.engine_size}
+                        horse_power={v.horse_power}
+                        transmission={v.transmission}
+                        redirect_path={v.redirect_path}
+                        tank_capacity={v.tank_capacity}
+                        trunk_capacity={v.trunk_capacity}
+                        air_conditioner={v.air_conditioner}
+                        luggage_available={v.luggage_available}
+                        engine_configuration={v.engine_configuration}
+                    />
                 </div>)}
             </div>
         </div>
