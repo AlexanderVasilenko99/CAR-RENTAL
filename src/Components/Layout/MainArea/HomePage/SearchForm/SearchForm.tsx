@@ -67,7 +67,7 @@ function SearchForm(): JSX.Element {
                 </div>
                 <div>
                     <select name="" {...register("age")}>
-                        <option value="all" disabled defaultValue={"all"}>Drivers Age</option>
+                        <option value="all" disabled selected>Drivers Age</option>
                         <option value="7000">All</option>
                         <option value="1823">18-23</option>
                         <option value="2346">23-46</option>
@@ -75,7 +75,7 @@ function SearchForm(): JSX.Element {
                         <option value="7000">70+</option>
                     </select>
                     <select name="" {...register("category")}>
-                        <option value="all" disabled defaultValue={"all"}>Vehicle Category</option>
+                        <option value="all" disabled selected>Vehicle Category</option>
                         <option value="all">All</option>
                         <option value="small">Small</option>
                         <option value="medium">Medium</option>
