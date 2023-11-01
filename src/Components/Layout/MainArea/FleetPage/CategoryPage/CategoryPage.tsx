@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useParams, useSearchParams } from "react-router-dom";
+import { NavLink, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { VehicleModel } from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
@@ -11,6 +11,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 function CategoryPage(): JSX.Element {
 
     const params = useParams();
+    const navigate = useNavigate();
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
     const [searchParams, setSearchParams] = useSearchParams({ s: "" });
 
@@ -18,6 +19,13 @@ function CategoryPage(): JSX.Element {
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
     function changeParams(order: string): void { setSearchParams(prev => { prev.set("s", order); return prev; }); }
+    const location = useLocation();
+    function resetParams(): void {
+        searchParams.delete("s");
+        searchParams.append("s", "");
+        setSearchParams(searchParams);
+    }
+    console.log(location);
     function sortByPrice(v: VehicleModel[]): VehicleModel[] {
         const clone: VehicleModel[] = Object.assign([], v);
         if (order == "lth") { clone.sort((v1, v2) => v1.price > v2.price ? 1 : -1) }
@@ -68,9 +76,12 @@ function CategoryPage(): JSX.Element {
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
-            <h5>Sort by&nbsp;<a onClick={changeURL}>
-                Price {order === "" ? "" : (order === "lth" ? "Low To High" : "High To Low")}
-            </a></h5>
+            <h5>Sort by &nbsp;
+                <a onClick={changeURL}>
+                    Price {order === "" ? "" : (order === "lth" ? "Low To High " : "High To Low ")}&nbsp;
+                </a>
+                <a onClick={resetParams}>Most Popular</a>
+            </h5>
             {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
