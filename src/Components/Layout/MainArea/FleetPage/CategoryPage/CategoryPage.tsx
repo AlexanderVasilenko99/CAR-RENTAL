@@ -61,7 +61,7 @@ function CategoryPage(): JSX.Element {
             {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
-                    <FleetItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner}
+                    <FleetItem full_name={v.full_name} image_name={v.image_name} air_conditioner={v.air_conditioner} price={v.price}
                         doors={v.doors} fuel={v.fuel} luggage={v.luggage} seats={v.seats} redirect_path={v.redirect_path}
                         tank_capacity={v.tank_capacity} abs={v.abs} cbs={v.cbs} engine_configuration={v.engine_configuration}
                         transmission={v.transmission} engine_size={v.engine_size} horse_power={v.horse_power} id={v.id} make={v.make}

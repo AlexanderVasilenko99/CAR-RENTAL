@@ -21,6 +21,7 @@ export class VehicleModel extends AllVehiclesByCategories {
     public radio: boolean;
     public air_conditioner: boolean;
     public redirect_path: string;
+    public price: number;
 
     // for bikes:
     public license: string;

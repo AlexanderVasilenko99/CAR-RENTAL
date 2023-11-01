@@ -74,7 +74,7 @@ function FleetItem(props: VehicleModel): JSX.Element {
                         Turbocharger
                     </div>}
                 </div>
-                <div className="btnHolder"><NavLink to={appConfig.samePagePath}>View Availability</NavLink></div>
+                <div className="btnHolder"><NavLink to={appConfig.samePagePath}>Choose At {props.price}</NavLink></div>
             </div>
         </div >
     );
