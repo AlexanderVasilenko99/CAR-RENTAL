@@ -64,7 +64,7 @@
     margin: 10px 10px 0px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     row-gap: 15px;
     height: 105px;
     border-radius: 10px;
@@ -105,4 +105,8 @@
     background-color: #FAF6E9;
     color: #A73121;
     border: 1px solid #A73121;
+}
+
+.Item .bold {
+    font-weight: 700;
 }
