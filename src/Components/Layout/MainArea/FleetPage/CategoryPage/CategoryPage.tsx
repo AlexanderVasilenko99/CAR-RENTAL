@@ -52,15 +52,9 @@ function CategoryPage(): JSX.Element {
                         arr = allBeVehicles.motorcycles_scooters
                         break;
                     case "all":
-                        let subArr: VehicleModel[] = [];
-                        for (const v of allBeVehicles.small) { subArr.push(v); }
-                        for (const v of allBeVehicles.medium) { subArr.push(v); }
-                        for (const v of allBeVehicles.large) { subArr.push(v); }
-                        for (const v of allBeVehicles.luxury) { subArr.push(v); }
-                        for (const v of allBeVehicles.suv_offroad) { subArr.push(v); }
-                        for (const v of allBeVehicles.vans_trucks) { subArr.push(v); }
-                        for (const v of allBeVehicles.motorcycles_scooters) { subArr.push(v); }
-                        arr = (subArr);
+                        arr = allBeVehicles.small.concat(allBeVehicles.medium).concat(allBeVehicles.large)
+                            .concat(allBeVehicles.motorcycles_scooters).concat(allBeVehicles.vans_trucks)
+                            .concat(allBeVehicles.luxury).concat(allBeVehicles.suv_offroad);
                         break;
                 }
                 arr = sortByPrice(arr);
