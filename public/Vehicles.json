@@ -77,7 +77,7 @@
                 "tank_capacity": "40L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 72.41,
+                "price": 69.41,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -733,8 +733,8 @@
                 "air_conditioner": null
             }
         ],
+        "luxury": [],
         "suv_offroad": [],
-        "vans_trucks": [],
-        "luxury": []
+        "vans_trucks": []
     }
 }

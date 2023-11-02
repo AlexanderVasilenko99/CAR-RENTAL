@@ -14,6 +14,7 @@ function FleetPage(): JSX.Element {
         new VehicleCategoryItem("Vans & Trucks", "mercedes.png", appConfig.fleetPageVansTrucksPath),
         new VehicleCategoryItem("Motorcycles & Scooters", "sv650.png", appConfig.fleetPageMotorcyclesScootersPath),
     ]
+    
     return (
         <div className="FleetPage">
             <h1>Our fleet offers a variety of over 150 vehicle models across all categories for you to choose from!&nbsp;

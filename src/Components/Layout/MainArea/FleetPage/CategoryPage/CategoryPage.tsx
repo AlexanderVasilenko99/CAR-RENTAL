@@ -1,25 +1,21 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import BeatLoader from "react-spinners/BeatLoader";
 import { VehicleModel } from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetItem from "./Item/Item";
-import { AllVehiclesByCategories } from "../../../../../Models/AllVehiclesByCategories";
-import BeatLoader from "react-spinners/BeatLoader";
 
 function CategoryPage(): JSX.Element {
 
     const params = useParams();
-    const navigate = useNavigate();
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
     const [searchParams, setSearchParams] = useSearchParams({ s: "" });
-
     const order: string = searchParams.get("s");
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
     function changeParams(order: string): void { setSearchParams(prev => { prev.set("s", order); return prev; }); }
-    const location = useLocation();
     function resetParams(): void {
         searchParams.delete("s");
         searchParams.append("s", "");
@@ -34,34 +30,32 @@ function CategoryPage(): JSX.Element {
 
     useEffect(() => {
         vehicleServices.GetAllVehicles()
-            .then((allBeVehicles: AllVehiclesByCategories) => {
+            .then((allBeVehicles: VehicleModel[]) => {
                 let arr: VehicleModel[] = [];
                 switch (params.vehicleCategory) {
                     case "small":
-                        arr = allBeVehicles.small;
+                        arr = allBeVehicles.filter(v => v.id >= 100 && v.id <= 199);
                         break;
                     case "medium":
-                        arr = allBeVehicles.medium;
+                        arr = allBeVehicles.filter(v => v.id >= 200 && v.id <= 299);
                         break;
                     case "large":
-                        arr = allBeVehicles.large
-                        break;
-                    case "luxury":
-                        arr = allBeVehicles.luxury
-                        break;
-                    case "suv&offraod":
-                        arr = allBeVehicles.suv_offroad
-                        break;
-                    case "vans&trucks":
-                        arr = allBeVehicles.vans_trucks
+                        arr = allBeVehicles.filter(v => v.id >= 300 && v.id <= 399);
                         break;
                     case "motorcycles&scooters":
-                        arr = allBeVehicles.motorcycles_scooters
+                        arr = allBeVehicles.filter(v => v.id >= 400 && v.id <= 499);
+                        break;
+                    case "luxury":
+                        arr = allBeVehicles.filter(v => v.id >= 500 && v.id <= 599);
+                        break;
+                    case "suv&offraod":
+                        arr = allBeVehicles.filter(v => v.id >= 600 && v.id <= 699);
+                        break;
+                    case "vans&trucks":
+                        arr = allBeVehicles.filter(v => v.id >= 700 && v.id <= 799);
                         break;
                     case "all":
-                        arr = allBeVehicles.small.concat(allBeVehicles.medium).concat(allBeVehicles.large)
-                            .concat(allBeVehicles.motorcycles_scooters).concat(allBeVehicles.vans_trucks)
-                            .concat(allBeVehicles.luxury).concat(allBeVehicles.suv_offroad);
+                        arr = allBeVehicles;
                         break;
                 }
                 arr = sortByPrice(arr);
