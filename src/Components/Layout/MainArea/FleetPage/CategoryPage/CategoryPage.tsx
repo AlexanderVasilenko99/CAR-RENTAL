@@ -18,6 +18,8 @@ function CategoryPage(): JSX.Element {
     let makesHelpSet: Set<string> = new Set();
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
     let modelsHelpSet: Set<string> = new Set();
+    const [feVehicleSeats, setFeVehicleSeats] = useState<number[]>([]);
+    let seatsHelpSet: Set<number> = new Set();
 
     const [searchParams, setSearchParams] = useSearchParams({ s: "" });
     const order: string = searchParams.get("s");
@@ -75,6 +77,11 @@ function CategoryPage(): JSX.Element {
                 arr?.forEach(v => modelsHelpSet.add(v.model));
                 setFeVehicleModels(Array.from(modelsHelpSet));
 
+                arr?.forEach(v => seatsHelpSet.add(v.seats));
+                let x = Array.from(seatsHelpSet)
+                x.sort((s1: number, s2: number) => s1 > s2 ? 1 : -1)
+                setFeVehicleSeats(x);
+
                 setFeVehicles(arr);
             })
             .catch(err => { console.log(err) });
@@ -85,34 +92,39 @@ function CategoryPage(): JSX.Element {
             <h3>Or go <NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
 
             {(feVehicles && feVehicles.length == 0) ? <></> :
-                <div className="filter-link">
-                    <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
-                        <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
-                        <Autocomplete
-                            disablePortal
-                            id="full-name-combo-box"
-                            options={feVehicleNames}
-                            sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
-                        <Autocomplete
-                            disablePortal
-                            id="make-combo-box"
-                            options={feVehicleMakes}
-                            sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Vehicle Make" />} />
-                        <Autocomplete
-                            disablePortal
-                            id="model-combo-box"
-                            options={feVehicleModels}
-                            sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
+                <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
+                    <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
+                    <Autocomplete
+                        disablePortal
+                        id="full-name-combo-box"
+                        options={feVehicleNames}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
+                    <Autocomplete
+                        disablePortal
+                        id="make-combo-box"
+                        options={feVehicleMakes}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Vehicle Make" />} />
+                    <Autocomplete
+                        disablePortal
+                        id="model-combo-box"
+                        options={feVehicleModels}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
+                    <Autocomplete
+                        disablePortal
+                        id="seats-combo-box"
+                        options={feVehicleSeats}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Vehicle Seats" />} />
 
-                        <div>transmission -  select/radio</div>
-                        <div>seats - select</div>
-                        <div>price - range</div>
-                        <button>SEARCH</button>
+                    
 
-                    </div>
+                    <div>transmission -  select/radio</div>
+                    <div>price - range</div>
+                    <button>SEARCH</button>
+
                 </div>}
 
             {(feVehicles && feVehicles.length == 0) ?
