@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/car-rental/static/css/main.313a4565.css",
-    "main.js": "/car-rental/static/js/main.93ef1992.js",
+    "main.css": "/car-rental/static/css/main.2217af31.css",
+    "main.js": "/car-rental/static/js/main.1acd5022.js",
     "static/media/vid1.mp4": "/car-rental/static/media/vid1.ab7fd9d2b7e23d0f8bf7.mp4",
     "static/media/road2.png": "/car-rental/static/media/road2.843b236a9d58202145bd.png",
     "static/media/calendar.png": "/car-rental/static/media/calendar.a1f49896c8b233bea26e.png",
@@ -92,11 +92,11 @@
     "static/media/tevalogo2.png": "/car-rental/static/media/tevalogo2.30a94ec0952cf04727f3.png",
     "static/media/navbar-logo-1-min.png": "/car-rental/static/media/navbar-logo-1-min.0a852f97207d209569cd.png",
     "index.html": "/car-rental/index.html",
-    "main.313a4565.css.map": "/car-rental/static/css/main.313a4565.css.map",
-    "main.93ef1992.js.map": "/car-rental/static/js/main.93ef1992.js.map"
+    "main.2217af31.css.map": "/car-rental/static/css/main.2217af31.css.map",
+    "main.1acd5022.js.map": "/car-rental/static/js/main.1acd5022.js.map"
   },
   "entrypoints": [
-    "static/css/main.313a4565.css",
-    "static/js/main.93ef1992.js"
+    "static/css/main.2217af31.css",
+    "static/js/main.1acd5022.js"
   ]
 }
