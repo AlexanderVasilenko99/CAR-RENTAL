@@ -95,6 +95,14 @@
     font-weight: 500;
 }
 
+.hours-and-contact .soon {
+    width: fit-content;
+    background-color: #ffe100;
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: 500;
+}
+
 .hours-and-contact .closed {
     width: fit-content;
     background-color: rgb(205, 57, 57);

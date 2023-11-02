@@ -19,12 +19,19 @@ import { ReturnAfterHours } from './ReturnAfterHours/ReturnAfterHours';
 
 function FullCity(params: LocationItemAccordionModel): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(true);
+    const [isClosingSoon, setIsClosingSoon] = useState<boolean>(false);
+    const [isOpeningSoon, setIsOpeningSoon] = useState<boolean>(false);
+    const location = `The ${params.city} location`
+
     useEffect(() => {
         const time = new Date();
         const hours = time.getHours();
-        hours >= 8 && hours < 22 ? setIsOpen(true) : setIsOpen(false)
-    }, [])
+        const minutes = time.getMinutes();
 
+        hours >= 8 && hours < 22 ? setIsOpen(true) : setIsOpen(false);
+        if (hours == 10 && minutes >= 30) { setIsOpeningSoon(true) };
+        if (hours == 22 && minutes <= 30) { setIsClosingSoon(true) };
+    }, [])
     return (
         <div className="FullCity">
             <div id="header">
@@ -54,7 +61,8 @@ function FullCity(params: LocationItemAccordionModel): JSX.Element {
                         <h3>Hours And Contact</h3>
                         <div className="subj-content">
                             <p className="days">Right Now:</p>
-                            <p className={isOpen ? "open" : "closed"}>{isOpen ? "OPEN" : "CLOSED"}</p>
+                            <p className={isOpen ? (isClosingSoon ? "soon" : "open") : (isOpeningSoon ? "soon" : "closed")}>
+                                {isOpen ? (isClosingSoon ? "CLOSING SOON" : "OPEN") : (isOpeningSoon ? "OPENING SOON" : "CLOSED")}</p>
                             <p className="days">Sunday - Friday:</p>
                             <p>8AM - 10PM</p>
                             <p className="days">Saturday:</p>
@@ -75,7 +83,7 @@ function FullCity(params: LocationItemAccordionModel): JSX.Element {
                     <Map {...params.locationParams} ></Map>
                     <p></p>
 
-                    <AvailableVehicles />
+                    <AvailableVehicles branch={location} />
                     <ChauffeurServices />
                     <MonthlyRental />
                     <ReturnAfterHours />
