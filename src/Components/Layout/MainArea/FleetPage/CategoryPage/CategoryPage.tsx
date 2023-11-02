@@ -64,18 +64,24 @@ function CategoryPage(): JSX.Element {
             .catch(err => { console.log(err) });
     }, [params]);
 
-
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
             <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
-            <h5>Sort by &nbsp;
-                <a onClick={changeURL}>
-                    Price {order === "" ? "" : (order === "lth" ? "Low To High " : "High To Low ")}&nbsp;
-                </a>
-                <a onClick={resetParams}>Most Popular</a>
-            </h5>
+            {(feVehicles && feVehicles.length == 0) ?
+                <></> :
+                <h5> Sort by &nbsp;
+                    <a onClick={changeURL}>
+                        Price {order === "" ? "" : (order === "lth" ? "Low To High " : "High To Low ")}&nbsp;
+                    </a>
+                    <a onClick={resetParams}>Most Popular</a>
+                </h5>}
+
+            {feVehicles ? (feVehicles.length == 0 && <h3 className="workInProgress">We're working on it!<br />
+                {params.vehicleCategory} vehicles will be available soon...</h3>) : ""}
+
             {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
+
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
                     <FleetItem key={v.id}
@@ -105,11 +111,10 @@ function CategoryPage(): JSX.Element {
                         trunk_capacity={v.trunk_capacity}
                         air_conditioner={v.air_conditioner}
                         luggage_available={v.luggage_available}
-                        engine_configuration={v.engine_configuration}
-                    />
+                        engine_configuration={v.engine_configuration} />
                 </div>)}
             </div>
-        </div>
+        </div >
     );
 }
 
