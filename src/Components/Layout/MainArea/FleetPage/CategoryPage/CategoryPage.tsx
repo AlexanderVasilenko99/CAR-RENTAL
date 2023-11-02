@@ -85,7 +85,7 @@ function CategoryPage(): JSX.Element {
             {feVehicles ? "" : <div className="spinner-container"><BeatLoader color="#A73121" loading size={25} /></div>}
             <div className="CategoryPageGridContainer">
                 {feVehicles?.map(v => <div>
-                    <FleetItem key={v.full_name} //change v.fullname to id later
+                    <FleetItem key={v.id}
                         id={v.id}
                         abs={v.abs}
                         cbs={v.cbs}

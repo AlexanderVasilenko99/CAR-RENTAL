@@ -1,11 +1,8 @@
 {
     "vehicles": {
-        "suv_offroad": [],
-        "vans_trucks": [],
-        "luxury": [],
         "small": [
             {
-                "id": 0,
+                "id": 100,
                 "full_name": "Hyundai i10",
                 "make": "Hyundai",
                 "model": "i10",
@@ -22,7 +19,7 @@
                 "tank_capacity": "40L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 69.90,
+                "price": 69.91,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -34,7 +31,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 101,
                 "full_name": "Nissan Micra",
                 "make": "Nissan",
                 "model": "Micra",
@@ -51,7 +48,7 @@
                 "tank_capacity": "39L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 72.4,
+                "price": 72.42,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -63,7 +60,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 102,
                 "full_name": "Kia Picanto",
                 "make": "Kia",
                 "model": "Picanto",
@@ -80,7 +77,7 @@
                 "tank_capacity": "40L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 72.4,
+                "price": 72.41,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -92,7 +89,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 103,
                 "full_name": "Volkswagen Polo",
                 "make": "Volkswagen",
                 "model": "Polo",
@@ -109,7 +106,7 @@
                 "tank_capacity": "43L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 74.90,
+                "price": 74.98,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -121,7 +118,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 104,
                 "full_name": "Skoda Fabia",
                 "make": "Skoda",
                 "model": "Fabia",
@@ -150,7 +147,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 105,
                 "full_name": "Toyota Yaris",
                 "make": "Toyota",
                 "model": "Yaris",
@@ -167,7 +164,7 @@
                 "tank_capacity": "45L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 74.9,
+                "price": 74.89,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -179,7 +176,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 106,
                 "full_name": "Mitsubishi Space Star",
                 "make": "Mitsubishi",
                 "model": "Space Star",
@@ -208,7 +205,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 107,
                 "full_name": "Suzuki Swift",
                 "make": "Suzuki",
                 "model": "Swift",
@@ -239,7 +236,7 @@
         ],
         "medium": [
             {
-                "id": 0,
+                "id": 200,
                 "full_name": "Renault Clio",
                 "make": "Renault",
                 "model": "Clio",
@@ -268,7 +265,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 201,
                 "full_name": "Seat Ibiza",
                 "make": "Seat",
                 "model": "Ibiza",
@@ -285,7 +282,7 @@
                 "tank_capacity": "75L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 92.70,
+                "price": 92.69,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -297,7 +294,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 202,
                 "full_name": "Mazda 3 Hatchback",
                 "make": "Mazda",
                 "model": "3",
@@ -314,7 +311,7 @@
                 "tank_capacity": "80L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 96.90,
+                "price": 96.89,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -326,7 +323,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 203,
                 "full_name": "Ford Fiesta st",
                 "make": "Ford",
                 "model": "Fiesta",
@@ -355,7 +352,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 204,
                 "full_name": "Peugeot 308",
                 "make": "Peugeot",
                 "model": "308",
@@ -384,7 +381,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 205,
                 "full_name": "Kia Soul",
                 "make": "Kia",
                 "model": "Soul",
@@ -401,7 +398,7 @@
                 "tank_capacity": "80L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 97.50,
+                "price": 97.54,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -413,7 +410,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 206,
                 "full_name": "Opel Astra",
                 "make": "Opel",
                 "model": "Astra",
@@ -430,7 +427,7 @@
                 "tank_capacity": "76L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 95.00,
+                "price": 94.99,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -444,7 +441,7 @@
         ],
         "large": [
             {
-                "id": 0,
+                "id": 300,
                 "full_name": "Nissan Sentra SR",
                 "make": "Nissan",
                 "model": "Sentra",
@@ -461,7 +458,7 @@
                 "tank_capacity": "100L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 154.90,
+                "price": 154.89,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -473,7 +470,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 301,
                 "full_name": "Volkswagen Jetta",
                 "make": "Volkswagen",
                 "model": "Jetta",
@@ -490,7 +487,7 @@
                 "tank_capacity": "110L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 163.90,
+                "price": 163.85,
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
@@ -502,7 +499,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 302,
                 "full_name": "Honda Accord",
                 "make": "Honda",
                 "model": "Accord",
@@ -531,7 +528,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 303,
                 "full_name": "Kia K5",
                 "make": "Kia",
                 "model": "K5",
@@ -560,7 +557,7 @@
                 "luggage_available": null
             },
             {
-                "id": 0,
+                "id": 304,
                 "full_name": "Toyota Corolla",
                 "make": "Toyota",
                 "model": "Corolla",
@@ -591,7 +588,7 @@
         ],
         "motorcycles_scooters": [
             {
-                "id": 0,
+                "id": 400,
                 "full_name": "BMW GS-1250",
                 "make": "BMW",
                 "model": "GS-1250",
@@ -606,7 +603,7 @@
                 "tank_capacity": "45L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 249.90,
+                "price": 249.79,
                 "abs": true,
                 "cbs": false,
                 "weight": "250kg",
@@ -620,7 +617,7 @@
                 "air_conditioner": null
             },
             {
-                "id": 0,
+                "id": 401,
                 "full_name": "Suzuki SV650A",
                 "make": "Suzuki",
                 "model": "SV650A",
@@ -635,7 +632,7 @@
                 "tank_capacity": "15L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 229.90,
+                "price": 229.89,
                 "abs": true,
                 "cbs": false,
                 "weight": 196,
@@ -649,7 +646,7 @@
                 "air_conditioner": null
             },
             {
-                "id": 0,
+                "id": 402,
                 "full_name": "Honda CB500F",
                 "make": "Honda",
                 "model": "CB500F",
@@ -678,7 +675,7 @@
                 "air_conditioner": null
             },
             {
-                "id": 0,
+                "id": 403,
                 "full_name": "Honda Forza 350",
                 "make": "Honda",
                 "model": "Forza 350",
@@ -693,7 +690,7 @@
                 "tank_capacity": "23L",
                 "fuel": "95 unleaded",
                 "redirect_path": "#",
-                "price": 150.90,
+                "price": 150.54,
                 "abs": true,
                 "cbs": false,
                 "weight": 147,
@@ -707,7 +704,7 @@
                 "air_conditioner": null
             },
             {
-                "id": 0,
+                "id": 404,
                 "full_name": "Honda Vision 110",
                 "make": "Honda",
                 "model": "Vision 110",
@@ -735,6 +732,9 @@
                 "radio": null,
                 "air_conditioner": null
             }
-        ]
+        ],
+        "suv_offroad": [],
+        "vans_trucks": [],
+        "luxury": []
     }
 }
