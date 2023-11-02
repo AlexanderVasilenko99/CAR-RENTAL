@@ -107,12 +107,10 @@ function CategoryPage(): JSX.Element {
                             sx={{ width: 300 }}
                             renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
 
-
                         <div>transmission -  select/radio</div>
                         <div>seats - select</div>
                         <div>price - range</div>
                         <button>SEARCH</button>
-
 
                     </div>
                 </div>}
