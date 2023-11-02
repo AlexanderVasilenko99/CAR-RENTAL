@@ -15,7 +15,7 @@ function Links(): JSX.Element {
         new SingleLink("Ben Gurion Airport", appConfig.locationsBenGurionPath),
     ];
     const carRentals: SingleLink[] = [
-        new SingleLink("All Family Cars", appConfig.fleetPagePath),
+        new SingleLink("All Our Vehicles", appConfig.fleetPageAllVehiclesPath),
         new SingleLink("Suv & Off Road", appConfig.fleetPageSuvOffRoadPath),
         new SingleLink("Vans & Trucks", appConfig.fleetPageVansTrucksPath),
         new SingleLink("Two Wheels", appConfig.fleetPageMotorcyclesScootersPath),
