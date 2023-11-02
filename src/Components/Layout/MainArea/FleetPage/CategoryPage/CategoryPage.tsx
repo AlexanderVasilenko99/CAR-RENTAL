@@ -25,7 +25,6 @@ function CategoryPage(): JSX.Element {
         searchParams.append("s", "");
         setSearchParams(searchParams);
     }
-    console.log(location);
     function sortByPrice(v: VehicleModel[]): VehicleModel[] {
         const clone: VehicleModel[] = Object.assign([], v);
         if (order == "lth") { clone.sort((v1, v2) => v1.price > v2.price ? 1 : -1) }
