@@ -1,16 +1,24 @@
 import { useEffect, useState } from "react";
-import { NavLink, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
 import { VehicleModel } from "../../../../../Models/VehicleModel";
 import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetItem from "./Item/Item";
+import { Autocomplete, TextField } from '@mui/material';
 
 function CategoryPage(): JSX.Element {
 
     const params = useParams();
+    const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
+    const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
+    const [feVehicleMakes, setFeVehicleMakes] = useState<string[]>([]);
+    let makesHelpSet: Set<string> = new Set();
+    const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
+    let modelsHelpSet: Set<string> = new Set();
+
     const [searchParams, setSearchParams] = useSearchParams({ s: "" });
     const order: string = searchParams.get("s");
 
@@ -59,15 +67,56 @@ function CategoryPage(): JSX.Element {
                         break;
                 }
                 arr = sortByPrice(arr);
+
+                arr?.forEach(v => setFeVehicleNames(current => [...current, v.full_name]));
+                arr?.forEach(v => makesHelpSet.add(v.make));
+                setFeVehicleMakes(Array.from(makesHelpSet));
+
+                arr?.forEach(v => modelsHelpSet.add(v.model));
+                setFeVehicleModels(Array.from(modelsHelpSet));
+
                 setFeVehicles(arr);
             })
             .catch(err => { console.log(err) });
     }, [params]);
-
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
-            <h3><NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
+            <h3>Or go <NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
+
+            {(feVehicles && feVehicles.length == 0) ? <></> :
+                <div className="filter-link">
+                    <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
+                        <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
+                        <Autocomplete
+                            disablePortal
+                            id="full-name-combo-box"
+                            options={feVehicleNames}
+                            sx={{ width: 300 }}
+                            renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
+                        <Autocomplete
+                            disablePortal
+                            id="make-combo-box"
+                            options={feVehicleMakes}
+                            sx={{ width: 300 }}
+                            renderInput={(params) => <TextField {...params} label="Vehicle Make" />} />
+                        <Autocomplete
+                            disablePortal
+                            id="model-combo-box"
+                            options={feVehicleModels}
+                            sx={{ width: 300 }}
+                            renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
+
+
+                        <div>transmission -  select/radio</div>
+                        <div>seats - select</div>
+                        <div>price - range</div>
+                        <button>SEARCH</button>
+
+
+                    </div>
+                </div>}
+
             {(feVehicles && feVehicles.length == 0) ?
                 <></> :
                 <h5> Sort by &nbsp;
