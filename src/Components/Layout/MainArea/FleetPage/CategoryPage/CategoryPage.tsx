@@ -6,7 +6,8 @@ import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetItem from "./Item/Item";
-import { Autocomplete, TextField } from '@mui/material';
+import { Autocomplete, Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Slider, TextField } from '@mui/material';
+import React from "react";
 
 function CategoryPage(): JSX.Element {
 
@@ -86,6 +87,27 @@ function CategoryPage(): JSX.Element {
             })
             .catch(err => { console.log(err) });
     }, [params]);
+
+
+    const [value, setValue] = React.useState<number[]>([10, 50]);
+    const handleChange = (event: Event, newValue: number | number[]) => {
+        setValue(newValue as number[]);
+    };
+    function RangeSlider() {
+
+        return (
+            <Box sx={{ width: 300 }}>
+                <Slider
+                    getAriaLabel={() => 'Temperature range'}
+                    value={value}
+                    onChange={handleChange}
+                    valueLabelDisplay="auto"
+                // getAriaValueText={valuetext}
+                />
+            </Box>
+        );
+    }
+
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
@@ -94,36 +116,52 @@ function CategoryPage(): JSX.Element {
             {(feVehicles && feVehicles.length == 0) ? <></> :
                 <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
                     <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
-                    <Autocomplete
-                        disablePortal
-                        id="full-name-combo-box"
-                        options={feVehicleNames}
-                        sx={{ width: 300 }}
-                        renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
-                    <Autocomplete
-                        disablePortal
-                        id="make-combo-box"
-                        options={feVehicleMakes}
-                        sx={{ width: 300 }}
-                        renderInput={(params) => <TextField {...params} label="Vehicle Make" />} />
-                    <Autocomplete
-                        disablePortal
-                        id="model-combo-box"
-                        options={feVehicleModels}
-                        sx={{ width: 300 }}
-                        renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
-                    <Autocomplete
-                        disablePortal
-                        id="seats-combo-box"
-                        options={feVehicleSeats}
-                        sx={{ width: 300 }}
-                        renderInput={(params) => <TextField {...params} label="Vehicle Seats" />} />
-
-                    
-
-                    <div>transmission -  select/radio</div>
+                    <div className="first-row">
+                        <Autocomplete
+                            disablePortal
+                            id="full-name-combo-box"
+                            options={feVehicleNames}
+                            sx={{
+                                borderColor: "white",
+                                width: 300,
+                            }}
+                            renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
+                        <Autocomplete
+                            disablePortal
+                            id="make-combo-box"
+                            options={feVehicleMakes}
+                            sx={{ width: 300 }}
+                            renderInput={(params) => <TextField {...params} label="Vehicle Make" />} />
+                        <Autocomplete
+                            disablePortal
+                            id="model-combo-box"
+                            options={feVehicleModels}
+                            sx={{ width: 300 }}
+                            renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
+                        <Autocomplete
+                            disablePortal
+                            id="seats-combo-box"
+                            options={feVehicleSeats}
+                            sx={{ width: 300 }}
+                            renderInput={(params) => <TextField {...params} label="Number Of Seats" />} />
+                    </div>
+                    {/* 
+                    <FormControl>
+                        <FormLabel id="transmission-radio-buttons-label">Transmission</FormLabel>
+                        <RadioGroup row name="radio-buttons-group">
+                            <FormControlLabel value="automatic" control={<Radio />} label="Automatic" />
+                            <FormControlLabel value="standard" control={<Radio />} label="Standard" />
+                        </RadioGroup>
+                    </FormControl>
+                    <Slider disableSwap
+                        // getAriaLabel={() => 'Temperature range'}
+                        value={value}
+                        onChange={handleChange}
+                        valueLabelDisplay="auto"
+                    // getAriaValueText={valuetext}
+                    />
                     <div>price - range</div>
-                    <button>SEARCH</button>
+                    <button>SEARCH</button> */}
 
                 </div>}
 

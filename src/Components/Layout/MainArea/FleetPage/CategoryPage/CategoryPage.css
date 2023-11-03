@@ -15,8 +15,9 @@
     max-width: 1337px;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 70px 1fr;
+    ;
 
 
     background-color: #A73121;
@@ -29,12 +30,42 @@
     transition: all 200ms;
 }
 
+.CategoryPage .first-row {
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MuiInputBase-root input,
+.MuiInputBase-root svg {
+    color: #952323 !important;
+    z-index: 3;
+}
+
+.CategoryPage .MuiInputLabel-root,
+.CategoryPage .MuiInputLabel-root-root.Mui-focused {
+    color: black !important;
+    background-color: #FAF6E9 !important;
+    z-index: 2;
+}
+
+.CategoryPage .MuiAutocomplete-root fieldset {
+    border-color: #FAF6E9 !important;
+    background-color: #FAF6E9 !important;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .CategoryPage .filter-container-expanded {
     height: 250px;
 }
 
+.CategoryPage .filter-container button {
+    grid-column: span 4;
+}
+
 .CategoryPage .filter-container h2 {
-    grid-column: span 3;
+    grid-column: span 4;
     margin-top: 0;
     color: black;
     cursor: pointer;
