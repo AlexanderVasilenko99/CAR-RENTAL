@@ -1,3 +1,4 @@
+import { Autocomplete, TextField } from '@mui/material';
 import { useEffect, useState } from "react";
 import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
@@ -6,12 +7,29 @@ import vehicleServices from "../../../../../Services/VehicleServices";
 import appConfig from "../../../../../Utils/AppConfig";
 import "./CategoryPage.css";
 import FleetItem from "./Item/Item";
-import { Autocomplete, Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Slider, TextField } from '@mui/material';
-import React from "react";
+
+export class searchValues {
+    name: string;
+    make: string;
+    model: string;
+    seats: string;
+    constructor(name: string, make: string, model: string, seats: string) {
+        this.name = name;
+        this.make = make;
+        this.model = model;
+        this.seats = seats;
+    }
+}
 
 function CategoryPage(): JSX.Element {
-
     const params = useParams();
+    const [searchParams, setSearchParams] = useSearchParams({ s: "", name: "", make: "", model: "", seats: "" });
+    const [searchValuesForm, setSearchValuesForm] = useState<searchValues>(new searchValues("", "", "", ""));
+    let order: string = searchParams.get("s");
+    let name: string = searchParams.get("name");
+    let make: string = searchParams.get("make");
+    let model: string = searchParams.get("model");
+    let seats: string = searchParams.get("seats");
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
@@ -23,11 +41,33 @@ function CategoryPage(): JSX.Element {
     const [feVehicleSeats, setFeVehicleSeats] = useState<number[]>([]);
     let seatsHelpSet: Set<number> = new Set();
 
-    const [searchParams, setSearchParams] = useSearchParams({ s: "" });
-    const order: string = searchParams.get("s");
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
-    function changeParams(order: string): void { setSearchParams(prev => { prev.set("s", order); return prev; }); }
+    function changeParams(order: string): void {
+        setSearchParams(prev => {
+            prev.set("s", order);
+            return prev;
+        });
+    }
+    function changeSearchParams(): void {
+        setSearchParams(prev => {
+            prev.set("s", order);
+            prev.set("name", searchValuesForm.name);
+            prev.set("make", searchValuesForm.make);
+            prev.set("model", searchValuesForm.model);
+            prev.set("seats", searchValuesForm.seats.toString());
+            return prev;
+        });
+    }
+    function sortByParams(arr: VehicleModel[]): VehicleModel[] {
+        let clone: VehicleModel[] = arr;
+        if (name) { clone = clone.filter(v => v.full_name === name); }
+        if (make) { clone = clone.filter(v => v.make === make); }
+        if (model) { clone = clone.filter(v => v.model === model); }
+        if (seats) { clone = clone.filter(v => v.seats.toString() === seats) };
+        if (clone.length == 0 && arr.length != 0) { return [] }
+        return clone;
+    }
     function resetParams(): void {
         searchParams.delete("s");
         searchParams.append("s", "");
@@ -39,7 +79,20 @@ function CategoryPage(): JSX.Element {
         else if (order === "htl") { clone.sort((v1, v2) => v1.price > v2.price ? -1 : 1) };
         return clone;
     }
+    function setValuesForAutoCompletes(arr: VehicleModel[]): void {
+        arr?.forEach(v => namesHelpSet.add(v.full_name));
+        setFeVehicleNames(Array.from(namesHelpSet));
 
+        arr?.forEach(v => makesHelpSet.add(v.make));
+        setFeVehicleMakes(Array.from(makesHelpSet));
+
+        arr?.forEach(v => modelsHelpSet.add(v.model));
+        setFeVehicleModels(Array.from(modelsHelpSet));
+
+        arr?.forEach(v => seatsHelpSet.add(v.seats));
+        setFeVehicleSeats(Array.from(seatsHelpSet).sort((s1: number, s2: number) => s1 > s2 ? 1 : -1));
+
+    }
     useEffect(() => {
         vehicleServices.GetAllVehicles()
             .then((allBeVehicles: VehicleModel[]) => {
@@ -70,19 +123,9 @@ function CategoryPage(): JSX.Element {
                         arr = allBeVehicles;
                         break;
                 }
+                setValuesForAutoCompletes(arr);
                 arr = sortByPrice(arr);
-
-                arr?.forEach(v => namesHelpSet.add(v.full_name));
-                setFeVehicleNames(Array.from(namesHelpSet));
-
-                arr?.forEach(v => makesHelpSet.add(v.make));
-                setFeVehicleMakes(Array.from(makesHelpSet));
-
-                arr?.forEach(v => modelsHelpSet.add(v.model));
-                setFeVehicleModels(Array.from(modelsHelpSet));
-
-                arr?.forEach(v => seatsHelpSet.add(v.seats));
-                setFeVehicleSeats(Array.from(seatsHelpSet).sort((s1: number, s2: number) => s1 > s2 ? 1 : -1));
+                arr = sortByParams(arr);
 
                 setFeVehicles(arr);
             })
@@ -97,38 +140,62 @@ function CategoryPage(): JSX.Element {
             {(feVehicles && feVehicles.length == 0) ? <></> :
                 <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
                     <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
-                    <div className="first-row">
-                        <Autocomplete
-                            disablePortal
-                            id="full-name-combo-box"
-                            options={feVehicleNames}
-                            sx={{
-                                borderColor: "white",
-                                width: 300,
-                            }}
-                            renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
-                        <Autocomplete
-                            disablePortal
-                            id="make-combo-box"
-                            options={feVehicleMakes}
-                            sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Vehicle Make" />} />
-                        <Autocomplete
-                            disablePortal
-                            id="model-combo-box"
-                            options={feVehicleModels}
-                            sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
-                        <Autocomplete
-                            disablePortal
-                            id="seats-combo-box"
-                            options={feVehicleSeats}
-                            sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Number Of Seats" />} />
-                    </div>
-
-                    <button id="searchCarBtn">Find My Rental!</button>
-
+                    <form>
+                        <div className="first-row">
+                            <Autocomplete
+                                onChange={(event, value) => {
+                                    const newSVals: searchValues = { ...searchValuesForm }
+                                    if (value == null) { newSVals.name = ""; }
+                                    else { newSVals.name = value; }
+                                    setSearchValuesForm(newSVals);
+                                }}
+                                disablePortal
+                                id="full-name-combo-box"
+                                options={feVehicleNames}
+                                sx={{
+                                    borderColor: "white",
+                                    width: 300,
+                                }}
+                                renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
+                            <Autocomplete
+                                onChange={(event, value) => {
+                                    const newSVals: searchValues = { ...searchValuesForm }
+                                    if (value == null) { newSVals.make = ""; }
+                                    else { newSVals.make = value; }
+                                    setSearchValuesForm(newSVals)
+                                }}
+                                disablePortal
+                                id="make-combo-box"
+                                options={feVehicleMakes}
+                                sx={{ width: 300 }}
+                                renderInput={(params) => <TextField {...params} label="Vehicle Make" />} />
+                            <Autocomplete
+                                onChange={(event, value) => {
+                                    const newSVals: searchValues = { ...searchValuesForm }
+                                    if (value == null) { newSVals.model = ""; }
+                                    else { newSVals.model = value; }
+                                    setSearchValuesForm(newSVals)
+                                }}
+                                disablePortal
+                                id="model-combo-box"
+                                options={feVehicleModels}
+                                sx={{ width: 300 }}
+                                renderInput={(params) => <TextField {...params} label="Vehicle Model" />} />
+                            <Autocomplete
+                                onChange={(event, value) => {
+                                    const newSVals: searchValues = { ...searchValuesForm }
+                                    if (value == null) { newSVals.seats = ""; }
+                                    else { newSVals.seats = value.toString(); }
+                                    setSearchValuesForm(newSVals)
+                                }}
+                                disablePortal
+                                id="seats-combo-box"
+                                options={feVehicleSeats}
+                                sx={{ width: 300 }}
+                                renderInput={(params) => <TextField {...params} label="Number Of Seats" />} />
+                        </div>
+                        <button id="searchCarBtn" type='button' onClick={changeSearchParams}>Find My Rental!</button>
+                    </form>
                 </div>}
 
             {(feVehicles && feVehicles.length == 0) ?
