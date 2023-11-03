@@ -78,6 +78,7 @@
 .CategoryPage .filter-container #searchCarBtn:hover {
     background-color: #FAF6E9;
     border: 0;
+    cursor: pointer;
     color: #A73121;
     scale: 1.03;
 }

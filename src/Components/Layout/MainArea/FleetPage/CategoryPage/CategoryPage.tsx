@@ -15,6 +15,7 @@ function CategoryPage(): JSX.Element {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
+    let namesHelpSet: Set<string> = new Set();
     const [feVehicleMakes, setFeVehicleMakes] = useState<string[]>([]);
     let makesHelpSet: Set<string> = new Set();
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
@@ -71,7 +72,9 @@ function CategoryPage(): JSX.Element {
                 }
                 arr = sortByPrice(arr);
 
-                arr?.forEach(v => setFeVehicleNames(current => [...current, v.full_name]));
+                arr?.forEach(v => namesHelpSet.add(v.full_name));
+                setFeVehicleNames(Array.from(namesHelpSet));
+
                 arr?.forEach(v => makesHelpSet.add(v.make));
                 setFeVehicleMakes(Array.from(makesHelpSet));
 
@@ -79,34 +82,12 @@ function CategoryPage(): JSX.Element {
                 setFeVehicleModels(Array.from(modelsHelpSet));
 
                 arr?.forEach(v => seatsHelpSet.add(v.seats));
-                let x = Array.from(seatsHelpSet)
-                x.sort((s1: number, s2: number) => s1 > s2 ? 1 : -1)
-                setFeVehicleSeats(x);
+                setFeVehicleSeats(Array.from(seatsHelpSet).sort((s1: number, s2: number) => s1 > s2 ? 1 : -1));
 
                 setFeVehicles(arr);
             })
             .catch(err => { console.log(err) });
     }, [params]);
-
-
-    const [value, setValue] = React.useState<number[]>([10, 50]);
-    const handleChange = (event: Event, newValue: number | number[]) => {
-        setValue(newValue as number[]);
-    };
-    function RangeSlider() {
-
-        return (
-            <Box sx={{ width: 300 }}>
-                <Slider
-                    getAriaLabel={() => 'Temperature range'}
-                    value={value}
-                    onChange={handleChange}
-                    valueLabelDisplay="auto"
-                // getAriaValueText={valuetext}
-                />
-            </Box>
-        );
-    }
 
     return (
         <div className="CategoryPage">
@@ -145,22 +126,7 @@ function CategoryPage(): JSX.Element {
                             sx={{ width: 300 }}
                             renderInput={(params) => <TextField {...params} label="Number Of Seats" />} />
                     </div>
-                    {/* 
-                    <FormControl>
-                        <FormLabel id="transmission-radio-buttons-label">Transmission</FormLabel>
-                        <RadioGroup row name="radio-buttons-group">
-                            <FormControlLabel value="automatic" control={<Radio />} label="Automatic" />
-                            <FormControlLabel value="standard" control={<Radio />} label="Standard" />
-                        </RadioGroup>
-                    </FormControl>
-                    <Slider disableSwap
-                        // getAriaLabel={() => 'Temperature range'}
-                        value={value}
-                        onChange={handleChange}
-                        valueLabelDisplay="auto"
-                    // getAriaValueText={valuetext}
-                    />
-                    <div>price - range</div>*/}
+
                     <button id="searchCarBtn">Find My Rental!</button>
 
                 </div>}
