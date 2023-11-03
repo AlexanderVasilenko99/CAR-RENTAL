@@ -33,13 +33,9 @@ function CategoryPage(): JSX.Element {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
-    let namesHelpSet: Set<string> = new Set();
     const [feVehicleMakes, setFeVehicleMakes] = useState<string[]>([]);
-    let makesHelpSet: Set<string> = new Set();
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
-    let modelsHelpSet: Set<string> = new Set();
     const [feVehicleSeats, setFeVehicleSeats] = useState<number[]>([]);
-    let seatsHelpSet: Set<number> = new Set();
 
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
@@ -80,6 +76,10 @@ function CategoryPage(): JSX.Element {
         return clone;
     }
     function setValuesForAutoCompletes(arr: VehicleModel[]): void {
+        let namesHelpSet: Set<string> = new Set();
+        let makesHelpSet: Set<string> = new Set();
+        let modelsHelpSet: Set<string> = new Set();
+        let seatsHelpSet: Set<number> = new Set();
         arr?.forEach(v => namesHelpSet.add(v.full_name));
         setFeVehicleNames(Array.from(namesHelpSet));
 
@@ -91,42 +91,45 @@ function CategoryPage(): JSX.Element {
 
         arr?.forEach(v => seatsHelpSet.add(v.seats));
         setFeVehicleSeats(Array.from(seatsHelpSet).sort((s1: number, s2: number) => s1 > s2 ? 1 : -1));
-
+    }
+    function getVehiclesByCategory(cat: string, arr: VehicleModel[]): VehicleModel[] {
+        let clone: VehicleModel[] = [...arr];
+        switch (cat) {
+            case "small":
+                clone = clone.filter(v => v.id >= 100 && v.id <= 199);
+                break;
+            case "medium":
+                clone = clone.filter(v => v.id >= 200 && v.id <= 299);
+                break;
+            case "large":
+                clone = clone.filter(v => v.id >= 300 && v.id <= 399);
+                break;
+            case "motorcycles&scooters":
+                clone = clone.filter(v => v.id >= 400 && v.id <= 499);
+                break;
+            case "luxury":
+                clone = clone.filter(v => v.id >= 500 && v.id <= 599);
+                break;
+            case "suv&offraod":
+                clone = clone.filter(v => v.id >= 600 && v.id <= 699);
+                break;
+            case "vans&trucks":
+                clone = clone.filter(v => v.id >= 700 && v.id <= 799);
+                break;
+            case "all":
+                clone = clone;
+                break;
+        }
+        return clone;
     }
     useEffect(() => {
         vehicleServices.GetAllVehicles()
             .then((allBeVehicles: VehicleModel[]) => {
-                let arr: VehicleModel[] = [];
-                switch (params.vehicleCategory) {
-                    case "small":
-                        arr = allBeVehicles.filter(v => v.id >= 100 && v.id <= 199);
-                        break;
-                    case "medium":
-                        arr = allBeVehicles.filter(v => v.id >= 200 && v.id <= 299);
-                        break;
-                    case "large":
-                        arr = allBeVehicles.filter(v => v.id >= 300 && v.id <= 399);
-                        break;
-                    case "motorcycles&scooters":
-                        arr = allBeVehicles.filter(v => v.id >= 400 && v.id <= 499);
-                        break;
-                    case "luxury":
-                        arr = allBeVehicles.filter(v => v.id >= 500 && v.id <= 599);
-                        break;
-                    case "suv&offraod":
-                        arr = allBeVehicles.filter(v => v.id >= 600 && v.id <= 699);
-                        break;
-                    case "vans&trucks":
-                        arr = allBeVehicles.filter(v => v.id >= 700 && v.id <= 799);
-                        break;
-                    case "all":
-                        arr = allBeVehicles;
-                        break;
-                }
+                let arr: VehicleModel[] = allBeVehicles;
+                arr = getVehiclesByCategory(params.vehicleCategory, arr);
                 setValuesForAutoCompletes(arr);
                 arr = sortByPrice(arr);
                 arr = sortByParams(arr);
-
                 setFeVehicles(arr);
             })
             .catch(err => { console.log(err) });
@@ -152,10 +155,7 @@ function CategoryPage(): JSX.Element {
                                 disablePortal
                                 id="full-name-combo-box"
                                 options={feVehicleNames}
-                                sx={{
-                                    borderColor: "white",
-                                    width: 300,
-                                }}
+                                sx={{ width: 300, }}
                                 renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
                             <Autocomplete
                                 onChange={(event, value) => {

@@ -31,9 +31,6 @@ class VehicleServices {
             const data: AllVehiclesByCategories = response.data.vehicles;
             vehicles = data.small.concat(data.medium).concat(data.large).concat(data.motorcycles_scooters)
                 .concat(data.luxury).concat(data.suv_offroad).concat(data.vans_trucks);
-
-            // const action = { type: VehicleActionTypes.GetAllVehicles, payload: vehicles }
-            // vehiclesState.dispatch(action);
         }
         switch (cat) {
             case "small":
