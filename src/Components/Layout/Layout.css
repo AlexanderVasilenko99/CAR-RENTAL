@@ -14,6 +14,7 @@
 
 .Layout nav {
     height: 70px;
+    z-index: 9;
 }
 
 body::-webkit-scrollbar {

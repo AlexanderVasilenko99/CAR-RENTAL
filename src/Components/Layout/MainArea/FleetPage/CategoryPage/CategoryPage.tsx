@@ -160,8 +160,8 @@ function CategoryPage(): JSX.Element {
                         valueLabelDisplay="auto"
                     // getAriaValueText={valuetext}
                     />
-                    <div>price - range</div>
-                    <button>SEARCH</button> */}
+                    <div>price - range</div>*/}
+                    <button id="searchCarBtn">Find My Rental!</button>
 
                 </div>}
 
