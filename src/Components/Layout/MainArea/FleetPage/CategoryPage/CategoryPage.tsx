@@ -13,22 +13,28 @@ export class searchValues {
     make: string;
     model: string;
     seats: string;
-    constructor(name: string, make: string, model: string, seats: string) {
+    minP: string;
+    maxP: string;
+    constructor(name: string, make: string, model: string, seats: string, minP: string, maxP: string) {
         this.name = name;
         this.make = make;
         this.model = model;
         this.seats = seats;
+        this.minP = minP;
+        this.maxP = maxP;
     }
 }
 function CategoryPage(): JSX.Element {
     const params = useParams();
-    const [searchParams, setSearchParams] = useSearchParams({ s: "", name: "", make: "", model: "", seats: "" });
-    const [searchValuesForm, setSearchValuesForm] = useState<searchValues>(new searchValues("", "", "", ""));
+    const [searchParams, setSearchParams] = useSearchParams({ s: "", name: "", make: "", model: "", seats: "", minP: "", maxP: "" });
+    const [searchValuesForm, setSearchValuesForm] = useState<searchValues>(new searchValues("", "", "", "", "", ""));
     let order: string = searchParams.get("s");
     let name: string = searchParams.get("name");
     let make: string = searchParams.get("make");
     let model: string = searchParams.get("model");
     let seats: string = searchParams.get("seats");
+    let minP: string = searchParams.get("minP");
+    let maxP: string = searchParams.get("maxP");
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>([]);
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
@@ -38,7 +44,7 @@ function CategoryPage(): JSX.Element {
     const [feVehicleMinMaxPrices, setFeVehicleMinMaxPrices] = useState<number[]>();
     const [priceRange, setPriceRange] = React.useState<number[]>([0, 0]);
     const handleSliderChange = (event: Event, newValue: number | number[]) => {
-        setPriceRange(newValue as number[])
+        setPriceRange(newValue as number[]);
     };
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
@@ -55,6 +61,8 @@ function CategoryPage(): JSX.Element {
             prev.set("make", searchValuesForm.make);
             prev.set("model", searchValuesForm.model);
             prev.set("seats", searchValuesForm.seats.toString());
+            prev.set("minP", priceRange[0].toString());
+            prev.set("maxP", priceRange[1].toString());
             return prev;
         });
     }
@@ -64,6 +72,8 @@ function CategoryPage(): JSX.Element {
         if (make) { clone = clone.filter(v => v.make === make); }
         if (model) { clone = clone.filter(v => v.model === model); }
         if (seats) { clone = clone.filter(v => v.seats.toString() === seats) };
+        if (minP) { clone = clone.filter(v => v.price >= +minP) }
+        if (maxP) { clone = clone.filter(v => v.price <= +maxP) }
         if (clone.length == 0 && arr.length != 0) { return [] }
         return clone;
     }
@@ -140,7 +150,12 @@ function CategoryPage(): JSX.Element {
                 minMaxPrices = x;
             }
         });
-        setPriceRange(minMaxPrices);
+        if (minP || maxP) {
+            setPriceRange([+minP, +maxP]);
+        }
+        else {
+            setPriceRange(minMaxPrices);
+        }
         setFeVehicleMinMaxPrices(minMaxPrices);
     }
 
