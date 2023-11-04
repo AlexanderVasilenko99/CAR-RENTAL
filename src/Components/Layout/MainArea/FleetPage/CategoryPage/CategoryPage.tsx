@@ -20,14 +20,6 @@ export class searchValues {
         this.seats = seats;
     }
 }
-export class MinMaxPrices {
-    public lowestPrice: number;
-    public highestPrice: number;
-    constructor(lowestPrice: number, highestPrice: number) {
-        this.lowestPrice = lowestPrice;
-        this.highestPrice = highestPrice;
-    }
-}
 function CategoryPage(): JSX.Element {
     const params = useParams();
     const [searchParams, setSearchParams] = useSearchParams({ s: "", name: "", make: "", model: "", seats: "" });
@@ -38,12 +30,12 @@ function CategoryPage(): JSX.Element {
     let model: string = searchParams.get("model");
     let seats: string = searchParams.get("seats");
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
-    const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
+    const [feVehicles, setFeVehicles] = useState<VehicleModel[]>([]);
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
     const [feVehicleMakes, setFeVehicleMakes] = useState<string[]>([]);
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
     const [feVehicleSeats, setFeVehicleSeats] = useState<string[]>([]);
-    const [feVehicleMinMaxPrices, setFeVehicleMinMaxPrices] = useState<MinMaxPrices>();
+    const [feVehicleMinMaxPrices, setFeVehicleMinMaxPrices] = useState<number[]>();
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
     function changeParams(order: string): void {
@@ -68,7 +60,6 @@ function CategoryPage(): JSX.Element {
         if (make) { clone = clone.filter(v => v.make === make); }
         if (model) { clone = clone.filter(v => v.model === model); }
         if (seats) { clone = clone.filter(v => v.seats.toString() === seats) };
-        findSetFeVehiclesMinMaxPrices(clone);
         if (clone.length == 0 && arr.length != 0) { return [] }
         return clone;
     }
@@ -132,21 +123,21 @@ function CategoryPage(): JSX.Element {
     }
     function findSetFeVehiclesMinMaxPrices(vehicles: VehicleModel[]): void {
         const arr: VehicleModel[] = [...vehicles];
-        let minMaxPrices = new MinMaxPrices(arr[0].price, arr[0].price);
+        let minMaxPrices: number[] = [arr[0].price, arr[0].price];
         arr.forEach(v => {
-            if (v.price < minMaxPrices.lowestPrice) {
-                let x: MinMaxPrices = { ...minMaxPrices }
-                x.lowestPrice = v.price;
+            if (v.price < minMaxPrices[0]) {
+                let x: number[] = [...minMaxPrices];
+                x[0] = v.price;
                 minMaxPrices = x;
             }
-            else if (v.price > minMaxPrices.highestPrice) {
-                let x: MinMaxPrices = { ...minMaxPrices }
-                x.highestPrice = v.price;
+            else if (v.price > minMaxPrices[1]) {
+                let x: number[] = [...minMaxPrices];
+                x[1] = v.price;
                 minMaxPrices = x;
             }
         });
         setFeVehicleMinMaxPrices(minMaxPrices);
-        setValue([minMaxPrices.lowestPrice, minMaxPrices.highestPrice])
+        setValue([minMaxPrices[0], minMaxPrices[1]])
     }
 
     useEffect(() => {
@@ -157,13 +148,16 @@ function CategoryPage(): JSX.Element {
                 arr = sortByPrice(arr);
                 arr = sortByParams(arr);
                 setValuesForAutoCompletes(arr);
-                findSetFeVehiclesMinMaxPrices(arr);
+                if (arr.length != 0) { findSetFeVehiclesMinMaxPrices(arr) }
                 setFeVehicles(arr);
+                console.log("this pages fe vehicles: ");
+                arr.forEach(v => console.log(v.full_name));
+
             })
             .catch(err => { console.log(err) });
     }, [params]);
 
-    const [value, setValue] = React.useState<number[]>([0, 100]);
+    const [value, setValue] = React.useState<number[]>([]);
     const handleChange = (event: Event, newValue: number | number[]) => {
         setValue(newValue as number[])
     };
@@ -231,8 +225,8 @@ function CategoryPage(): JSX.Element {
                             {feVehicleMinMaxPrices &&
                                 <Box sx={{ width: 300 }}>
                                     <Slider
-                                        min={feVehicleMinMaxPrices.lowestPrice}
-                                        max={feVehicleMinMaxPrices.highestPrice}
+                                        min={feVehicleMinMaxPrices[0]}
+                                        max={feVehicleMinMaxPrices[1]}
                                         getAriaLabel={() => 'Temperature range'}
                                         value={value}
                                         onChange={handleChange}
