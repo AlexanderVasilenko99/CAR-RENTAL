@@ -35,7 +35,7 @@ function CategoryPage(): JSX.Element {
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
     const [feVehicleMakes, setFeVehicleMakes] = useState<string[]>([]);
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
-    const [feVehicleSeats, setFeVehicleSeats] = useState<number[]>([]);
+    const [feVehicleSeats, setFeVehicleSeats] = useState<string[]>([]);
 
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
@@ -79,7 +79,7 @@ function CategoryPage(): JSX.Element {
         let namesHelpSet: Set<string> = new Set();
         let makesHelpSet: Set<string> = new Set();
         let modelsHelpSet: Set<string> = new Set();
-        let seatsHelpSet: Set<number> = new Set();
+        let seatsHelpSet: Set<string> = new Set();
         arr?.forEach(v => namesHelpSet.add(v.full_name));
         setFeVehicleNames(Array.from(namesHelpSet));
 
@@ -89,8 +89,8 @@ function CategoryPage(): JSX.Element {
         arr?.forEach(v => modelsHelpSet.add(v.model));
         setFeVehicleModels(Array.from(modelsHelpSet));
 
-        arr?.forEach(v => seatsHelpSet.add(v.seats));
-        setFeVehicleSeats(Array.from(seatsHelpSet).sort((s1: number, s2: number) => s1 > s2 ? 1 : -1));
+        arr?.forEach(v => seatsHelpSet.add(v.seats.toString()));
+        setFeVehicleSeats(Array.from(seatsHelpSet).sort((s1: string, s2: string) => +s1 > +s2 ? 1 : -1));
     }
     function getVehiclesByCategory(cat: string, arr: VehicleModel[]): VehicleModel[] {
         let clone: VehicleModel[] = [...arr];
@@ -144,9 +144,10 @@ function CategoryPage(): JSX.Element {
                 <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
                     <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
                     <form>
-                        <div className="first-row">
+                        <div className='firstDiv'>
                             <Autocomplete
                                 onChange={(event, value) => {
+                                    console.log(value);
                                     const newSVals: searchValues = { ...searchValuesForm }
                                     if (value == null) { newSVals.name = ""; }
                                     else { newSVals.name = value; }
@@ -155,7 +156,7 @@ function CategoryPage(): JSX.Element {
                                 disablePortal
                                 id="full-name-combo-box"
                                 options={feVehicleNames}
-                                sx={{ width: 300, }}
+                                sx={{ width: 300 }}
                                 renderInput={(params) => <TextField {...params} label="Vehicle Name" />} />
                             <Autocomplete
                                 onChange={(event, value) => {
