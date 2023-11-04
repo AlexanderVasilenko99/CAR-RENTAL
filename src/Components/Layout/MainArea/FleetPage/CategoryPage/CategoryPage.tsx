@@ -1,5 +1,5 @@
-import { Autocomplete, TextField } from '@mui/material';
-import { useEffect, useState } from "react";
+import { Autocomplete, Box, Slider, TextField } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
 import { VehicleModel } from "../../../../../Models/VehicleModel";
@@ -20,7 +20,14 @@ export class searchValues {
         this.seats = seats;
     }
 }
-
+export class MinMaxPrices {
+    public lowestPrice: number;
+    public highestPrice: number;
+    constructor(lowestPrice: number, highestPrice: number) {
+        this.lowestPrice = lowestPrice;
+        this.highestPrice = highestPrice;
+    }
+}
 function CategoryPage(): JSX.Element {
     const params = useParams();
     const [searchParams, setSearchParams] = useSearchParams({ s: "", name: "", make: "", model: "", seats: "" });
@@ -36,7 +43,7 @@ function CategoryPage(): JSX.Element {
     const [feVehicleMakes, setFeVehicleMakes] = useState<string[]>([]);
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
     const [feVehicleSeats, setFeVehicleSeats] = useState<string[]>([]);
-
+    const [feVehicleMinMaxPrices, setFeVehicleMinMaxPrices] = useState<MinMaxPrices>();
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
     function changeParams(order: string): void {
@@ -61,6 +68,7 @@ function CategoryPage(): JSX.Element {
         if (make) { clone = clone.filter(v => v.make === make); }
         if (model) { clone = clone.filter(v => v.model === model); }
         if (seats) { clone = clone.filter(v => v.seats.toString() === seats) };
+        findSetFeVehiclesMinMaxPrices(clone);
         if (clone.length == 0 && arr.length != 0) { return [] }
         return clone;
     }
@@ -122,19 +130,43 @@ function CategoryPage(): JSX.Element {
         }
         return clone;
     }
+    function findSetFeVehiclesMinMaxPrices(vehicles: VehicleModel[]): void {
+        const arr: VehicleModel[] = [...vehicles];
+        let minMaxPrices = new MinMaxPrices(arr[0].price, arr[0].price);
+        arr.forEach(v => {
+            if (v.price < minMaxPrices.lowestPrice) {
+                let x: MinMaxPrices = { ...minMaxPrices }
+                x.lowestPrice = v.price;
+                minMaxPrices = x;
+            }
+            else if (v.price > minMaxPrices.highestPrice) {
+                let x: MinMaxPrices = { ...minMaxPrices }
+                x.highestPrice = v.price;
+                minMaxPrices = x;
+            }
+        });
+        setFeVehicleMinMaxPrices(minMaxPrices);
+        setValue([minMaxPrices.lowestPrice, minMaxPrices.highestPrice])
+    }
+
     useEffect(() => {
         vehicleServices.GetAllVehicles()
             .then((allBeVehicles: VehicleModel[]) => {
-                let arr: VehicleModel[] = allBeVehicles;
+                let arr: VehicleModel[] = [...allBeVehicles];
                 arr = getVehiclesByCategory(params.vehicleCategory, arr);
-                setValuesForAutoCompletes(arr);
                 arr = sortByPrice(arr);
                 arr = sortByParams(arr);
+                setValuesForAutoCompletes(arr);
+                findSetFeVehiclesMinMaxPrices(arr);
                 setFeVehicles(arr);
             })
             .catch(err => { console.log(err) });
     }, [params]);
 
+    const [value, setValue] = React.useState<number[]>([0, 100]);
+    const handleChange = (event: Event, newValue: number | number[]) => {
+        setValue(newValue as number[])
+    };
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
@@ -194,6 +226,21 @@ function CategoryPage(): JSX.Element {
                                 options={feVehicleSeats}
                                 sx={{ width: 300 }}
                                 renderInput={(params) => <TextField {...params} label="Number Of Seats" />} />
+                        </div>
+                        <div className='secondDiv'>
+                            {feVehicleMinMaxPrices &&
+                                <Box sx={{ width: 300 }}>
+                                    <Slider
+                                        min={feVehicleMinMaxPrices.lowestPrice}
+                                        max={feVehicleMinMaxPrices.highestPrice}
+                                        getAriaLabel={() => 'Temperature range'}
+                                        value={value}
+                                        onChange={handleChange}
+                                        valueLabelDisplay="auto"
+                                    // getAriaValueText={valuetext}
+                                    />
+                                </Box>
+                            }
                         </div>
                         <button id="searchCarBtn" type='button' onClick={changeSearchParams}>Find My Rental!</button>
                     </form>
