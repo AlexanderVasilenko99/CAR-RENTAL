@@ -137,7 +137,6 @@ function CategoryPage(): JSX.Element {
             }
         });
         setFeVehicleMinMaxPrices(minMaxPrices);
-        setValue([minMaxPrices[0], minMaxPrices[1]])
     }
 
     useEffect(() => {
@@ -150,17 +149,10 @@ function CategoryPage(): JSX.Element {
                 setValuesForAutoCompletes(arr);
                 if (arr.length != 0) { findSetFeVehiclesMinMaxPrices(arr) }
                 setFeVehicles(arr);
-                console.log("this pages fe vehicles: ");
-                arr.forEach(v => console.log(v.full_name));
-
             })
             .catch(err => { console.log(err) });
     }, [params]);
 
-    const [value, setValue] = React.useState<number[]>([]);
-    const handleChange = (event: Event, newValue: number | number[]) => {
-        setValue(newValue as number[])
-    };
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
@@ -227,11 +219,11 @@ function CategoryPage(): JSX.Element {
                                     <Slider
                                         min={feVehicleMinMaxPrices[0]}
                                         max={feVehicleMinMaxPrices[1]}
-                                        getAriaLabel={() => 'Temperature range'}
-                                        value={value}
-                                        onChange={handleChange}
+                                        value={feVehicleMinMaxPrices}
+                                        onChange={(event: Event, newValue: number | number[]) => {
+                                            setFeVehicleMinMaxPrices(newValue as number[])
+                                        }}
                                         valueLabelDisplay="auto"
-                                    // getAriaValueText={valuetext}
                                     />
                                 </Box>
                             }
