@@ -36,6 +36,10 @@ function CategoryPage(): JSX.Element {
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
     const [feVehicleSeats, setFeVehicleSeats] = useState<string[]>([]);
     const [feVehicleMinMaxPrices, setFeVehicleMinMaxPrices] = useState<number[]>();
+    const [priceRange, setPriceRange] = React.useState<number[]>([0, 0]);
+    const handleSliderChange = (event: Event, newValue: number | number[]) => {
+        setPriceRange(newValue as number[])
+    };
 
     function changeURL(): void { order === "lth" ? changeParams("htl") : changeParams("lth"); }
     function changeParams(order: string): void {
@@ -136,6 +140,7 @@ function CategoryPage(): JSX.Element {
                 minMaxPrices = x;
             }
         });
+        setPriceRange(minMaxPrices);
         setFeVehicleMinMaxPrices(minMaxPrices);
     }
 
@@ -219,11 +224,11 @@ function CategoryPage(): JSX.Element {
                                     <Slider
                                         min={feVehicleMinMaxPrices[0]}
                                         max={feVehicleMinMaxPrices[1]}
-                                        value={feVehicleMinMaxPrices}
-                                        onChange={(event: Event, newValue: number | number[]) => {
-                                            setFeVehicleMinMaxPrices(newValue as number[])
-                                        }}
+                                        getAriaLabel={() => 'Temperature range'}
+                                        value={priceRange}
+                                        onChange={handleSliderChange}
                                         valueLabelDisplay="auto"
+                                    // getAriaValueText={valuetext}
                                     />
                                 </Box>
                             }
