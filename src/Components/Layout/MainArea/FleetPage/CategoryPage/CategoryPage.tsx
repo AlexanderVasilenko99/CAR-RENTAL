@@ -164,10 +164,10 @@ function CategoryPage(): JSX.Element {
             .then((allBeVehicles: VehicleModel[]) => {
                 let arr: VehicleModel[] = [...allBeVehicles];
                 arr = getVehiclesByCategory(params.vehicleCategory, arr);
+                if (arr.length != 0) { findSetFeVehiclesMinMaxPrices(arr) }
                 arr = sortByPrice(arr);
                 arr = sortByParams(arr);
                 setValuesForAutoCompletes(arr);
-                if (arr.length != 0) { findSetFeVehiclesMinMaxPrices(arr) }
                 setFeVehicles(arr);
             })
             .catch(err => { console.log(err) });
@@ -176,7 +176,8 @@ function CategoryPage(): JSX.Element {
     return (
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
-            <h3>Or go <NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></h3>
+            <h3><div>Or go <NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></div>
+                <span>Showing {feVehicles.length} results</span></h3>
 
             {(feVehicles && feVehicles.length == 0) ? <></> :
                 <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
@@ -235,20 +236,27 @@ function CategoryPage(): JSX.Element {
                         </div>
                         <div className='secondDiv'>
                             {feVehicleMinMaxPrices &&
-                                <Box sx={{ width: 300 }}>
-                                    <Slider
-                                        min={feVehicleMinMaxPrices[0]}
-                                        max={feVehicleMinMaxPrices[1]}
-                                        getAriaLabel={() => 'Temperature range'}
-                                        value={priceRange}
-                                        onChange={handleSliderChange}
-                                        valueLabelDisplay="auto"
-                                    // getAriaValueText={valuetext}
-                                    />
-                                </Box>
+                                <div className='price-range-div'>
+                                    <p>Price <span>(NIS&#8362;/Day)</span></p>
+                                    <Box sx={{ width: 300 }}>
+                                        <Slider
+                                            min={feVehicleMinMaxPrices[0]}
+                                            max={feVehicleMinMaxPrices[1]}
+                                            getAriaLabel={() => 'Temperature range'}
+                                            value={priceRange}
+                                            onChange={handleSliderChange}
+                                            valueLabelDisplay="auto"
+                                        // getAriaValueText={valuetext}
+                                        />
+                                    </Box>
+                                </div>
                             }
+                            <button id="searchCarBtn" type='button' onClick={changeSearchParams}>Find My Rental!</button>
+                            <div style={{ width: 300 }}></div>
                         </div>
-                        <button id="searchCarBtn" type='button' onClick={changeSearchParams}>Find My Rental!</button>
+                        <div className='thirdDiv'>
+                            {/* <button id="searchCarBtn" type='button' onClick={changeSearchParams}>Find My Rental!</button> */}
+                        </div>
                     </form>
                 </div>}
 

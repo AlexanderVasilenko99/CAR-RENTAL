@@ -1,5 +1,11 @@
 .CategoryPage {
     padding: 0px 175px;
+}.CategoryPage h3{
+    display: flex;
+    justify-content: space-between;
+}
+.CategoryPage h3 span{
+    font-weight: 400;
 }
 
 .CategoryPageGridContainer {
@@ -33,7 +39,7 @@
 .CategoryPage form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .CategoryPage .firstDiv {
@@ -43,10 +49,32 @@
 }
 
 .CategoryPage .secondDiv {
+    font-size: 18px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 30px 0px; 
+    padding: 0px 20px;
+    margin: 40px 0px 10px 0px; 
+}
+.CategoryPage .secondDiv p{
+    font-weight: 500;
+    color: #FAF6E9;
+    margin: 0;
+    text-align: center;
+}
+.CategoryPage .secondDiv span{
+    font-size: 14px;
+    color: #FAF6E9;
+}
+.CategoryPage .price-range-div{
+    display: flex;
+    flex-direction: column;
+
+}
+.CategoryPage .thirdDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .CategoryPage .MuiInputBase-root input,
