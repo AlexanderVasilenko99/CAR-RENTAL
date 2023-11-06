@@ -45,6 +45,9 @@ const helpSubNavItems: SubNavItem[] = [
     new SubNavItem('About Us', appConfig.aboutUsPagePath),
     new SubNavItem('General Help', appConfig.helpPagePath),
 ];
+const careersSubNavItems: SubNavItem[] = [
+    new SubNavItem('Available Positions', appConfig.careersPagePath)
+];
 
 
 
@@ -104,12 +107,14 @@ function NavbarArea(): JSX.Element {
                         itemSvgComponent={<PlaceOutlinedIcon />} />
                 </div>
                 <div onClick={closeModal}>
-                    <NavbarItem itemText='Careers' itemDestinationPagePath={appConfig.careersPagePath} itemSvgComponent={<WorkOutlineIcon />} />
+                    <NavbarItem isDropdown itemText='Careers' itemDestinationPagePath={appConfig.careersPagePath}
+                        subNavItems={careersSubNavItems}
+                        itemSvgComponent={<WorkOutlineIcon />} />
                 </div>
                 <div onClick={closeModal}>
                     <NavbarItem isDropdown itemText='Help' itemDestinationPagePath={appConfig.helpPagePath}
-                    subNavItems={helpSubNavItems}
-                    itemSvgComponent={<HelpOutlineIcon />} />
+                        subNavItems={helpSubNavItems}
+                        itemSvgComponent={<HelpOutlineIcon />} />
                 </div>
                 <div onClick={() => setIsOpen(!modalIsOpen)} id='sighIn'>
                     <NavbarItem itemText='Sign in' itemDestinationPagePath={appConfig.samePagePath} itemSvgComponent={<PersonIcon />} />
