@@ -61,7 +61,7 @@ function Links(): JSX.Element {
                     <NavLink to={"https://www.linkedin.com/in/alexander-vasilenko-323a21299/"} target="_blank">
                         <img src={require("../../../../Assets/Images/linkedinicon.png")} alt="" />
                     </NavLink>
-                    <NavLink to={"#"}>
+                    <NavLink to={"tel:0508145431"} target="_blank">
                         <img src={require("../../../../Assets/Images/phoneicon.png")} alt="" />
                     </NavLink>
                     <NavLink to={"#"}>
