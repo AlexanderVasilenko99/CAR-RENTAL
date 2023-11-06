@@ -35,6 +35,7 @@ class AppConfig {
     public readonly helpPageTermsConditionsPagePath = this.helpPagePath + `terms&conditions/`
 
     public readonly LoyaltyProgramPagePath = `/Loyalty-program/`
+    public readonly aboutUsPagePath = `/about-us/`
     
 
     public readonly signInPagePath = `/sign-in/`

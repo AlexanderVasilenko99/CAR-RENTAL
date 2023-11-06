@@ -33,7 +33,7 @@ function Links(): JSX.Element {
         new SingleLink("One Way Car Rental", appConfig.servicesOneWayRentalPagePath),
     ];
     const information: SingleLink[] = [
-        new SingleLink("Who We Are", appConfig.samePagePath),
+        new SingleLink("Who We Are", appConfig.aboutUsPagePath),
         new SingleLink("Useful information", appConfig.helpPageInfoPagePath),
         new SingleLink("Help Page", appConfig.helpPagePath),
         new SingleLink("Loyalty Program", appConfig.LoyaltyProgramPagePath),

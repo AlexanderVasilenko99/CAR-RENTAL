@@ -34,6 +34,7 @@ import OneWay from "../ServicesPage/OneWay/OneWay";
 import ServicesPage from "../ServicesPage/ServicesPage";
 import SignInPage from "../SignInPage/SignInPage";
 import "./MyRouter.css";
+import AboutUs from "../AboutUs/AboutUs";
 
 function Router(): JSX.Element {
     return (
@@ -71,6 +72,7 @@ function Router(): JSX.Element {
                 <Route path={appConfig.helpPageTermsConditionsPagePath} element={<  TermsAndConditions />} />
 
                 <Route path={appConfig.LoyaltyProgramPagePath} element={<  LoyaltyProgram />} />
+                <Route path={appConfig.aboutUsPagePath} element={<  AboutUs />} />
 
 
                 <Route path={appConfig.signInPagePath} element={<  SignInPage />} />
