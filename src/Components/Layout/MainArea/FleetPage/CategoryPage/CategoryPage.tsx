@@ -35,6 +35,7 @@ function CategoryPage(): JSX.Element {
     let seats: string = searchParams.get("seats");
     let minP: string = searchParams.get("minP");
     let maxP: string = searchParams.get("maxP");
+    const [resetButtonState, setResetButtonState] = useState<boolean>();
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
@@ -65,6 +66,23 @@ function CategoryPage(): JSX.Element {
             prev.set("maxP", priceRange[1].toString());
             return prev;
         });
+    }
+    function clearAllParams(): void {
+        searchParams.delete("s");
+        searchParams.append("s", "");
+        searchParams.delete("name");
+        searchParams.append("name", "");
+        searchParams.delete("make");
+        searchParams.append("make", "");
+        searchParams.delete("model");
+        searchParams.append("model", "");
+        searchParams.delete("seats");
+        searchParams.append("seats", "");
+        searchParams.delete("minP");
+        searchParams.append("minP", "");
+        searchParams.delete("maxP");
+        searchParams.append("maxP", "");
+        setSearchParams(searchParams);
     }
     function sortByParams(arr: VehicleModel[]): VehicleModel[] {
         let clone: VehicleModel[] = arr;
@@ -182,9 +200,12 @@ function CategoryPage(): JSX.Element {
 
             {(feVehicles && feVehicles.length == 0) ? <></> :
                 <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
-                    <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
+                    <div className='headers-container'>
+                        <h2 onClick={() => setIsExpanded(!isExpanded)}>Filter</h2>
+                        <h2 onClick={() => { clearAllParams(); setResetButtonState(!resetButtonState) }}>Reset</h2>
+                    </div>
                     <form>
-                        <div className='firstDiv'>
+                        <div className='firstDiv' key={resetButtonState ? "yes" : "no"}>
                             <Autocomplete
                                 onChange={(event, value) => {
                                     console.log(value);
