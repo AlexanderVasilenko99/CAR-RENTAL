@@ -36,7 +36,7 @@ function CategoryPage(): JSX.Element {
     let minP: string = searchParams.get("minP");
     let maxP: string = searchParams.get("maxP");
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
-    const [feVehicles, setFeVehicles] = useState<VehicleModel[]>([]);
+    const [feVehicles, setFeVehicles] = useState<VehicleModel[]>();
     const [feVehicleNames, setFeVehicleNames] = useState<string[]>([]);
     const [feVehicleMakes, setFeVehicleMakes] = useState<string[]>([]);
     const [feVehicleModels, setFeVehicleModels] = useState<string[]>([]);
@@ -177,7 +177,8 @@ function CategoryPage(): JSX.Element {
         <div className="CategoryPage">
             <h1>Browse {params.vehicleCategory}</h1>
             <h3><div>Or go <NavLink to={appConfig.fleetPagePath}>Back To All Categories</NavLink></div>
-                <span>Showing {feVehicles.length} results</span></h3>
+                {feVehicles && <span>Showing {feVehicles.length} results</span>}
+            </h3>
 
             {(feVehicles && feVehicles.length == 0) ? <></> :
                 <div className={isExpanded ? " filter-container filter-container-expanded" : "filter-container"}>
