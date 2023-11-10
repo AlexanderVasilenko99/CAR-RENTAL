@@ -5,3 +5,6 @@
     width: 1357px;
     margin-bottom: 60px;
 }
+.row-content{
+    display: flex;
+}

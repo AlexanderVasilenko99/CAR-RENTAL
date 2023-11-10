@@ -8,6 +8,20 @@
     height: 70px;
     background-color: #952323;
 }
-#searchform{
+
+#searchform {
     scroll-margin-top: 70px;
+}
+
+.HomePage .EntireRoadTripInspiration {
+    padding: 0px 105px;
+}
+.HomePage .RoadTripInspiration {
+    width: 100%;
+}
+.HomePage .row-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
 }

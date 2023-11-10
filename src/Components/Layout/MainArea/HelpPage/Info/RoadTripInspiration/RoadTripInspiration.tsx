@@ -18,7 +18,7 @@ function RoadTripInspiration(): JSX.Element {
             "https://www.lonelyplanet.com/articles/beyond-tel-aviv-road-tripping-israels-north-coast")
     ]
     return (
-        <div>
+        <div className="EntireRoadTripInspiration">
             <h2>Road Trip Inspiration</h2>
             <div className="RoadTripInspiration">
                 <div className="row-content">
