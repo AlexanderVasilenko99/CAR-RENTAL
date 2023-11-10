@@ -6,6 +6,7 @@ import appConfig from "../../../../Utils/AppConfig";
 import "./HomePage.css";
 import SearchForm from "./SearchForm/SearchForm";
 import RoadTripInspiration from '../HelpPage/Info/RoadTripInspiration/RoadTripInspiration';
+import WhyUs from './WhyUs/WhyUs';
 
 function HomePage(): JSX.Element {
 
@@ -24,6 +25,7 @@ function HomePage(): JSX.Element {
             <div id="searchform">
                 <SearchForm />
             </div>
+            <WhyUs />
             <RoadTripInspiration />
         </div>
     );

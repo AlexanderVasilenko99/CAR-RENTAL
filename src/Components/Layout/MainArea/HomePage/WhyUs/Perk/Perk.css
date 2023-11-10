@@ -1,0 +1,15 @@
+.Perk {
+    width: 300px;
+    height: 300px;
+    background-color: #952323;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Perk img {
+    width: 140px;
+    height: 140px;
+}
