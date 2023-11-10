@@ -1,8 +1,18 @@
 import "./Perk.css";
-function Perk(): JSX.Element {
+export class PerkModel {
+    public header: string;
+    public imageName: string;
+    constructor(header: string, imageName: string) {
+        this.header = header;
+        this.imageName = imageName;
+    }
+}
+function Perk(props:PerkModel): JSX.Element {
     return (
         <div className="Perk">
-            <img src={require("../../../../../../Assets/Images/HomePage/easy.png")} alt="" />
+            <h2>{props.header}</h2>
+            {/* <img src={require(`../../../../../../Assets/Images/HomePage/{props.imageName}`)} alt="" /> */}
+
         </div>
     );
 }

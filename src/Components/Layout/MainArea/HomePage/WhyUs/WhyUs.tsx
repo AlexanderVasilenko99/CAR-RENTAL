@@ -1,14 +1,17 @@
-import Perk from "./Perk/Perk";
+import Perk, { PerkModel } from "./Perk/Perk";
 import "./WhyUs.css";
 
 function WhyUs(): JSX.Element {
+    const perks: PerkModel[] = [
+        new PerkModel("IT'S EASY!", "easy.png"),
+        new PerkModel("IT'S AFFORDABLE!", "easy.png")
+    ]
     return (
         <div className="WhyUs">
             <div className="WhyUsContent">
-                <Perk/>
-                <Perk/>
-                <Perk/>
-                <Perk/>
+                {perks.map(p =>
+                    <Perk header={p.header} imageName={p.imageName} />
+                )}
             </div>
         </div>
     );

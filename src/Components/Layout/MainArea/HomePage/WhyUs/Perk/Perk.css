@@ -5,11 +5,19 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: url("../../../../../../Assets/Images/HomePage/easy.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140px;
+    color: #FAF6E9;
 }
 
 .Perk img {
     width: 140px;
     height: 140px;
+}
+.Perk h2{
+    position: relative;
+    top: 10px;
 }
