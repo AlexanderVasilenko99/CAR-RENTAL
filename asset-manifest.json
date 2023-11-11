@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/car-rental/static/css/main.9940ef07.css",
-    "main.js": "/car-rental/static/js/main.f8652a09.js",
+    "main.css": "/car-rental/static/css/main.16d88fc3.css",
+    "main.js": "/car-rental/static/js/main.735bffaf.js",
     "static/media/vid1.mp4": "/car-rental/static/media/vid1.ab7fd9d2b7e23d0f8bf7.mp4",
     "static/media/road2.png": "/car-rental/static/media/road2.843b236a9d58202145bd.png",
     "static/media/calendar.png": "/car-rental/static/media/calendar.a1f49896c8b233bea26e.png",
@@ -16,6 +16,7 @@
     "static/media/15.png": "/car-rental/static/media/15.14422d085b9f4e2263e8.png",
     "static/media/monthly.png": "/car-rental/static/media/monthly.1675949bbedb392965d8.png",
     "static/media/oneday3.png": "/car-rental/static/media/oneday3.ca035bcfbbbf5b856c34.png",
+    "static/media/whyus.png": "/car-rental/static/media/whyus.ed7a3460aef31e1409b3.png",
     "static/media/monthly2.png": "/car-rental/static/media/monthly2.d8f180a6a18c71305af7.png",
     "static/media/group2.png": "/car-rental/static/media/group2.a69f1795200b8e0787de.png",
     "static/media/business.png": "/car-rental/static/media/business.2d6531b0e4b2855fec4b.png",
@@ -24,8 +25,8 @@
     "static/media/handshake2.png": "/car-rental/static/media/handshake2.de41a6d87abccd322362.png",
     "static/media/13.png": "/car-rental/static/media/13.79f041ad24ca5df5afc4.png",
     "static/media/7.png": "/car-rental/static/media/7.0e37e19ffb1d19347462.png",
-    "static/media/3.png": "/car-rental/static/media/3.e2544569cd63466461a0.png",
-    "static/media/2.png": "/car-rental/static/media/2.0b8cd69802f98e627678.png",
+    "static/media/3.png": "/car-rental/static/media/3.1a20fb48e658da4f8a8e.png",
+    "static/media/2.png": "/car-rental/static/media/2.19757424223aee819743.png",
     "static/media/haifa.png": "/car-rental/static/media/haifa.44a8f29a4a1660b4d7c1.png",
     "static/media/11.png": "/car-rental/static/media/11.5ad8128f26e97e3e3db5.png",
     "static/media/fabia.png": "/car-rental/static/media/fabia.4a95416584f29646c0f1.png",
@@ -35,6 +36,7 @@
     "static/media/bengurion.png": "/car-rental/static/media/bengurion.c188bd07748d76371342.png",
     "static/media/beersheva.jpg": "/car-rental/static/media/beersheva.331a6e57a7e08ff425c3.jpg",
     "static/media/6.png": "/car-rental/static/media/6.d5956c688e3d4f2c7b03.png",
+    "static/media/Alexander-Vasilenko-CV.pdf": "/car-rental/static/media/Alexander-Vasilenko-CV.732a179c16bdcde16e6e.pdf",
     "static/media/9.png": "/car-rental/static/media/9.e7a69f33a767305b4104.png",
     "static/media/1.png": "/car-rental/static/media/1.42aafcc260f2a14b4003.png",
     "static/media/12.png": "/car-rental/static/media/12.a583a4c24c21de9d0a32.png",
@@ -92,11 +94,11 @@
     "static/media/tevalogo2.png": "/car-rental/static/media/tevalogo2.30a94ec0952cf04727f3.png",
     "static/media/navbar-logo-1-min.png": "/car-rental/static/media/navbar-logo-1-min.0a852f97207d209569cd.png",
     "index.html": "/car-rental/index.html",
-    "main.9940ef07.css.map": "/car-rental/static/css/main.9940ef07.css.map",
-    "main.f8652a09.js.map": "/car-rental/static/js/main.f8652a09.js.map"
+    "main.16d88fc3.css.map": "/car-rental/static/css/main.16d88fc3.css.map",
+    "main.735bffaf.js.map": "/car-rental/static/js/main.735bffaf.js.map"
   },
   "entrypoints": [
-    "static/css/main.9940ef07.css",
-    "static/js/main.f8652a09.js"
+    "static/css/main.16d88fc3.css",
+    "static/js/main.735bffaf.js"
   ]
 }
