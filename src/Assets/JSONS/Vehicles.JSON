@@ -266,7 +266,7 @@
                             "fuel": "95 unleaded",
                             "ABS": true,
                             "CBS": false,
-                            "weight": "250kg",
+                            "weight": "260kg",
                             "luggage_available": true
                         }
                     },
@@ -285,6 +285,24 @@
                             "ABS": true,
                             "CBS": false,
                             "weight": "196kg",
+                            "luggage_available": false
+                        }
+                    },
+                    "Kawasaki": {
+                        "Z650": {
+                            "id" : "",
+                            "full_name": "Kawasaki Z650",
+                            "image_name": "",
+                            "make_year": 2018,
+                            "engine_size": 649,
+                            "engine_configuration": "Parallel Twin",
+                            "horse_power": 75,
+                            "transmission": "Standard",
+                            "tank_capacity": "14L",
+                            "fuel": "95 unleaded",
+                            "ABS": true,
+                            "CBS": false,
+                            "weight": "206kg",
                             "luggage_available": false
                         }
                     }

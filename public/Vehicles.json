@@ -647,6 +647,35 @@
             },
             {
                 "id": 402,
+                "full_name": "Kawasaki Z650",
+                "make": "Kawasaki",
+                "model": "Z650",
+                "license": "A",
+                "type": "motorcycle",
+                "make_year": 2018,
+                "image_name": "z650.png",
+                "engine_size": 645,
+                "engine_configuration": "Parallel Twin",
+                "horse_power": 69,
+                "transmission": "Standard",
+                "tank_capacity": "14L",
+                "fuel": "95 unleaded",
+                "redirect_path": "#",
+                "price": 2245.59,
+                "abs": true,
+                "cbs": false,
+                "weight": 206,
+                "luggage_available": false,
+                "turbo": false,
+                "seats": 2,
+                "doors": null,
+                "luggage": null,
+                "trunk_capacity": null,
+                "radio": null,
+                "air_conditioner": null
+            },
+            {
+                "id": 404,
                 "full_name": "Honda CB500F",
                 "make": "Honda",
                 "model": "CB500F",
@@ -675,7 +704,7 @@
                 "air_conditioner": null
             },
             {
-                "id": 403,
+                "id": 404,
                 "full_name": "Honda Forza 350",
                 "make": "Honda",
                 "model": "Forza 350",
@@ -704,7 +733,7 @@
                 "air_conditioner": null
             },
             {
-                "id": 404,
+                "id": 405,
                 "full_name": "Honda Vision 110",
                 "make": "Honda",
                 "model": "Vision 110",
