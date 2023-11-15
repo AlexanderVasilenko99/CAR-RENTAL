@@ -9,8 +9,8 @@ class VehicleServices {
             return vehiclesState.getState().vehicles;
         }
         else {
-            // const response = await axios.get("/Vehicles.json");
-            const response = await axios.get("https://raw.githubusercontent.com/AlexanderVasilenko99/car-rental/main/public/Vehicles.json");
+            const response = await axios.get("/Vehicles.json");
+            // const response = await axios.get("https://raw.githubusercontent.com/AlexanderVasilenko99/car-rental/main/public/Vehicles.json");
             const data: AllVehiclesByCategories = response.data.vehicles;
             const vehicles: VehicleModel[] = data.small.concat(data.medium).concat(data.large).concat(data.motorcycles_scooters)
                 .concat(data.luxury).concat(data.suv_offroad).concat(data.vans_trucks);
