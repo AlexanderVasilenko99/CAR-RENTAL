@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/car-rental/static/css/main.16d88fc3.css",
-    "main.js": "/car-rental/static/js/main.19d0cb3b.js",
+    "main.js": "/car-rental/static/js/main.44c4e24c.js",
     "static/media/vid1.mp4": "/car-rental/static/media/vid1.ab7fd9d2b7e23d0f8bf7.mp4",
     "static/media/road2.png": "/car-rental/static/media/road2.843b236a9d58202145bd.png",
     "static/media/calendar.png": "/car-rental/static/media/calendar.a1f49896c8b233bea26e.png",
@@ -27,6 +27,7 @@
     "static/media/7.png": "/car-rental/static/media/7.0e37e19ffb1d19347462.png",
     "static/media/3.png": "/car-rental/static/media/3.1a20fb48e658da4f8a8e.png",
     "static/media/2.png": "/car-rental/static/media/2.19757424223aee819743.png",
+    "static/media/jimny.png": "/car-rental/static/media/jimny.cfd3d936d50e41bd5be7.png",
     "static/media/haifa.png": "/car-rental/static/media/haifa.44a8f29a4a1660b4d7c1.png",
     "static/media/11.png": "/car-rental/static/media/11.5ad8128f26e97e3e3db5.png",
     "static/media/fabia.png": "/car-rental/static/media/fabia.4a95416584f29646c0f1.png",
@@ -43,6 +44,7 @@
     "static/media/ramon.jpg": "/car-rental/static/media/ramon.38cbb4c8a5c532fef6f8.jpg",
     "static/media/4.png": "/car-rental/static/media/4.2395aedc36a93106da54.png",
     "static/media/16.png": "/car-rental/static/media/16.ca9b50c60fe7dba47fcb.png",
+    "static/media/bronco.png": "/car-rental/static/media/bronco.f60b297d6438f3ca782b.png",
     "static/media/23.png": "/car-rental/static/media/23.d05893f155a459f29dbe.png",
     "static/media/22.png": "/car-rental/static/media/22.10faa589c9fce4ad429c.png",
     "static/media/10.png": "/car-rental/static/media/10.fb66a0918c0ed15314ef.png",
@@ -53,21 +55,27 @@
     "static/media/i10.png": "/car-rental/static/media/i10.7b15cba03f3c65b4e434.png",
     "static/media/pcx.png": "/car-rental/static/media/pcx.eb5785ecbff77e543250.png",
     "static/media/k5.png": "/car-rental/static/media/k5.4e81d57c46bab8265efb.png",
+    "static/media/gtr.png": "/car-rental/static/media/gtr.546686bf917d3dbdabec.png",
     "static/media/sv650.png": "/car-rental/static/media/sv650.81d3b4075203f52167d5.png",
     "static/media/1250gs.png": "/car-rental/static/media/1250gs.93a22756589d7a6c4811.png",
+    "static/media/crv.png": "/car-rental/static/media/crv.77901b3a2a12b1f85f79.png",
     "static/media/corolla.png": "/car-rental/static/media/corolla.472b3d913ce2469163a1.png",
     "static/media/8.png": "/car-rental/static/media/8.a6e8bf988f8364d92b1e.png",
     "static/media/spacestar.png": "/car-rental/static/media/spacestar.6e9df962e3c0998cc642.png",
     "static/media/xadv.png": "/car-rental/static/media/xadv.59c76087ca0dd16dd84f.png",
     "static/media/raanana.jpg": "/car-rental/static/media/raanana.82172925e9a249b863b0.jpg",
+    "static/media/gt2.png": "/car-rental/static/media/gt2.7d552c76b6863ae4eff5.png",
     "static/media/mercedes.png": "/car-rental/static/media/mercedes.ade87b3ba7a1b991a6f0.png",
+    "static/media/forester.png": "/car-rental/static/media/forester.bf9e87da442890adc51b.png",
     "static/media/forza350.png": "/car-rental/static/media/forza350.507864242969de1a06a3.png",
     "static/media/astra.png": "/car-rental/static/media/astra.04b3388ebf912e08ab54.png",
     "static/media/soul.png": "/car-rental/static/media/soul.9f2d58cab21689e38083.png",
+    "static/media/landcruiser.png": "/car-rental/static/media/landcruiser.c2b3b8f06e599fd0d6b6.png",
     "static/media/picanto.png": "/car-rental/static/media/picanto.56b5b6411d8d4e5ea064.png",
     "static/media/eilat.jpg": "/car-rental/static/media/eilat.23dd8fcfff810e705ac8.jpg",
     "static/media/swift.png": "/car-rental/static/media/swift.c4c8b156ba211315ca04.png",
     "static/media/monthlyrentalsteps2.png": "/car-rental/static/media/monthlyrentalsteps2.4660c710318bb39ebaf9.png",
+    "static/media/challanger.png": "/car-rental/static/media/challanger.48eb80df4c91f62fc47d.png",
     "static/media/308.png": "/car-rental/static/media/308.53eae65f7bb693fa5001.png",
     "static/media/grouprentalsteps2.png": "/car-rental/static/media/grouprentalsteps2.b443200f6c1869639333.png",
     "static/media/clio.png": "/car-rental/static/media/clio.b5da6836d081255be079.png",
@@ -98,10 +106,10 @@
     "static/media/navbar-logo-1-min.png": "/car-rental/static/media/navbar-logo-1-min.0a852f97207d209569cd.png",
     "index.html": "/car-rental/index.html",
     "main.16d88fc3.css.map": "/car-rental/static/css/main.16d88fc3.css.map",
-    "main.19d0cb3b.js.map": "/car-rental/static/js/main.19d0cb3b.js.map"
+    "main.44c4e24c.js.map": "/car-rental/static/js/main.44c4e24c.js.map"
   },
   "entrypoints": [
     "static/css/main.16d88fc3.css",
-    "static/js/main.19d0cb3b.js"
+    "static/js/main.44c4e24c.js"
   ]
 }
