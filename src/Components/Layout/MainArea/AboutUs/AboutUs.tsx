@@ -3,7 +3,7 @@ import cvFile from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pd
 function AboutUs(): JSX.Element {
     return (
         <div className="AboutUs">
-            Alex Vas
+            Alex Vasilenko
             <a href="This is my CV" download={cvFile}>CV</a>
         </div>
     );
