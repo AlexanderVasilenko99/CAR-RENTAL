@@ -41,7 +41,7 @@ function FleetItem(props: VehicleModel): JSX.Element {
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/abs.png`)} />
                         CBS
                     </div>}
-                    {(props.type == "motorcycle" || props.type == "scooter") && props.horse_power && <div>
+                    {(props.type == "motorcycle" || props.type == "scooter" || props.type == "luxury") && props.horse_power && <div>
                         <img src={require(`../../../../../../Assets/Images/Fleet/Icons/horsepower.png`)} />
                         {props.horse_power}
                     </div>}

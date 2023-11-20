@@ -843,7 +843,7 @@
                 "radio": true,
                 "air_conditioner": true,
                 "license": null,
-                "type": null,
+                "type": "luxury",
                 "engine_configuration": "Flat 6",
                 "abs": true,
                 "cbs": null,
