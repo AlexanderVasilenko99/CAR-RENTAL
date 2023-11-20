@@ -820,7 +820,37 @@
                 "air_conditioner": null
             }
         ],
-        "luxury": [],
+        "luxury": [
+            {
+                "id": 100,
+                "full_name": "Porsche 911 GT2",
+                "make": "Porsche",
+                "model": "911 GT2",
+                "make_year": "2019",
+                "image_name": "gt2.png",
+                "engine_size": 3.6,
+                "turbo": false,
+                "horse_power": 523,
+                "transmission": "Automatic",
+                "seats": 2,
+                "doors": 2,
+                "luggage": null,
+                "trunk_capacity": "160L",
+                "tank_capacity": "40L",
+                "fuel": "95 unleaded",
+                "redirect_path": "#",
+                "price": 451.89,
+                "radio": true,
+                "air_conditioner": true,
+                "license": null,
+                "type": null,
+                "engine_configuration": "Flat 6",
+                "abs": true,
+                "cbs": null,
+                "weight": null,
+                "luggage_available": null
+            }
+        ],
         "suv_offroad": [],
         "vans_trucks": []
     }
