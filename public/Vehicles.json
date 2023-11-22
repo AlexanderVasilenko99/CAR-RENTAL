@@ -884,7 +884,7 @@
                 "full_name": "Dodge Challanger SRT Hellcat",
                 "make": "Dodge",
                 "model": "Challanger SRT Hellcat",
-                "make_year": "2032",
+                "make_year": "2023",
                 "image_name": "challanger.png",
                 "engine_size": 6.2,
                 "turbo": false,
@@ -909,7 +909,37 @@
                 "luggage_available": null
             }
         ],
-        "suv_offroad": [],
+        "suv_offroad": [
+            {
+                "id": 600,
+                "full_name": "Ford Bronco",
+                "make": "Ford",
+                "model": "Bronco",
+                "make_year": "2023",
+                "image_name": "bronco.png",
+                "engine_size": 2.3,
+                "turbo": true,
+                "horse_power": 330,
+                "transmission": "Standard",
+                "seats": 4,
+                "doors": 4,
+                "luggage": null,
+                "trunk_capacity": "2350L",
+                "tank_capacity": "64L",
+                "fuel": "95 unleaded",
+                "redirect_path": "#",
+                "price": 415.45,
+                "radio": true,
+                "air_conditioner": true,
+                "license": null,
+                "type": "suv&offroad",
+                "engine_configuration": "V6",
+                "abs": true,
+                "cbs": null,
+                "weight": null,
+                "luggage_available": null
+            }
+        ],
         "vans_trucks": []
     }
 }
