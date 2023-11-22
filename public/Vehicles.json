@@ -1201,6 +1201,35 @@
                 "cbs": null,
                 "weight": null,
                 "luggage_available": null
+            },
+            {
+                "id": 705,
+                "full_name": "Dodge RAM 1500",
+                "make": "Dodge",
+                "model": "RAM 1500",
+                "make_year": "2022",
+                "image_name": "ram.png",
+                "engine_size": 3.6,
+                "turbo": true,
+                "horse_power": 305,
+                "transmission": "Standard",
+                "seats": 5,
+                "doors": 4,
+                "luggage": null,
+                "trunk_capacity": "1526L",
+                "tank_capacity": "98L",
+                "fuel": "95 unleaded",
+                "redirect_path": "#",
+                "price": 481.52,
+                "radio": true,
+                "air_conditioner": true,
+                "license": null,
+                "type": "vans&trucks",
+                "engine_configuration": "",
+                "abs": true,
+                "cbs": null,
+                "weight": null,
+                "luggage_available": null
             }
         ]
     }
