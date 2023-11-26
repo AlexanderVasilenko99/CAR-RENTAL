@@ -1,3 +1,9 @@
 .AboutUs {
-	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.AboutUs > *{
+    text-align: center;
+    margin: 0px 100px;
 }
