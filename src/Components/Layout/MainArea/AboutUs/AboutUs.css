@@ -6,4 +6,24 @@
 .AboutUs > *{
     text-align: center;
     margin: 0px 100px;
+    font-weight: 300;
+}
+.AboutUs h1{
+    margin: 50px 0px 25px 0px;
+    font-weight: 300;
+}
+.AboutUs h2{
+    margin-top: 25px;
+    font-weight: 300;
+}
+.AboutUs h3{
+    margin-top: 0px;
+    font-weight: 500;
+    font-size: 36px;
+}
+.AboutUs h4{
+    letter-spacing: 2px;
+}
+.AboutUs p{
+    margin: 25px 100px;
 }
