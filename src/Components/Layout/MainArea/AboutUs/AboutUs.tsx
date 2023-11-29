@@ -3,7 +3,9 @@ import cvFile from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pd
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
-// import myPic from "../../../../Assets/Images/me_square.jpeg"
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import myCV from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pdf"
 function AboutUs(): JSX.Element {
 
     let hashlink = React.useRef();
@@ -12,30 +14,41 @@ function AboutUs(): JSX.Element {
         btn.click();
     }
 
+    class myLinksModel {
+        public imageName: string;
+        public link: string;
+        constructor(imageName: string, link: string) {
+            this.imageName = imageName;
+            this.link = link;
+        }
+    }
+    const myContacts: myLinksModel[] = [
+        new myLinksModel("giticon.png", "https://github.com/AlexanderVasilenko99"),
+        new myLinksModel("linkedinicon.png", "https://www.linkedin.com/in/alexander-vasilenko-323a21299/"),
+        new myLinksModel("phoneicon.png", "050-814-5431"),
+        new myLinksModel("emailicon.png", "alexandervjr1@gmail.com"),
+    ];
     return (
         <div className="AboutUs">
             <div className="first-section">
                 <h1 className="h1">About Me & This Project</h1>
-                <div><img className="profile-pic" src={require('../../../../Assets/Images/me_square.jpeg')} alt="" /></div>
+                <div><img className="profile-pic" src={require('../../../../Assets/Images/me_square.jpeg')} /></div>
                 <h2>👋🏻Hi There! I'm</h2>
                 <h3>Alexander <span>JR</span> Vasilenko</h3>
                 <h4>Full Stack Developer</h4>
                 <h5>
-                    <NavLink to="#">
-                        <img className="icon" src={require('../../../../Assets/Images/giticon.png')} alt="" />
-                    </NavLink>
-                    <NavLink to="#">
-                        <img className="icon" src={require('../../../../Assets/Images/linkedinicon.png')} alt="" />
-                    </NavLink>
-                    <NavLink to="#">
-                        <img className="icon" src={require('../../../../Assets/Images/phoneicon.png')} alt="" />
-                    </NavLink>
-                    <NavLink to="#">
-                        <img className="icon" src={require('../../../../Assets/Images/emailicon.png')} alt="" />
-                    </NavLink>
-                    <NavLink to="#">
-                        <img className="icon" src={require('../../../../Assets/Images/cv.png')} alt="" />
-                    </NavLink>
+                    {myContacts.map(c =>
+                        <Tooltip title={c.link} arrow>
+                            <NavLink to={c.link} target="_blank">
+                                <img className="icon" src={require(`../../../../Assets/Images/${c.imageName}`)} />
+                            </NavLink>
+                        </Tooltip>
+                    )}
+                    <Tooltip title="My CV" arrow>
+                        <NavLink to="#" download={myCV} target="_blank">
+                            <img className="icon" src={require(`../../../../Assets/Images/cv.png`)} />
+                        </NavLink>
+                    </Tooltip>
                 </h5>
                 <div className="chevron-holder">
                     <HashLink smooth to="#about-grid-container" ref={hashlink}>
