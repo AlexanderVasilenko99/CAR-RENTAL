@@ -5,7 +5,7 @@ import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import myCV from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pdf"
+import myCV from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pdf";
 function AboutUs(): JSX.Element {
 
     let hashlink = React.useRef();
@@ -13,7 +13,6 @@ function AboutUs(): JSX.Element {
         const btn = hashlink.current as unknown as HTMLElement;
         btn.click();
     }
-
     class myLinksModel {
         public imageName: string;
         public link: string;
@@ -38,7 +37,11 @@ function AboutUs(): JSX.Element {
                 <h4>Full Stack Developer</h4>
                 <h5>
                     {myContacts.map(c =>
-                        <Tooltip title={c.link} arrow>
+                        <Tooltip title={c.link} arrow sx={
+                            {
+                                background: "yellow"
+                            }
+                        }>
                             <NavLink to={c.link} target="_blank">
                                 <img className="icon" src={require(`../../../../Assets/Images/${c.imageName}`)} />
                             </NavLink>
