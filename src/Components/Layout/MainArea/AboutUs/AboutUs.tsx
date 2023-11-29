@@ -37,11 +37,7 @@ function AboutUs(): JSX.Element {
                 <h4>Full Stack Developer</h4>
                 <h5>
                     {myContacts.map(c =>
-                        <Tooltip title={c.link} arrow sx={
-                            {
-                                background: "yellow"
-                            }
-                        }>
+                        <Tooltip title={c.link} arrow>
                             <NavLink to={c.link} target="_blank">
                                 <img className="icon" src={require(`../../../../Assets/Images/${c.imageName}`)} />
                             </NavLink>
