@@ -59,7 +59,7 @@ function AboutUs(): JSX.Element {
             <div className="about-grid-container" id="about-grid-container">
                 <div>
                     <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quis facilis excepturi laboriosam doloremque. Id placeat excepturi praesentium, accusamus aliquid odit maiores culpa libero tempore modi, laboriosam odio delectus consequatur! Molestias maiores voluptatem voluptas autem cumque veritatis dolorum deleniti blanditiis, assumenda aperiam ullam cum error quidem quis exercitationem dolorem nemo est voluptatibus reprehenderit facere deserunt non odit molestiae voluptates? Nihil ea blanditiis odio vitae aut pariatur iste laborum quasi ipsum sint nemo molestiae nisi animi voluptates quam, nam officia est praesentium consequatur repellendus ducimus cum nesciunt culpa eveniet! Veritatis tenetur corporis et iste iure omnis quis. Corporis libero ad, eaque aperiam tempora corrupti qui suscipit officia officiis voluptas tempore, et sapiente laboriosam hic quidem rerum iste cum id! Similique, incidunt? Unde, laborum natus harum, nobis ipsam officiis recusandae modi animi soluta quaerat molestias repudiandae repellat voluptas quos dolor suscipit consequatur iste debitis maiores, perspiciatis magnam quas aspernatur. Reprehenderit, cumque accusamus.</p>
+                    <p>Hi again and welcome! My name is Alexander Vasilenko, I am a 24 year old student currently on my path to become a full stack developer. I am </p>
                 </div>
                 <div>
                     <h1>About This Project</h1>
