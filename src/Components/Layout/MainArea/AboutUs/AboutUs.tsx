@@ -1,18 +1,24 @@
-import "./AboutUs.css";
-import cvFile from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pdf"
-import React from "react";
-import { HashLink } from "react-router-hash-link";
-import { NavLink } from "react-router-dom";
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import myCV from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pdf";
+import React, { useEffect, useRef } from "react";
+import { NavLink, useParams } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import { default as cvFile, default as myCV } from "../../../../Assets/Files/Downloads/Alexander-Vasilenko-CV.pdf";
+import "./AboutUs.css";
 function AboutUs(): JSX.Element {
 
-    let hashlink = React.useRef();
-    function scrollDown(): void {
-        const btn = hashlink.current as unknown as HTMLElement;
-        btn.click();
+    const isFirstScroll = useRef(true);
+    function handleScrollChange(): void {
+        console.log("eventlistener triggered");
+        if (isFirstScroll.current) {
+            isFirstScroll.current = false;
+            console.log("scrolling to section...");
+            window.scrollTo({ top: 840, behavior: "smooth" })
+            window.removeEventListener('scroll', handleScrollChange);
+        }
     }
+    window.addEventListener('scroll', handleScrollChange);
+    let hashlink = React.useRef();
+
     class myLinksModel {
         public imageName: string;
         public link: string;
