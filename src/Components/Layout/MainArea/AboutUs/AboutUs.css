@@ -54,7 +54,14 @@
 }
 
 .AboutUs p {
-    margin: 25px 100px;
+    margin: 0px 100px;
+    line-height: 1.5em;
+}
+.about-grid-container p::first-letter{
+    font-size: 45px;
+    font-weight: 400;
+    vertical-align: bottom;
+    line-height: 1.05em;
 }
 
 .AboutUs .about-grid-container {
@@ -62,6 +69,13 @@
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     scroll-margin-top: 70px;
+}
+.AboutUs .about-grid-container p{
+    font-size: 20px;
+    text-align: justify;
+}
+.about-grid-container span{
+    font-weight: 600;
 }
 
 .chevron-holder {

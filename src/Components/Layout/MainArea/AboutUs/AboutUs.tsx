@@ -21,6 +21,7 @@ function AboutUs(): JSX.Element {
             this.link = link;
         }
     }
+
     const myContacts: myLinksModel[] = [
         new myLinksModel("giticon.png", "https://github.com/AlexanderVasilenko99"),
         new myLinksModel("linkedinicon.png", "https://www.linkedin.com/in/alexander-vasilenko-323a21299/"),
@@ -59,7 +60,20 @@ function AboutUs(): JSX.Element {
             <div className="about-grid-container" id="about-grid-container">
                 <div>
                     <h1>About Me</h1>
-                    <p>Hi again and welcome! My name is Alexander Vasilenko, I am a 24 year old student currently on my path to become a full stack developer. I am </p>
+                    <p>Hi again and welcome! My name is <span>Alexander Vasilenko</span> and I am a 24 year old student currently on my
+                        path to become a full stack developer.
+                        <br /><br />Besides studying and working, I spend most of my time constantly
+                        learning new things, reading about new technologies and love exploring new fields. I am very into coding and
+                        technology overall, a big fan of motorics who finds it very pleasing to work and wrench on motorcycles and
+                        scooters and learning the mechanics of how they work. To say I am also a big fan of physical
+                        activities and absolutely love hiking and working out would be an absolute understatement as I work out at least
+                        five
+                        times a week and take great pride in my physical achievements.
+                        <br /><br />
+                        The oldest child to two amazing parents, an older brother, a partner, your honest friend, a determined creator,
+                        and an aspiring individual with vast interests fields and many dreams and milestones yet to be achieved. An
+                        ambitious man with a unique personality constantly seeking to improve and better himself and his surrounding.
+                    </p>
                 </div>
                 <div>
                     <h1>About This Project</h1>
