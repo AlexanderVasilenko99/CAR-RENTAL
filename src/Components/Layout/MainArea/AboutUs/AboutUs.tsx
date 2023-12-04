@@ -83,7 +83,14 @@ function AboutUs(): JSX.Element {
                 </div>
                 <div>
                     <h1>About This Project</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quis facilis excepturi laboriosam doloremque. Id placeat excepturi praesentium, accusamus aliquid odit maiores culpa libero tempore modi, laboriosam odio delectus consequatur! Molestias maiores voluptatem voluptas autem cumque veritatis dolorum deleniti blanditiis, assumenda aperiam ullam cum error quidem quis exercitationem dolorem nemo est voluptatibus reprehenderit facere deserunt non odit molestiae voluptates? Nihil ea blanditiis odio vitae aut pariatur iste laborum quasi ipsum sint nemo molestiae nisi animi voluptates quam, nam officia est praesentium consequatur repellendus ducimus cum nesciunt culpa eveniet! Veritatis tenetur corporis et iste iure omnis quis. Corporis libero ad, eaque aperiam tempora corrupti qui suscipit officia officiis voluptas tempore, et sapiente laboriosam hic quidem rerum iste cum id! Similique, incidunt? Unde, laborum natus harum, nobis ipsam officiis recusandae modi animi soluta quaerat molestias repudiandae repellat voluptas quos dolor suscipit consequatur iste debitis maiores, perspiciatis magnam quas aspernatur. Reprehenderit, cumque accusamus.</p>
+                    <p><span>Vasilenko Car Rental</span> is my first original project I wrote for fun and in order to practice recently
+                        learned skills and wishfully learn new ones in the process - which I successfully have.<br /><br />
+                        This website vas written in <span>ReactTS</span> with great emphasis on self written code. One can very rarely
+                        see the use of external libraries in this project, especially regarding the styling and behavior of components.
+                        I have however used very popular libraries such as <span>Redux, React-Router, and Axios</span> to achieve it's
+                        functionality.<br/><br/>In this project I put effort into 'clean' coding without repetition of code, object
+                        oriented programming, correct file structuring and responsiveness.<br/><br/>As of December 2023, the website
+                        is still work in progress🙂</p>
                 </div>
             </div>
             <a href="This is my CV" download={cvFile}>CV</a>
